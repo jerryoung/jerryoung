@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>程序猿清丰</title>
+  
+  <subtitle>认真学习，快乐生活，一起做个快乐的程序猿吧!</subtitle>
+  <link href="https://jaryoung.com/atom.xml" rel="self"/>
+  
+  <link href="https://jaryoung.com/"/>
+  <updated>2022-02-07T04:44:06.385Z</updated>
+  <id>https://jaryoung.com/</id>
+  
+  <author>
+    <name>Jerry Wu</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>利用Gulp优化Hexo静态资源</title>
+    <link href="https://jaryoung.com/2022/02/04/gulp-optimization-hexo-statict-resources/"/>
+    <id>https://jaryoung.com/2022/02/04/gulp-optimization-hexo-statict-resources/</id>
+    <published>2022-02-04T10:24:00.000Z</published>
+    <updated>2022-02-07T04:44:06.385Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;由于网上使用gulp给hexo进行压缩优化的文章，找到一些方案，但是时间太久，相应的gulp工具也升级一些版本，导致跟教程有差别，我本地无法</summary>
+      
+    
+    
+    
+    <category term="Hexo" scheme="https://jaryoung.com/categories/Hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://jaryoung.com/tags/Hexo/"/>
+    
+    <category term="Gulp" scheme="https://jaryoung.com/tags/Gulp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>优化打开博客速度，给您的Hexo添加上PWA吧</title>
+    <link href="https://jaryoung.com/2022/02/03/Add-PWA-to-hexo-in-fluid-theme/"/>
+    <id>https://jaryoung.com/2022/02/03/Add-PWA-to-hexo-in-fluid-theme/</id>
+    <published>2022-02-03T11:42:00.000Z</published>
+    <updated>2022-02-08T15:06:31.500Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;0-版本&quot;&gt;&lt;a href=&quot;#0-版本&quot; class=&quot;headerlink&quot; title=&quot;0. 版本&quot;&gt;&lt;/a&gt;0. 版本&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;hexo相关版本&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;hexo: 6.0.0&lt;/li&gt;
+&lt;li&gt;hexo-cli</summary>
+      
+    
+    
+    
+    <category term="Hexo" scheme="https://jaryoung.com/categories/Hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://jaryoung.com/tags/Hexo/"/>
+    
+    <category term="PWA" scheme="https://jaryoung.com/tags/PWA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vagrant 默认是用root账户登陆</title>
+    <link href="https://jaryoung.com/2021/08/28/Vagrant-default-use-root-login/"/>
+    <id>https://jaryoung.com/2021/08/28/Vagrant-default-use-root-login/</id>
+    <published>2021-08-28T10:08:09.000Z</published>
+    <updated>2022-02-07T04:44:06.367Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;本文不讨论，通过账号密码登陆的登陆的方式，因为我所在版本【Vagrant 2.2.9】，就算通过config-ssh-insert_key&amp;#x3D;false，也无法通过免&lt;strong&gt;输入&lt;/strong&gt;密码的方式登陆&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    
+    <category term="Visual box" scheme="https://jaryoung.com/tags/Visual-box/"/>
+    
+    <category term="Vagrant" scheme="https://jaryoung.com/tags/Vagrant/"/>
+    
+    <category term="Linux" scheme="https://jaryoung.com/tags/Linux/"/>
+    
+    <category term="CentOS7" scheme="https://jaryoung.com/tags/CentOS7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>重新认识maven</title>
+    <link href="https://jaryoung.com/2021/08/01/%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86maven/"/>
+    <id>https://jaryoung.com/2021/08/01/%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86maven/</id>
+    <published>2021-08-01T14:33:22.000Z</published>
+    <updated>2022-02-07T04:44:06.375Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;目标&quot;&gt;&lt;a href=&quot;#目标&quot; class=&quot;headerlink&quot; title=&quot;目标&quot;&gt;&lt;/a&gt;目标&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;能够快速熟悉公司项目的maven配置，并且能够配置自己的maven配置&lt;/li&gt;
+&lt;li&gt;配置maven，不用再copy，能够做到应用自如&lt;/li&gt;
+&lt;li&gt;开源项目的maven配置文件，不在迷茫&lt;/li&gt;
+&lt;li&gt;能够搭建自己的maven私服，用maven进行企业级的规范工程管理&lt;/li&gt;
+&lt;/ol&gt;</summary>
+    
+    
+    
+    
+    <category term="Java" scheme="https://jaryoung.com/tags/Java/"/>
+    
+    <category term="maven" scheme="https://jaryoung.com/tags/maven/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ARTS-Week-5</title>
+    <link href="https://jaryoung.com/2020/07/26/ARTS-Week-5/"/>
+    <id>https://jaryoung.com/2020/07/26/ARTS-Week-5/</id>
+    <published>2020-07-26T09:52:45.000Z</published>
+    <updated>2022-02-07T04:44:06.396Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;ARTS-Week-5&quot;&gt;&lt;a href=&quot;#ARTS-Week-5&quot; class=&quot;headerlink&quot; title=&quot;ARTS Week-5&quot;&gt;&lt;/a&gt;ARTS Week-5&lt;/h2&gt;&lt;h3 id=&quot;1-Algorithm：每周至少做一个-leetcode-的算法题&quot;&gt;&lt;a href=&quot;#1-Algorithm：每周至少做一个-leetcode-的算法题&quot; class=&quot;headerlink&quot; title=&quot;1.Algorithm：每周至少做一个 leetcode 的算法题&quot;&gt;&lt;/a&gt;1.Algorithm：每周至少做一个 leetcode 的算法题&lt;/h3&gt;</summary>
+    
+    
+    
+    <category term="ARTS" scheme="https://jaryoung.com/categories/ARTS/"/>
+    
+    
+    <category term="ARTS" scheme="https://jaryoung.com/tags/ARTS/"/>
+    
+    <category term="Study" scheme="https://jaryoung.com/tags/Study/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hystrix 是如何工作？（翻译）</title>
+    <link href="https://jaryoung.com/2020/03/08/Hystrix-How-it-Works/"/>
+    <id>https://jaryoung.com/2020/03/08/Hystrix-How-it-Works/</id>
+    <published>2020-03-08T12:43:57.000Z</published>
+    <updated>2022-02-07T04:44:06.350Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/Netflix/Hystrix/wiki/How-it-Works&quot;&gt;原文链接&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;Hystrix-流程图&quot;&gt;&lt;a href=&quot;#Hystrix-流程图&quot; class=&quot;headerlink&quot; title=&quot;Hystrix-流程图&quot;&gt;&lt;/a&gt;Hystrix-流程图&lt;/h2&gt;&lt;p&gt;下图显示了通过Hystrix向服务依赖项请求时发生的情况：&lt;br&gt;&lt;img src=&quot;https://s2.ax1x.com/2020/03/08/3zdwSU.png&quot; alt=&quot;3zdwSU.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;以下各节将更详细地说明此流程：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#1.%E6%9E%84%E9%80%A0%E4%B8%80%E4%B8%AAHystrixCommand%E6%88%96HystrixObservableCommand%E5%AF%B9%E8%B1%A1&quot;&gt;1.构造一个HystrixCommand或HystrixObservableCommand对象&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#2.%E6%89%A7%E8%A1%8CCommand&quot;&gt;2.执行Command&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#3.%E5%93%8D%E5%BA%94%E6%98%AF%E5%90%A6%E7%BC%93%E5%AD%98&quot;&gt;3.响应是否缓存&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#4.%E7%94%B5%E8%B7%AF%E6%98%AF%E5%90%A6%E5%B7%B2%E7%BB%8F%E5%BC%80%E8%B7%AF&quot;&gt;4.电路是否已经开路&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#5.%E7%BA%BF%E7%A8%8B%E6%B1%A0/%E9%98%9F%E5%88%97/%E4%BF%A1%E5%8F%B7%E9%87%8F%E6%98%AF%E5%90%A6%E5%B7%B2%E7%BB%8F%E6%BB%A1&quot;&gt;5.线程池&amp;#x2F;队列&amp;#x2F;信号量是否已经满&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="translate" scheme="https://jaryoung.com/categories/translate/"/>
+    
+    
+    <category term="Hystrix" scheme="https://jaryoung.com/tags/Hystrix/"/>
+    
+    <category term="translate" scheme="https://jaryoung.com/tags/translate/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《Netty in Action》 读后感</title>
+    <link href="https://jaryoung.com/2020/02/07/Netty-in-Action-After-Reading/"/>
+    <id>https://jaryoung.com/2020/02/07/Netty-in-Action-After-Reading/</id>
+    <published>2020-02-07T13:59:12.000Z</published>
+    <updated>2022-02-07T13:29:47.559Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;开编我想说&quot;&gt;&lt;a href=&quot;#开编我想说&quot; class=&quot;headerlink&quot; title=&quot;开编我想说&quot;&gt;&lt;/a&gt;开编我想说&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;刻意练习，本着课本的例子，照着我也写一遍的原则进行练习。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;  基础知识真的太重要，很多基础知识是会影响我们阅读书的效果，甚至可能会误解书本的原意。就拿着当前阅读的书来说起，如果我们不知道计算机操作系统基础，不知Java网络编程基础，不知网络协议等，那么我们看书可能会举步维艰。所以，在看本书之前，我尝试查阅一些相关资料，以补充能够更好吸收书本知识。&lt;/p&gt;
+&lt;p&gt;  本文章，就是书本很多地方的内容，并未能深刻理解，一本书的内容也不可能全部呈现。例如，零拷贝，各种网络协议的理解，例如tcp，udp协议等。很多基础内容，都感觉相对薄弱，所以日后需要加强基础的部分。&lt;br&gt; 看完，你可能会有以下收获：&lt;br&gt;  Netty核心组件、重新认识字节、关于Netty单元测试、编码器和解码器、WebSocket简单的聊天室&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Read" scheme="https://jaryoung.com/categories/Read/"/>
+    
+    
+    <category term="Java" scheme="https://jaryoung.com/tags/Java/"/>
+    
+    <category term="Netty" scheme="https://jaryoung.com/tags/Netty/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Google&#39;s Elite Security Team, Project Zero</title>
+    <link href="https://jaryoung.com/2020/01/04/Google-Elite-Security-Team-Project-Zero/"/>
+    <id>https://jaryoung.com/2020/01/04/Google-Elite-Security-Team-Project-Zero/</id>
+    <published>2020-01-04T14:35:24.000Z</published>
+    <updated>2022-02-07T04:44:06.343Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;阅读&quot;&gt;&lt;a href=&quot;#阅读&quot; class=&quot;headerlink&quot; title=&quot;阅读&quot;&gt;&lt;/a&gt;阅读&lt;/h2&gt;&lt;p&gt;When Apple launched the iPhone through an exclusive partnership with AT&amp;amp;T in 2007, seventeen-year-old George Hotz wanted to use an iPhone but not with AT&amp;amp;T. He wanted to make calls through hsi own T-Mobile network, so he cracked AT&amp;amp;T’s lock on the iPhone. Apple scrambled to fix the bug that allowed this, but offcially ignored George Hotz.&lt;/p&gt;
+&lt;p&gt;Later in 2011, Hotz reverse engineered the Playstion 3 and posted a copy of the root keys on his website. Snoy sued him but settled after Hotz promise never to hack Sony products again.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="English" scheme="https://jaryoung.com/categories/English/"/>
+    
+    
+    <category term="Study" scheme="https://jaryoung.com/tags/Study/"/>
+    
+    <category term="English" scheme="https://jaryoung.com/tags/English/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Study English One Day</title>
+    <link href="https://jaryoung.com/2020/01/02/Study-English-One-Day/"/>
+    <id>https://jaryoung.com/2020/01/02/Study-English-One-Day/</id>
+    <published>2020-01-02T15:16:10.000Z</published>
+    <updated>2022-02-07T04:44:06.355Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;2020年立个flat-刻意学习和练习英语&quot;&gt;&lt;a href=&quot;#2020年立个flat-刻意学习和练习英语&quot; class=&quot;headerlink&quot; title=&quot;2020年立个flat 刻意学习和练习英语&quot;&gt;&lt;/a&gt;2020年立个flat 刻意学习和练习英语&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;跟着《程序员的英语》学起英语来。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;五个基本基本句式&quot;&gt;&lt;a href=&quot;#五个基本基本句式&quot; class=&quot;headerlink&quot; title=&quot;五个基本基本句式&quot;&gt;&lt;/a&gt;五个基本基本句式&lt;/h2&gt;&lt;h3 id=&quot;句式1为【主语-动词（vi）】，是基本句式&quot;&gt;&lt;a href=&quot;#句式1为【主语-动词（vi）】，是基本句式&quot; class=&quot;headerlink&quot; title=&quot;句式1为【主语 + 动词（vi）】，是基本句式&quot;&gt;&lt;/a&gt;句式1为【主语 + 动词（vi）】，是基本句式&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;vi，不及物动词，不能直接跟宾语，需要一些介词跟着，例如，to，of，at等&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="English" scheme="https://jaryoung.com/categories/English/"/>
+    
+    
+    <category term="Study" scheme="https://jaryoung.com/tags/Study/"/>
+    
+    <category term="English" scheme="https://jaryoung.com/tags/English/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>String of Java</title>
+    <link href="https://jaryoung.com/2019/08/25/String-of-Java/"/>
+    <id>https://jaryoung.com/2019/08/25/String-of-Java/</id>
+    <published>2019-08-25T15:56:36.000Z</published>
+    <updated>2022-02-07T04:44:06.401Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;String-概括&quot;&gt;&lt;a href=&quot;#String-概括&quot; class=&quot;headerlink&quot; title=&quot;String 概括&quot;&gt;&lt;/a&gt;String 概括&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;string 名次，意思可以翻译为：线，弦，细绳；一串，一行等&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;再来看看String的类图，String的value是不是感觉很应景呢？一个个字符，串起来变成我们熟悉的字符串。&lt;br&gt;&lt;a href=&quot;https://imgchr.com/i/mgkwsH&quot;&gt;&lt;img src=&quot;https://s2.ax1x.com/2019/08/25/mgkwsH.md.png&quot; alt=&quot;mgkwsH.md.png&quot;&gt;&lt;/a&gt;&lt;br&gt;这里有两个关键的field：value和hash。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Java基础" scheme="https://jaryoung.com/categories/Java%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="Java" scheme="https://jaryoung.com/tags/Java/"/>
+    
+    <category term="hash" scheme="https://jaryoung.com/tags/hash/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>你喜欢技术吗？</title>
+    <link href="https://jaryoung.com/2019/07/13/%E4%BD%A0%E5%96%9C%E6%AC%A2%E6%8A%80%E6%9C%AF%E5%90%97/"/>
+    <id>https://jaryoung.com/2019/07/13/%E4%BD%A0%E5%96%9C%E6%AC%A2%E6%8A%80%E6%9C%AF%E5%90%97/</id>
+    <published>2019-07-12T16:12:26.000Z</published>
+    <updated>2022-02-02T07:43:19.741Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;技术的本身是什么？&quot;&gt;&lt;a href=&quot;#技术的本身是什么？&quot; class=&quot;headerlink&quot; title=&quot;技术的本身是什么？&quot;&gt;&lt;/a&gt;技术的本身是什么？&lt;/h2&gt;&lt;p&gt;我从维基百科找了一个差不多定义&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;技术可以指人类对机器、硬件或人造器皿的运用，但它也可以包含更广的架构，如系统、组织方法学和技巧。 &lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    
+    <category term="Something" scheme="https://jaryoung.com/tags/Something/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java的包装类型</title>
+    <link href="https://jaryoung.com/2019/04/03/Java%E7%9A%84%E5%8C%85%E8%A3%85%E7%B1%BB%E5%9E%8B/"/>
+    <id>https://jaryoung.com/2019/04/03/Java%E7%9A%84%E5%8C%85%E8%A3%85%E7%B1%BB%E5%9E%8B/</id>
+    <published>2019-04-03T03:11:35.000Z</published>
+    <updated>2022-02-07T13:29:47.559Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;顾名思义，包装类型就是对基本类型的封装的对象。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;基本类型&lt;/th&gt;
+&lt;th&gt;包装类型&lt;/th&gt;
+&lt;th&gt;大小&lt;/th&gt;
+&lt;th&gt;默认值&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;boolean&lt;/td&gt;
+&lt;td&gt;Boolean&lt;/td&gt;
+&lt;td&gt;1B&lt;/td&gt;
+&lt;td&gt;false&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;byte&lt;/td&gt;
+&lt;td&gt;Byte&lt;/td&gt;
+&lt;td&gt;1B&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;short&lt;/td&gt;
+&lt;td&gt;Short&lt;/td&gt;
+&lt;td&gt;2B&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;char&lt;/td&gt;
+&lt;td&gt;Character&lt;/td&gt;
+&lt;td&gt;2B&lt;/td&gt;
+&lt;td&gt;‘\u0000’&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;int&lt;/td&gt;
+&lt;td&gt;Integer&lt;/td&gt;
+&lt;td&gt;4B&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;long&lt;/td&gt;
+&lt;td&gt;Long&lt;/td&gt;
+&lt;td&gt;8B&lt;/td&gt;
+&lt;td&gt;0L&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;float&lt;/td&gt;
+&lt;td&gt;Float&lt;/td&gt;
+&lt;td&gt;4B&lt;/td&gt;
+&lt;td&gt;0.0f&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;double&lt;/td&gt;
+&lt;td&gt;Double&lt;/td&gt;
+&lt;td&gt;8B&lt;/td&gt;
+&lt;td&gt;0.0d&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;</summary>
+    
+    
+    
+    <category term="Java基础" scheme="https://jaryoung.com/categories/Java%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="Java" scheme="https://jaryoung.com/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>初识Docker（针对开发人员）</title>
+    <link href="https://jaryoung.com/2019/03/31/%E5%88%9D%E8%AF%86Docker/"/>
+    <id>https://jaryoung.com/2019/03/31/%E5%88%9D%E8%AF%86Docker/</id>
+    <published>2019-03-30T16:47:47.000Z</published>
+    <updated>2022-02-07T04:44:06.360Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;概括&quot;&gt;&lt;a href=&quot;#概括&quot; class=&quot;headerlink&quot; title=&quot;概括&quot;&gt;&lt;/a&gt;概括&lt;/h2&gt;&lt;p&gt;Docker 是世界领先的软件容器平台。开发人员利用 Docker 可以解决，“在我的机器上可正常工作的啊！！！”的问题&lt;/p&gt;
+&lt;h2 id=&quot;容器又是什么东西？&quot;&gt;&lt;a href=&quot;#容器又是什么东西？&quot; class=&quot;headerlink&quot; title=&quot;容器又是什么东西？&quot;&gt;&lt;/a&gt;容器又是什么东西？&lt;/h2&gt;&lt;p&gt;容器是一种标准化的软件单元。&lt;br&gt;容器镜像是轻量的、可执行的独立软件包，包含软件运行所需的所有内容：代码、运行时环境、系统工具、系统库和设置。&lt;br&gt;&lt;img src=&quot;https://s2.ax1x.com/2019/03/30/ADavjK.png&quot; alt=&quot;ADavjK.png&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;图片出自：&lt;a href=&quot;https://www.docker-cn.com/what-container&quot;&gt;https://www.docker-cn.com/what-container&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Docker" scheme="https://jaryoung.com/categories/Docker/"/>
+    
+    
+    <category term="Docker" scheme="https://jaryoung.com/tags/Docker/"/>
+    
+    <category term="Container" scheme="https://jaryoung.com/tags/Container/"/>
+    
+  </entry>
+  
+</feed>
