@@ -20,20 +20,20 @@
 <li>Request multiplexing（请求多路复用）</li>
 </ul>
 <p>主要介绍http&#x2F;2，跟http1.0 最大到区别就是2.0能够做到请求的多路复用，而1.0不是。引用文章到图片更好说明这一点：</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://miro.medium.com/max/1494/0*lY05UTuA-dWCXU-q.png" alt="https://miro.medium.com/max/1494/0*lY05UTuA-dWCXU-q.png"></p>
+<p><img src="https://miro.medium.com/max/1494/0*lY05UTuA-dWCXU-q.png" alt="https://miro.medium.com/max/1494/0*lY05UTuA-dWCXU-q.png"></p>
 <ul>
 <li>Header compression（请求头压缩）</li>
 </ul>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://miro.medium.com/max/1400/0*5r8-MbhEseP6lEQg.png" alt="https://miro.medium.com/max/1400/0*5r8-MbhEseP6lEQg.png"></p>
+<p><img src="https://miro.medium.com/max/1400/0*5r8-MbhEseP6lEQg.png" alt="https://miro.medium.com/max/1400/0*5r8-MbhEseP6lEQg.png"></p>
 <ul>
 <li>Binary protocol（二进制协议）</li>
 </ul>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://miro.medium.com/max/1400/0*0LtM_XmkauxVoY8M.png" alt="https://miro.medium.com/max/1400/0*0LtM_XmkauxVoY8M.png"></p>
+<p><img src="https://miro.medium.com/max/1400/0*0LtM_XmkauxVoY8M.png" alt="https://miro.medium.com/max/1400/0*0LtM_XmkauxVoY8M.png"></p>
 <ul>
 <li>HTTP&#x2F;2 Server Push</li>
 </ul>
 <p>如果服务端发现 资源X 和 Y 是有关联，会一并发送，而不是分开发送，这个也是1.0的区别。</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://miro.medium.com/max/996/0*ZJLgVdXq_06hcF1o.png" alt="https://miro.medium.com/max/996/0*ZJLgVdXq_06hcF1o.png"></p>
+<p><img src="https://miro.medium.com/max/996/0*ZJLgVdXq_06hcF1o.png" alt="https://miro.medium.com/max/996/0*ZJLgVdXq_06hcF1o.png"></p>
 <h3 id="3-Tip：学习至少一个技术技巧"><a href="#3-Tip：学习至少一个技术技巧" class="headerlink" title="3.Tip：学习至少一个技术技巧"></a>3.Tip：学习至少一个技术技巧</h3><p>学习如何将自己本地的docker镜像上传到docker hub中，遇到的坑为：需要自己在docker创建仓库，并且docker的tag需要跟你的仓库保持一致。例如，我的账号为：jaryoung，创建了一个web-demo的仓库，所以我们需要修改本地的tag为 jaryoung&#x2F;web-demo</p>
 <p>下面为修改镜像的tag和推送到远端的命令</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">tag web-demo-docker-image jaryoung/web-demo</span><br><span class="line">docker push jaryoung/web-demo</span><br></pre></td></tr></table></figure>
@@ -105,9 +105,9 @@
 <li><p>生成和发布代码</p>
 </li>
 <li><p>查询manifest.json配置情况，如果如下图所示，至少说明的配置文件已经正确识别读取。</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tva1.sinaimg.cn/large/008i3skNly1gz0mqk2zd3j32gd0u00ws.jpg" alt="Application-截图1"></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tva1.sinaimg.cn/large/008i3skNly1gz0mqimu13j32gd0u00ws.jpg" alt="Application-截图2"></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tva1.sinaimg.cn/large/008i3skNly1gz6hnt5jprj32ew0u0wjo.jpg" alt="sw.js"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gz0mqk2zd3j32gd0u00ws.jpg" alt="Application-截图1"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gz0mqimu13j32gd0u00ws.jpg" alt="Application-截图2"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gz6hnt5jprj32ew0u0wjo.jpg" alt="sw.js"></p>
 <blockquote>
 <p>确保自己的sw.js被正确注册了喔，如果没有的话，记得在header里面引用 <code>sw-register.js</code> 让它注册好<code>sw.js</code> 文件</p>
 </blockquote>
@@ -115,14 +115,14 @@
 <li><p>安装Chrome插件<code>Lighthouse</code></p>
 </li>
 <li><p>如果是本地验证的时候，需要打开控制台；如果是部署到服务器或者GitHub page上面就不用了。</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tva1.sinaimg.cn/large/008i3skNly1gz0mqkkyvpj32jb0u00zb.jpg" alt="Lighthouse-截图1"></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tva1.sinaimg.cn/large/008i3skNly1gz0ndkga8rj31ms0u076k.jpg" alt="Lighthouse-截图2"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gz0mqkkyvpj32jb0u00zb.jpg" alt="Lighthouse-截图1"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gz0ndkga8rj31ms0u076k.jpg" alt="Lighthouse-截图2"></p>
 </li>
 </ol>
 <h1 id="3-遇到的问题及解决"><a href="#3-遇到的问题及解决" class="headerlink" title="3. 遇到的问题及解决"></a>3. 遇到的问题及解决</h1><ol>
 <li>Manifest has a maskable icon<br>解决办法：<a href="https://web.dev/maskable-icon-audit/%EF%BC%8C%E5%A2%9E%E5%8A%A0%E5%8F%AF%E5%B1%8F%E8%94%BD%E7%9A%84%E5%9B%BE%E6%A0%87">https://web.dev/maskable-icon-audit/，增加可屏蔽的图标</a></li>
 <li>manifest.josn文件一直加载不到，考虑fluid主题可能，或者hexo我的版本比较新导致生成html文件的加载manifest.josn的设置，幸好fluid主题提供，插入自定义html head的配置<br>解决办法：修改配置<code>_config.fluid.yml</code>文件，<code>custom_head: &#39;&lt;link rel=&quot;manifest&quot; href=&quot;/manifest.json&quot;&gt;&lt;script src=&quot;/sw-register.js&quot;&gt;&lt;/script&gt;&#39;</code></li>
-<li>其他问题，如果实在不知道自己的问题出现在哪里，可以考虑看看 <code>PWA OPTIMIZED</code> ，我很多次都是通过上面的提醒和连接，解决问题<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tva1.sinaimg.cn/large/008i3skNly1gz0mqj32idj31230u076x.jpg" alt="Lighthouse-截图"></li>
+<li>其他问题，如果实在不知道自己的问题出现在哪里，可以考虑看看 <code>PWA OPTIMIZED</code> ，我很多次都是通过上面的提醒和连接，解决问题<br><img src="https://tva1.sinaimg.cn/large/008i3skNly1gz0mqj32idj31230u076x.jpg" alt="Lighthouse-截图"></li>
 </ol>
 <h1 id="4-参考"><a href="#4-参考" class="headerlink" title="4. 参考"></a>4. 参考</h1><ol>
 <li><a href="https://hexo.fluid-dev.com/posts/hexo-pwa/">给 Hexo 博客添加 PWA 支持</a></li>
@@ -183,202 +183,6 @@
       <tags>
         <tag>Study</tag>
         <tag>English</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hystrix 是如何工作？（翻译）</title>
-    <url>/2020/03/08/Hystrix-How-it-Works/</url>
-    <content><![CDATA[<blockquote>
-<p><a href="https://github.com/Netflix/Hystrix/wiki/How-it-Works">原文链接</a></p>
-</blockquote>
-<h2 id="Hystrix-流程图"><a href="#Hystrix-流程图" class="headerlink" title="Hystrix-流程图"></a>Hystrix-流程图</h2><p>下图显示了通过Hystrix向服务依赖项请求时发生的情况：<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.ax1x.com/2020/03/08/3zdwSU.png" alt="3zdwSU.png"></p>
-<p>以下各节将更详细地说明此流程：</p>
-<p><a href="#1.%E6%9E%84%E9%80%A0%E4%B8%80%E4%B8%AAHystrixCommand%E6%88%96HystrixObservableCommand%E5%AF%B9%E8%B1%A1">1.构造一个HystrixCommand或HystrixObservableCommand对象</a></p>
-<p><a href="#2.%E6%89%A7%E8%A1%8CCommand">2.执行Command</a></p>
-<p><a href="#3.%E5%93%8D%E5%BA%94%E6%98%AF%E5%90%A6%E7%BC%93%E5%AD%98">3.响应是否缓存</a></p>
-<p><a href="#4.%E7%94%B5%E8%B7%AF%E6%98%AF%E5%90%A6%E5%B7%B2%E7%BB%8F%E5%BC%80%E8%B7%AF">4.电路是否已经开路</a></p>
-<p><a href="#5.%E7%BA%BF%E7%A8%8B%E6%B1%A0/%E9%98%9F%E5%88%97/%E4%BF%A1%E5%8F%B7%E9%87%8F%E6%98%AF%E5%90%A6%E5%B7%B2%E7%BB%8F%E6%BB%A1">5.线程池&#x2F;队列&#x2F;信号量是否已经满</a></p>
-<span id="more"></span>
-
-<p><a href="#6.HystrixObservableCommand.construct()%E6%88%96%E8%80%85HystrixCommand.run()">6.HystrixObservableCommand.construct()或者HystrixCommand.run()</a></p>
-<p><a href="#7.%E8%AE%A1%E7%AE%97%E7%94%B5%E8%B7%AF%E5%81%A5%E5%BA%B7">7.计算电路健康</a></p>
-<p><a href="#8.%E8%8E%B7%E5%8F%96%E5%90%8E%E5%A4%87">8.获取后备</a></p>
-<p><a href="#9.%E8%BF%94%E5%9B%9E%E6%88%90%E5%8A%9F%E7%9A%84%E5%93%8D%E5%BA%94">9.返回成功的响应</a></p>
-<h3 id="1-构造一个HystrixCommand或HystrixObservableCommand对象"><a href="#1-构造一个HystrixCommand或HystrixObservableCommand对象" class="headerlink" title="1.构造一个HystrixCommand或HystrixObservableCommand对象"></a>1.构造一个HystrixCommand或HystrixObservableCommand对象</h3><p>第一步，是构造一个<code>HystrixCommand</code>或<code>HystrixObservableCommand</code>对象，以表示您对依赖项的请求。向构造函数传递发出请求时所需的任何参数。</p>
-<p>如果期待依赖返回单个响应，则构造一个 <a href="http://netflix.github.com/Hystrix/javadoc/index.html?com/netflix/hystrix/HystrixCommand.html"><code>HystrixCommand</code></a>对象，例如</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">HystrixCommand</span> <span class="variable">command</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">HystrixCommand</span>(arg1, arg2);</span><br></pre></td></tr></table></figure>
-
-<p>如果期待依赖项返回一个可发出响应的Observable，则构造一个  <a href="http://netflix.github.com/Hystrix/javadoc/index.html?com/netflix/hystrix/HystrixObservableCommand.html"><code>HystrixObservableCommand</code></a> 对象，例如</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">HystrixObservableCommand</span> <span class="variable">command</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">HystrixObservableCommand</span>(arg1, arg2);</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-执行Command"><a href="#2-执行Command" class="headerlink" title="2.执行Command"></a>2.执行Command</h3><p>使用Hystrix命令对象的以下四种方法之一，可以执行命令的方式有四种（前两种仅适用于简单的<code>HystrixCommand</code>对象，而不适用于<code>HystrixObservableCommand</code>）：</p>
-<ul>
-<li><a href="http://netflix.github.io/Hystrix/javadoc/com/netflix/hystrix/HystrixCommand.html#execute()"><code>execute()</code></a> — 代码块，然后返回从依赖项收到单个响应（发生错误的情况下引发的异常）</li>
-<li><a href="http://netflix.github.io/Hystrix/javadoc/com/netflix/hystrix/HystrixCommand.html#queue()"><code>queue()</code></a> — 返回一个 <code>Future</code> ，您可以使用它从依赖项获得单个响应</li>
-<li><a href="http://netflix.github.io/Hystrix/javadoc/com/netflix/hystrix/HystrixObservableCommand.html#observe()"><code>observe()</code></a> — 订阅表示来自 依赖项的<code>Observable</code> 的响应，并返回复制源 <code>Observable</code> 的 <code>Observable</code></li>
-<li><a href="http://netflix.github.io/Hystrix/javadoc/com/netflix/hystrix/HystrixObservableCommand.html#toObservable()"><code>toObservable()</code></a> — 返回一个 <code>Observable</code> ,当您订阅它的时候，它将会执行Hystrix命令并发出其响应</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">K</span>             <span class="variable">value</span>   <span class="operator">=</span> command.execute();</span><br><span class="line">Future&lt;K&gt;     fValue  = command.queue();</span><br><span class="line">Observable&lt;K&gt; ohValue = command.observe();         <span class="comment">//hot observable</span></span><br><span class="line">Observable&lt;K&gt; ocValue = command.toObservable();    <span class="comment">//cold observable</span></span><br></pre></td></tr></table></figure>
-
-<p>同步调用 <code>execute()</code> ，调用 <code>queue().get()</code>. <code>queue()</code> 依次调用<code>toObservable().toBlocking().toFuture()</code>. 就是说，最终每个 <code>HystrixCommand</code> 都由一个 <a href="http://reactivex.io/documentation/observable.html"><code>Observable</code></a> 实现, 即使那些只是想返回单个简单的命令也是如此</p>
-<h3 id="3-响应是否缓存"><a href="#3-响应是否缓存" class="headerlink" title="3.响应是否缓存"></a>3.响应是否缓存</h3><p>如果为此命令启用了请求缓存，并且如果对请求的响应在缓存中可用，则该缓存的响应将立即以<code>Observable</code> 的形式返回。  (See <a href="http://localhost:4000/2020/03/08/Hystrix-How-it-Works/#%E8%AF%B7%E6%B1%82%E7%BC%93%E5%AD%98">“Request Caching”</a> below.)</p>
-<h3 id="4-电路是否已经开路"><a href="#4-电路是否已经开路" class="headerlink" title="4.电路是否已经开路"></a>4.电路是否已经开路</h3><blockquote>
-<p>维基百科：<a href="https://zh.wikipedia.org/wiki/%E5%BC%80%E8%B7%AF">开路</a></p>
-<p>电路三种状态：</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1583859175204&di=1633e5307bcabc79aed491ca0edf1c50&imgtype=0&src=http://d.hiphotos.baidu.com/zhidao/wh=450,600/sign=a148305f7af40ad115b1cfe7621c3de9/b7fd5266d0160924002ba57cd50735fae6cd344e.jpg" alt="电路三种状态"></p>
-</blockquote>
-<p>当你执行这个命令，<code>Hystrix</code> 会检查断路器，以查看断路器是否是<code>open</code>。</p>
-<p>如果电路是<code>open</code>（或跳闸），然后<code>Hystrix</code>将不会执行这个命令，但将会路由路由到<code>8. Get the Fallback</code>。</p>
-<p>如果电路是闭合的，则流程到<code>5. Semaphore/Thread pool rejected.</code>，以检查是否有可用于运行该命令的容量。</p>
-<h3 id="5-线程池-x2F-队列-x2F-信号量是否已经满"><a href="#5-线程池-x2F-队列-x2F-信号量是否已经满" class="headerlink" title="5.线程池&#x2F;队列&#x2F;信号量是否已经满"></a>5.线程池&#x2F;队列&#x2F;信号量是否已经满</h3><p>如果与该命令关联的线程池和队列（或信号量，如果没有运行在线程上）已满，则<code>Hystrix</code>将不会执行该命令，但会马上返回<code>8. Get the Fallback</code></p>
-<h3 id="6-HystrixObservableCommand-construct-或者HystrixCommand-run"><a href="#6-HystrixObservableCommand-construct-或者HystrixCommand-run" class="headerlink" title="6.HystrixObservableCommand.construct()或者HystrixCommand.run()"></a>6.HystrixObservableCommand.construct()或者HystrixCommand.run()</h3><p>在这里， <code>Hystrix</code> 通过为此目的编写方法（以下之一）调用对依赖项的请求:</p>
-<ul>
-<li><a href="http://netflix.github.io/Hystrix/javadoc/com/netflix/hystrix/HystrixCommand.html#run()"><code>HystrixCommand.run()</code></a> — 返回单个响应或抛出异常</li>
-<li><a href="http://netflix.github.io/Hystrix/javadoc/com/netflix/hystrix/HystrixObservableCommand.html#construct()"><code>HystrixObservableCommand.construct()</code></a> — 返回一个<code>Observable</code> ，它发出响应或发送<code>onError</code> 通知</li>
-</ul>
-<p>If the <code>run()</code> or <code>construct()</code> method exceeds the command’s timeout value, the thread will throw a <code>TimeoutException</code> (or a separate timer thread will, if the command itself is not running in its own thread). In that case Hystrix routes the response through 8. Get the Fallback, and it discards the eventual return value <code>run()</code> or <code>construct()</code> method if that method does not cancel&#x2F;interrupt.</p>
-<p>如果<code>run（）</code>或<code>construct（）</code>方法的值超过了命令的超时的数值，则线程将抛出“ TimeoutException”（或者，如果命令本身未在其自己的线程中运行，则线程将抛出单独的计时器线程）。在那种情况下，Hystrix将响应路由到<code>8. Get the Fallback</code>，如果该方法没有取消&#x2F;中断，则它会丢弃最终的返回值<code>run()</code> 或者<code>construct()</code> 方法。</p>
-<p>请注意，没有办法强制潜在线程停止工作-Hystrix在JVM上可以做的最好的事情就是将其抛出InterruptedException。如果Hystrix封装的工作不遵守InterruptedExceptions，尽管客户端已经收到TimeoutException，Hystrix线程池中的线程仍将继续工作。尽管负载已“正确释放”，但此行为可能会使Hystrix线程池饱和。大多数Java HTTP客户端库不解释InterruptedExceptions。因此，请确保在HTTP客户端上正确配置连接和读取&#x2F;写入超时。如果命令没有抛出任何异常，然后它会返回一个响应，则<code>Hystrix</code>在执行一些日志记录和监控报告后将返回此响应。对于<code>run</code>，<code>Hystrix</code>返回一个<code>Observable</code>，它发出单个响应，然后发出一个 <code>onCompleted</code>通知；对于 <code>construct()</code> ，<code>Hystrix</code>返回的是 <code>construct()</code>返回的<code>Observable</code>。</p>
-<h3 id="7-计算电路健康"><a href="#7-计算电路健康" class="headerlink" title="7.计算电路健康"></a>7.计算电路健康</h3><p><code>Hystrix</code> 向断路器 报告成功，失败，拒绝和超时，断路器保持滚动一个计数器来计算统计信息。它使用这些统计信息来确定断路器什么时候应该跳闸，这时他会将随后所有请求短路，直到经过恢复期为止，在此之后，在首先检查某些运行状况检查后，它将在此闭合电路。</p>
-<h3 id="8-获取后备（Get-the-Fallback）"><a href="#8-获取后备（Get-the-Fallback）" class="headerlink" title="8. 获取后备（Get the Fallback）"></a>8. 获取后备（Get the Fallback）</h3><p>Hystrix tried to revert to your fallback whenever a command execution fails:</p>
-<p><code>Hystrix</code>尝试在命令执行失败时回复到您的后备状态：</p>
-<ul>
-<li>当<code>construct（）</code>或<code>run（）</code>抛出异常时（6.）</li>
-<li>当命令由于电路断开而短路时（4.）</li>
-<li>命令的线程池和队列或信号量达到最大容量（5.）</li>
-<li>命令超过其超时长度时。</li>
-</ul>
-<p>编写您的后备，以从内存缓存中或者通过其他的静态逻辑提供通用的响应，而无需任何网络依赖性。如果你在后备中必须使用网络调用，您应该通过<code>HystrixCommand</code> 或 <code>HystrixObservableCommand</code> 来使用。</p>
-<p>对于 <code>HystrixCommand</code>，要提供后备逻辑，请实现<a href="http://netflix.github.io/Hystrix/javadoc/com/netflix/hystrix/HystrixCommand.html#getFallback()"><code>HystrixCommand.getFallback()</code></a>，它将会返回一个后备值。</p>
-<p>对于<code>HystrixObservableCommand</code>，要提供后备逻辑，您可以实现<a href="http://netflix.github.io/Hystrix/javadoc/com/netflix/hystrix/HystrixObservableCommand.html#resumeWithFallback"><code>HystrixObservableCommand.resumeWithFallback()</code></a>，它返回一个Observable，它可能会发出一个或多个后备值。</p>
-<p>如果fallback方法返回响应，则Hystrix将将此响应返回给调用方。如果是<code>HystrixCommand.getFallback()</code>，它将返回一个Observable，该Observable发出从方法返回的值。对于<code>HystrixObservableCommand.resumeWithFallback()</code>，它将返回从方法返回的相同Observable。</p>
-<p>如果尚未为<code>Hystrix</code>命令实现后备方法，或者后备本身引发异常，则Hystrix仍会返回一个Observable，但它不发出任何内容并立即以<code>onError</code>通知终止。通过此<code>onError</code>通知，导致命令失败的异常被发送回调用者。 （实施回退实现可能会失败，这是一个糟糕的做法。您应该实施回退，以使其不执行任何可能失败的逻辑。）</p>
-<p>后备失败或不存在的后备结果将因调用<code>Hystrix</code>命令的方式而异：</p>
-<ul>
-<li><code>execute()</code> — 抛出异常</li>
-<li><code>queue()</code> — 成功返回 <code>Future</code>，但是这个 <code>Future</code>如果调用<code>get()</code>方法时候将会抛出异常</li>
-<li><code>observe()</code> — 返回一个 <code>Observable</code> ，当你订阅它时，将通过调用订阅者的<code>onError</code> 方法立刻终止</li>
-<li><code>toObservable()</code> — 返回一个 <code>Observable</code> ，当您订阅它时，将通过调用订阅者的<code>onError</code> 方法终止</li>
-</ul>
-<h3 id="9-返回成功的响应"><a href="#9-返回成功的响应" class="headerlink" title="9.返回成功的响应"></a>9.返回成功的响应</h3><p>如果<code>Hystrix</code>命令成功执行，它将以<code>Observable</code>的形式将一个或多个响应返回给调用方。根据您在上述第2步中调用命令的方式，此<code>Observable</code>可能会在返回给您之前进行转换：</p>
-<p><a href="https://imgchr.com/i/8yU8AK"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s1.ax1x.com/2020/03/19/8yU8AK.png" alt="8yU8AK.png"></a></p>
-<ul>
-<li><code>execute()</code> —  以与<code>.queue()</code> 相同的方式获取<code>Future</code>，然后在此<code>Future</code>调用<code>get</code>以获取<code>Observable</code> 发出的单个值。</li>
-<li><code>queue()</code> — 将 <code>Observable</code> 转换为 <code>BlockingObservable</code> ，以便于可以将其转换成一个 <code>Future</code>，然后返回<code>Future</code>。</li>
-<li><code>observe()</code> — 立即定于 <code>Observable</code> 并开始执行命令的流程；返回一个 <code>Observable</code> ，当您 <code>subscribe（订阅）</code> 它时候，将重新发出和通知。</li>
-<li><code>toObservable()</code> — 不变地返回 <code>Observable</code> ； 您必须 <code>subscribe（订阅）</code> 它，才能真正开始真正执行命令的流程。</li>
-</ul>
-<h2 id="时序图"><a href="#时序图" class="headerlink" title="时序图"></a>时序图</h2><p>@adrianb11 has kindly provided a <a href="https://design.codelytics.io/hystrix/how-it-works">sequence diagram</a> demonstrating the above flows.（Note: 需要梯子喔。）</p>
-<p>参考上面，自己也有手撸了一个：</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s1.ax1x.com/2020/03/19/86icFS.png" alt="86icFS.png"></p>
-<h2 id="断路器（熔断器）"><a href="#断路器（熔断器）" class="headerlink" title="断路器（熔断器）"></a>断路器（熔断器）</h2><p>下面展示了 <code>HystrixCommand</code> 或者 <code>HystrixObservableCommand</code> 如何与 <a href="http://netflix.github.io/Hystrix/javadoc/index.html?com/netflix/hystrix/HystrixCircuitBreaker.html"><code>HystrixCircuitBreaker</code></a> 交互，以及其逻辑和决策流程，包括计数器在断路器中的行为方式。</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s1.ax1x.com/2020/03/19/86kkNT.png" alt="86kkNT.png"></p>
-<p>电路打开和闭合的精确方式如下：</p>
-<ol>
-<li>假设电路上的容量达到某个阈值(<code>HystrixCommandProperties.circuitBreakerRequestVolumeThreshold()</code>)…</li>
-<li>并假设误差百分比超过阈值误差百分比(<code>HystrixCommandProperties.circuitBreakerErrorThresholdPercentage()</code>)…</li>
-<li>断路器从 <code>CLOSED</code> 状态转换成 <code>OPEN</code>状态。</li>
-<li>当它断开时，它会使针对该断路器的所有请求短路。</li>
-<li>一段时间后(<code>HystrixCommandProperties.circuitBreakerSleepWindowInMilliseconds()</code>)，下一个单个请求被允许通过（这是<code>HALF-OPEN(半开)</code>状态）。如果请求失败，断路器将在睡眠窗口期间返回<code>OPEN</code>状态。如果请求成功，断路器将切换到<code>CLOSED</code> 然后回到1.中的逻辑。</li>
-</ol>
-<h2 id="隔离（Isolation）"><a href="#隔离（Isolation）" class="headerlink" title="隔离（Isolation）"></a>隔离（Isolation）</h2><p>Hystrix使用隔板模式将依赖关系彼此隔离，并限制对其中任何一个的并发访问。</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s1.ax1x.com/2020/03/20/82UKHA.png" alt="82UKHA.png"></p>
-<h2 id="线程和线程池"><a href="#线程和线程池" class="headerlink" title="线程和线程池"></a>线程和线程池</h2><p>客户端（库，网络调用等）在单独的线程上执行。这样可以将它们与调用线程（Tomcat线程池）隔离，以便调用者可以“摆脱”花费太长时间的依赖项调用。</p>
-<p>Hystrix使用单独的，每个依赖关系的线程池作为约束任何给定依赖关系的方式，因此对基础执行的延迟将仅使该池中的可用线程饱和。</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s1.ax1x.com/2020/03/20/82aUxO.png" alt="82aUxO.png"></p>
-<p>您可以在不使用线程池的情况下防止失败，但这需要信任的客户端非常快速地失败（网络连接&#x2F;读取超时和重试配置），并且始终表现良好。</p>
-<p>Netflix在Hystrix的设计中选择使用线程和线程池来实现隔离的原因很多，其中包括：</p>
-<ul>
-<li>许多应用程序会针对许多不同团队开发的数十种不同服务执行数十种（有时甚至超过100种）不同的后端服务调用。</li>
-<li>每个服务都提供自己的客户端库。</li>
-<li>客户端库一直在变化</li>
-<li>客户端库逻辑可以更改以添加新的网络调用。</li>
-<li>客户端库可以包含诸如重试，数据解析，缓存（内存中或跨网络）之类的逻辑，以及其他此类行为。</li>
-<li>客户端库往往是“黑匣子”-用户对其实现细节，网络访问模式，配置默认值等不透明。</li>
-<li>在实际的几次生产中断中，确定为“哦，某些更改并且应该调整属性”或“客户端库更改了其行为”。</li>
-<li>即使客户端本身没有变化，服务本身也会发生变化，从而影响性能特征，进而导致客户端配置无效</li>
-<li>传递依赖关系可能会引入其他意外的客户端库，这些客户端库可能不是预期的，而且配置可能不正确。</li>
-<li>大部分的网络访问是同步进行。</li>
-<li>故障和延迟也可能在客户端代码中发生，而不仅仅是在网络调用中。</li>
-</ul>
-<h3 id="线程池的好处"><a href="#线程池的好处" class="headerlink" title="线程池的好处"></a>线程池的好处</h3><p>通过自己线程池中的线程进行隔离的好处是：</p>
-<ul>
-<li>该应用程序受到完全保护，不受客户端库的攻击。给定依赖库的池可以填满，而不会影响应用程序的其余部分。</li>
-<li>该应用程序可以接受风险更低的新客户端库。如果发生问题，它将隔离到库中，并且不会影响其他所有问题。</li>
-<li>当发生故障的客户端再次恢复正常运行时，线程池将被清除，应用程序将立即恢复运行正常的性能，与整个Tomcat容器不堪重负的长时间恢复相反。</li>
-<li>如果客户端库配置错误，线程池的运行状况将迅速证明这一点（通过增加错误，延迟，超时，拒绝等），您可以处理它（通常通过动态属性实时进行）而不会影响应用程序功能。</li>
-<li>如果客户端服务更改了性能特征（通常会经常出现问题），进而导致需要调整属性（增加&#x2F;减少超时，更改重试次数等），则可以通过线程池指标（错误，延迟）再次看到该特征，超时，拒绝），并且可以在不影响其他客户端，请求或用户的情况下进行处理。</li>
-<li>除了隔离优势之外，拥有专用线程池还可以提供内置的并发性，可以利用这些并发性在同步客户端库之上构建异步外观（类似于Netflix API如何在Hystrix命令之上构建一个reactive，采用完全异步的Java API）。</li>
-</ul>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s1.ax1x.com/2020/03/20/8207FA.png" alt="8207FA.png"></p>
-<p>简而言之，线程池提供的隔离允许客户端库和子系统性能特征的不断变化和动态组合得到优雅处理，而不会造成中断。</p>
-<p>注意：尽管有单独的线程提供了隔离，但您的基础客户端代码也应具有超时和&#x2F;或对线程中断的响应，因此它不能无限期地阻塞并使Hystrix线程池饱和。</p>
-<h3 id="线程池的缺点"><a href="#线程池的缺点" class="headerlink" title="线程池的缺点"></a>线程池的缺点</h3><p>线程池的主要缺点是它们增加了计算开销。每个命令执行都涉及在单独的线程上运行命令所涉及的队列，调度和上下文切换。</p>
-<p>Netflix API使用线程隔离每天处理10+亿次Hystrix Command执行。每个API实例有40多个线程池，每个线程池中有5-20个线程（大多数设置为10）。</p>
-<h3 id="线程的成本"><a href="#线程的成本" class="headerlink" title="线程的成本"></a>线程的成本</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://github.com/Netflix/Hystrix/wiki/images/thread-cost-60rps-original.png" alt="thread-cost-60rps-original.png"></p>
-<p>在中位数（或更低）处，拥有一个单独的线程没有成本。</p>
-<p>在第90个百分位数处，拥有一个单独的线程需要花费3ms的时间。</p>
-<p>在第99个百分位数处，拥有一个单独的线程要花费9ms。但是请注意，成本的增加远远小于单独线程（网络请求）的执行时间的增加，后者从2跳到28，而成本从0跳到9。</p>
-<p>对于这样的电路，这种开销在90％或更高的百分比上被认为对于大多数Netflix用例都是可以接受的，以实现所具有的弹性。</p>
-<p>对于包装延迟非常低的请求的电路（例如那些主要访问内存缓存的请求），开销可能会过高，在这种情况下，您可以使用另一种方法，例如可尝试的信号量，尽管它们不允许超时，提供最大的弹性优势，而没有开销。但是，总的来说开销很小，以至于Netflix实际上通常比这种技术更喜欢使用单独线程的隔离优势。</p>
-<h3 id="信号灯（Semaphores）"><a href="#信号灯（Semaphores）" class="headerlink" title="信号灯（Semaphores）"></a>信号灯（Semaphores）</h3><p>您可以使用信号量（或计数器）将并发调用的数量限制为任何给定的依赖项，而不是使用线程池&#x2F;队列大小。这使Hystrix无需使用线程池就可以减轻负载，但它不允许超时和退出。如果您信任客户端，并且只希望减少负载，则可以使用这种方法。</p>
-<p><code>HystrixCommand</code> and <code>HystrixObservableCommand</code> 在2个地方支持信号灯:</p>
-<ul>
-<li><strong>Fallback:</strong> Hystrix检索回退时，总是在调用Tomcat线程上进行回退。</li>
-<li><strong>Execution:</strong> 如果将属性<code>execution.isolation.strategy</code>设置为<code>SEMAPHORE</code>，则Hystrix将使用信号量而不是线程来限制调用该命令的并发父线程的数量</li>
-</ul>
-<p>您可以通过定义可以执行多少个并发线程的动态属性来配置信号灯的这两种用法。您应该使用与确定线程池大小时相似的计算方法来确定它们的大小（在不到毫秒的时间内返回的内存中调用的性能可以超过5000rps，并且信号量仅为1或2…但默认值为10）。</p>
-<p>注意：如果依赖关系被信号量隔离，然后变为潜在状态，则父线程将保持阻塞状态，直到基础网络调用超时为止。</p>
-<p>一旦达到限制，信号灯拒绝将开始，但是填充信号灯的线程无法终止。</p>
-<h2 id="请求折叠（Request-Collapsing）"><a href="#请求折叠（Request-Collapsing）" class="headerlink" title="请求折叠（Request Collapsing）"></a>请求折叠（Request Collapsing）</h2><p>您可以在<code>HystrixCommand</code>前面加上请求折叠程序（<a href="http://netflix.github.io/Hystrix/javadoc/index.html?com/netflix/hystrix/HystrixCollapser.html"><code>HystrixCollapser</code></a>是抽象父级），您可以将多个请求折叠为一个后端依赖项调用。</p>
-<p>下图显示了两种情况下的线程和网络连接数：首先是没有连接，然后是请求折叠（假设所有连接在较短的时间范围内（在这种情况下为10ms）在“并发”状态）。</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s1.ax1x.com/2020/03/20/82RCtS.png" alt="82RCtS.png"></p>
-<h3 id="请求折叠-时序图"><a href="#请求折叠-时序图" class="headerlink" title="请求折叠-时序图"></a>请求折叠-时序图</h3><p>@adrianb11 has kindly provided a <a href="https://design.codelytics.io/hystrix/request-collapsing">sequence diagram</a> of request-collapsing（Note: 需要梯子喔。）<br>同样手撸一个图，如果想了解大概流程，可以参考上面的链接：<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s1.ax1x.com/2020/03/22/8ICSXT.png" alt="8ICSXT.png"></p>
-<h3 id="为什么使用请求折叠"><a href="#为什么使用请求折叠" class="headerlink" title="为什么使用请求折叠"></a>为什么使用请求折叠</h3><p>使用请求折叠可减少执行并发<code>HystrixCommand</code>执行所需的线程数和网络连接数。请求折叠以一种自动化的方式完成，不会强制所有代码库的开发人员协调手动的请求批处理。</p>
-<h4 id="全局上下文-Across-All-Tomcat-Threads"><a href="#全局上下文-Across-All-Tomcat-Threads" class="headerlink" title="全局上下文 (Across All Tomcat Threads)"></a>全局上下文 (Across All Tomcat Threads)</h4><p>理想的折叠类型是在全局应用程序级别完成的，因此可以将来自任何Tomcat线程上任何用户的请求一起折叠。</p>
-<p>例如，如果将<code>HystrixCommand</code>配置为支持对检索电影分级的依赖项的所有用户的批处理，则当同一JVM中的任何用户线程发出这样的请求时，Hystrix都会将其请求与其他任何请求一起添加到同一JVM中网络通话崩溃。</p>
-<p>请注意，折叠器会将单个<code>HystrixRequestContext</code>对象传递给折叠的网络调用，因此下游系统必须处理这种情况才能使其成为有效的选择。</p>
-<h4 id="用户请求的上下文-Single-Tomcat-Thread"><a href="#用户请求的上下文-Single-Tomcat-Thread" class="headerlink" title="用户请求的上下文 (Single Tomcat Thread)"></a>用户请求的上下文 (Single Tomcat Thread)</h4><p>如果将<code>HystrixCommand</code>配置为仅处理单个用户的批处理请求，则Hystrix可以折叠单个Tomcat线程（请求）中的请求。</p>
-<p>例如，如果用户想为300个视频对象加载书签，而不是执行300个网络调用，Hystrix可以将它们全部合并为一个。</p>
-<h4 id="对象建模和代码复杂度"><a href="#对象建模和代码复杂度" class="headerlink" title="对象建模和代码复杂度"></a>对象建模和代码复杂度</h4><p>有时，当您创建对对象的使用者具有逻辑意义的对象模型时，与对象的生产者的有效资源利用并不十分匹配。</p>
-<p>例如，给定一个300个视频对象的列表，对其进行迭代并在每个对象上调用<code>getSomeAttribute()</code>是一个显而易见的对象模型，但是如果天真地实现了，则可能会导致300个网络调用之间相互之间的毫秒数（并且很可能会占用资源）。</p>
-<p>有一些手动方法可以处理此问题，例如在允许用户调用<code>getSomeAttribute()</code>之前，要求他们声明要为其获取属性的视频对象，以便可以全部提取它们。</p>
-<p>或者，您可以划分对象模型，以便用户必须从一个地方获取视频列表，然后从其他地方询问该视频列表的属性。</p>
-<p>这些方法可能导致笨拙的API和对象模型与思维模型和使用模式不匹配。当多个开发人员在一个代码库上工作时，它们还可能导致简单的错误和效率低下，因为针对一个用例进行的优化可能会因另一用例的实现和代码的新路径而中断。</p>
-<p>通过将折叠逻辑推到Hystrix层，无论如何创建对象模型，以什么顺序进行调用，或者不同的开发人员是否知道已完成优化或什至需要完成优化都无关紧要.</p>
-<p>可以将<code>getSomeAttribute()</code>方法放在最合适的位置，并以适合使用模式的任何方式调用它，然后折叠器将自动将调用批量处理到时间窗口中。</p>
-<h4 id="请求折叠的成本是多少"><a href="#请求折叠的成本是多少" class="headerlink" title="请求折叠的成本是多少"></a>请求折叠的成本是多少</h4><p>启用请求折叠的代价是在执行实际命令之前增加了等待时间。最大成本是批处理窗口的大小。</p>
-<p>如果您有一条命令需要花费5ms的中位数执行时间和10ms的批处理窗口，则在最坏的情况下执行时间可能变为15ms。通常，一个请求不会在打开时就被提交到窗口，因此中值损失是窗口时间的一半，在这种情况下为5ms。</p>
-<p>确定此成本是否值得取决于所执行的命令。高延迟命令不会受到少量额外平均延迟的影响。同样，给定命令的并发量很关键：如果很少有超过1或2个请求被批处理在一起，那么付出代价是没有意义的。实际上，在单线程顺序迭代中，折叠将是主要的性能瓶颈，因为每次迭代将等待10ms的批处理窗口时间。</p>
-<p>但是，如果特定命令被大量同时使用，并且可以将数十个甚至数百个呼叫分批处理。然后，由于Hystrix减少了所需的线程数以及与依存关系的网络连接数，因此获得的吞吐量通常远远超过了成本。</p>
-<h4 id="折叠流程图"><a href="#折叠流程图" class="headerlink" title="折叠流程图"></a>折叠流程图</h4><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s1.ax1x.com/2020/03/20/82TSJ0.png" alt="82TSJ0.png"></p>
-<h2 id="请求缓存"><a href="#请求缓存" class="headerlink" title="请求缓存"></a>请求缓存</h2><p><code>HystrixCommand</code>和<code>HystrixObservableCommand</code>实现可以定义一个缓存键，然后将其用于以并发感知的方式对请求上下文中的重复数据进行重复数据删除。</p>
-<p>这是一个示例流程，涉及一个HTTP请求生命周期和两个在该请求中工作的线程：</p>
-<p>请求缓存的好处是：</p>
-<ul>
-<li>不同的代码路径可以执行Hystrix命令，而无需担心重复的工作。</li>
-</ul>
-<p>这在大型代码库中特别有用，在该代码库中许多开发人员正在实现不同的功能。</p>
-<p>例如，所有需要获得用户的<code>Account</code>对象的代码的多个路径都可以这样请求：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">Account</span> <span class="variable">account</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">UserGetAccount</span>(accountId).execute();</span><br><span class="line"></span><br><span class="line"><span class="comment">//or</span></span><br><span class="line"></span><br><span class="line">Observable&lt;Account&gt; accountObservable = <span class="keyword">new</span> <span class="title class_">UserGetAccount</span>(accountId).observe();</span><br></pre></td></tr></table></figure>
-
-<p>Hystrix <code>RequestCache</code>将一次且仅执行一次基础<code>run()</code>方法，并且尽管实例化了不同的实例，但执行<code>HystrixCommand</code>的两个线程仍将接收相同的数据。</p>
-<ul>
-<li>整个请求中的数据检索都是一致的。</li>
-</ul>
-<p>不是每次执行命令时都可能返回不同的值（或回退），而是对同一请求内的所有后续调用进行缓存并返回第一个响应。</p>
-<ul>
-<li>消除重复线程执行</li>
-</ul>
-<p>由于请求缓存位于<code>construct()</code>或<code>run()</code>方法调用的前面，因此Hystrix可以在导致线程执行之前对重复数据删除重复数据。</p>
-<p>如果Hystrix没有实现请求缓存功能，则每个命令都需要自己在<code>construct()</code>或<code>run()</code>方法内部实现它，这会将其放在线程排队和执行之后。</p>
-]]></content>
-      <categories>
-        <category>translate</category>
-      </categories>
-      <tags>
-        <tag>Hystrix</tag>
-        <tag>translate</tag>
       </tags>
   </entry>
   <entry>
@@ -484,6 +288,202 @@
       </tags>
   </entry>
   <entry>
+    <title>Hystrix 是如何工作？（翻译）</title>
+    <url>/2020/03/08/Hystrix-How-it-Works/</url>
+    <content><![CDATA[<blockquote>
+<p><a href="https://github.com/Netflix/Hystrix/wiki/How-it-Works">原文链接</a></p>
+</blockquote>
+<h2 id="Hystrix-流程图"><a href="#Hystrix-流程图" class="headerlink" title="Hystrix-流程图"></a>Hystrix-流程图</h2><p>下图显示了通过Hystrix向服务依赖项请求时发生的情况：<br><img src="https://s2.ax1x.com/2020/03/08/3zdwSU.png" alt="3zdwSU.png"></p>
+<p>以下各节将更详细地说明此流程：</p>
+<p><a href="#1.%E6%9E%84%E9%80%A0%E4%B8%80%E4%B8%AAHystrixCommand%E6%88%96HystrixObservableCommand%E5%AF%B9%E8%B1%A1">1.构造一个HystrixCommand或HystrixObservableCommand对象</a></p>
+<p><a href="#2.%E6%89%A7%E8%A1%8CCommand">2.执行Command</a></p>
+<p><a href="#3.%E5%93%8D%E5%BA%94%E6%98%AF%E5%90%A6%E7%BC%93%E5%AD%98">3.响应是否缓存</a></p>
+<p><a href="#4.%E7%94%B5%E8%B7%AF%E6%98%AF%E5%90%A6%E5%B7%B2%E7%BB%8F%E5%BC%80%E8%B7%AF">4.电路是否已经开路</a></p>
+<p><a href="#5.%E7%BA%BF%E7%A8%8B%E6%B1%A0/%E9%98%9F%E5%88%97/%E4%BF%A1%E5%8F%B7%E9%87%8F%E6%98%AF%E5%90%A6%E5%B7%B2%E7%BB%8F%E6%BB%A1">5.线程池&#x2F;队列&#x2F;信号量是否已经满</a></p>
+<span id="more"></span>
+
+<p><a href="#6.HystrixObservableCommand.construct()%E6%88%96%E8%80%85HystrixCommand.run()">6.HystrixObservableCommand.construct()或者HystrixCommand.run()</a></p>
+<p><a href="#7.%E8%AE%A1%E7%AE%97%E7%94%B5%E8%B7%AF%E5%81%A5%E5%BA%B7">7.计算电路健康</a></p>
+<p><a href="#8.%E8%8E%B7%E5%8F%96%E5%90%8E%E5%A4%87">8.获取后备</a></p>
+<p><a href="#9.%E8%BF%94%E5%9B%9E%E6%88%90%E5%8A%9F%E7%9A%84%E5%93%8D%E5%BA%94">9.返回成功的响应</a></p>
+<h3 id="1-构造一个HystrixCommand或HystrixObservableCommand对象"><a href="#1-构造一个HystrixCommand或HystrixObservableCommand对象" class="headerlink" title="1.构造一个HystrixCommand或HystrixObservableCommand对象"></a>1.构造一个HystrixCommand或HystrixObservableCommand对象</h3><p>第一步，是构造一个<code>HystrixCommand</code>或<code>HystrixObservableCommand</code>对象，以表示您对依赖项的请求。向构造函数传递发出请求时所需的任何参数。</p>
+<p>如果期待依赖返回单个响应，则构造一个 <a href="http://netflix.github.com/Hystrix/javadoc/index.html?com/netflix/hystrix/HystrixCommand.html"><code>HystrixCommand</code></a>对象，例如</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">HystrixCommand</span> <span class="variable">command</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">HystrixCommand</span>(arg1, arg2);</span><br></pre></td></tr></table></figure>
+
+<p>如果期待依赖项返回一个可发出响应的Observable，则构造一个  <a href="http://netflix.github.com/Hystrix/javadoc/index.html?com/netflix/hystrix/HystrixObservableCommand.html"><code>HystrixObservableCommand</code></a> 对象，例如</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">HystrixObservableCommand</span> <span class="variable">command</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">HystrixObservableCommand</span>(arg1, arg2);</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-执行Command"><a href="#2-执行Command" class="headerlink" title="2.执行Command"></a>2.执行Command</h3><p>使用Hystrix命令对象的以下四种方法之一，可以执行命令的方式有四种（前两种仅适用于简单的<code>HystrixCommand</code>对象，而不适用于<code>HystrixObservableCommand</code>）：</p>
+<ul>
+<li><a href="http://netflix.github.io/Hystrix/javadoc/com/netflix/hystrix/HystrixCommand.html#execute()"><code>execute()</code></a> — 代码块，然后返回从依赖项收到单个响应（发生错误的情况下引发的异常）</li>
+<li><a href="http://netflix.github.io/Hystrix/javadoc/com/netflix/hystrix/HystrixCommand.html#queue()"><code>queue()</code></a> — 返回一个 <code>Future</code> ，您可以使用它从依赖项获得单个响应</li>
+<li><a href="http://netflix.github.io/Hystrix/javadoc/com/netflix/hystrix/HystrixObservableCommand.html#observe()"><code>observe()</code></a> — 订阅表示来自 依赖项的<code>Observable</code> 的响应，并返回复制源 <code>Observable</code> 的 <code>Observable</code></li>
+<li><a href="http://netflix.github.io/Hystrix/javadoc/com/netflix/hystrix/HystrixObservableCommand.html#toObservable()"><code>toObservable()</code></a> — 返回一个 <code>Observable</code> ,当您订阅它的时候，它将会执行Hystrix命令并发出其响应</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">K</span>             <span class="variable">value</span>   <span class="operator">=</span> command.execute();</span><br><span class="line">Future&lt;K&gt;     fValue  = command.queue();</span><br><span class="line">Observable&lt;K&gt; ohValue = command.observe();         <span class="comment">//hot observable</span></span><br><span class="line">Observable&lt;K&gt; ocValue = command.toObservable();    <span class="comment">//cold observable</span></span><br></pre></td></tr></table></figure>
+
+<p>同步调用 <code>execute()</code> ，调用 <code>queue().get()</code>. <code>queue()</code> 依次调用<code>toObservable().toBlocking().toFuture()</code>. 就是说，最终每个 <code>HystrixCommand</code> 都由一个 <a href="http://reactivex.io/documentation/observable.html"><code>Observable</code></a> 实现, 即使那些只是想返回单个简单的命令也是如此</p>
+<h3 id="3-响应是否缓存"><a href="#3-响应是否缓存" class="headerlink" title="3.响应是否缓存"></a>3.响应是否缓存</h3><p>如果为此命令启用了请求缓存，并且如果对请求的响应在缓存中可用，则该缓存的响应将立即以<code>Observable</code> 的形式返回。  (See <a href="http://localhost:4000/2020/03/08/Hystrix-How-it-Works/#%E8%AF%B7%E6%B1%82%E7%BC%93%E5%AD%98">“Request Caching”</a> below.)</p>
+<h3 id="4-电路是否已经开路"><a href="#4-电路是否已经开路" class="headerlink" title="4.电路是否已经开路"></a>4.电路是否已经开路</h3><blockquote>
+<p>维基百科：<a href="https://zh.wikipedia.org/wiki/%E5%BC%80%E8%B7%AF">开路</a></p>
+<p>电路三种状态：</p>
+<p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1583859175204&di=1633e5307bcabc79aed491ca0edf1c50&imgtype=0&src=http://d.hiphotos.baidu.com/zhidao/wh=450,600/sign=a148305f7af40ad115b1cfe7621c3de9/b7fd5266d0160924002ba57cd50735fae6cd344e.jpg" alt="电路三种状态"></p>
+</blockquote>
+<p>当你执行这个命令，<code>Hystrix</code> 会检查断路器，以查看断路器是否是<code>open</code>。</p>
+<p>如果电路是<code>open</code>（或跳闸），然后<code>Hystrix</code>将不会执行这个命令，但将会路由路由到<code>8. Get the Fallback</code>。</p>
+<p>如果电路是闭合的，则流程到<code>5. Semaphore/Thread pool rejected.</code>，以检查是否有可用于运行该命令的容量。</p>
+<h3 id="5-线程池-x2F-队列-x2F-信号量是否已经满"><a href="#5-线程池-x2F-队列-x2F-信号量是否已经满" class="headerlink" title="5.线程池&#x2F;队列&#x2F;信号量是否已经满"></a>5.线程池&#x2F;队列&#x2F;信号量是否已经满</h3><p>如果与该命令关联的线程池和队列（或信号量，如果没有运行在线程上）已满，则<code>Hystrix</code>将不会执行该命令，但会马上返回<code>8. Get the Fallback</code></p>
+<h3 id="6-HystrixObservableCommand-construct-或者HystrixCommand-run"><a href="#6-HystrixObservableCommand-construct-或者HystrixCommand-run" class="headerlink" title="6.HystrixObservableCommand.construct()或者HystrixCommand.run()"></a>6.HystrixObservableCommand.construct()或者HystrixCommand.run()</h3><p>在这里， <code>Hystrix</code> 通过为此目的编写方法（以下之一）调用对依赖项的请求:</p>
+<ul>
+<li><a href="http://netflix.github.io/Hystrix/javadoc/com/netflix/hystrix/HystrixCommand.html#run()"><code>HystrixCommand.run()</code></a> — 返回单个响应或抛出异常</li>
+<li><a href="http://netflix.github.io/Hystrix/javadoc/com/netflix/hystrix/HystrixObservableCommand.html#construct()"><code>HystrixObservableCommand.construct()</code></a> — 返回一个<code>Observable</code> ，它发出响应或发送<code>onError</code> 通知</li>
+</ul>
+<p>If the <code>run()</code> or <code>construct()</code> method exceeds the command’s timeout value, the thread will throw a <code>TimeoutException</code> (or a separate timer thread will, if the command itself is not running in its own thread). In that case Hystrix routes the response through 8. Get the Fallback, and it discards the eventual return value <code>run()</code> or <code>construct()</code> method if that method does not cancel&#x2F;interrupt.</p>
+<p>如果<code>run（）</code>或<code>construct（）</code>方法的值超过了命令的超时的数值，则线程将抛出“ TimeoutException”（或者，如果命令本身未在其自己的线程中运行，则线程将抛出单独的计时器线程）。在那种情况下，Hystrix将响应路由到<code>8. Get the Fallback</code>，如果该方法没有取消&#x2F;中断，则它会丢弃最终的返回值<code>run()</code> 或者<code>construct()</code> 方法。</p>
+<p>请注意，没有办法强制潜在线程停止工作-Hystrix在JVM上可以做的最好的事情就是将其抛出InterruptedException。如果Hystrix封装的工作不遵守InterruptedExceptions，尽管客户端已经收到TimeoutException，Hystrix线程池中的线程仍将继续工作。尽管负载已“正确释放”，但此行为可能会使Hystrix线程池饱和。大多数Java HTTP客户端库不解释InterruptedExceptions。因此，请确保在HTTP客户端上正确配置连接和读取&#x2F;写入超时。如果命令没有抛出任何异常，然后它会返回一个响应，则<code>Hystrix</code>在执行一些日志记录和监控报告后将返回此响应。对于<code>run</code>，<code>Hystrix</code>返回一个<code>Observable</code>，它发出单个响应，然后发出一个 <code>onCompleted</code>通知；对于 <code>construct()</code> ，<code>Hystrix</code>返回的是 <code>construct()</code>返回的<code>Observable</code>。</p>
+<h3 id="7-计算电路健康"><a href="#7-计算电路健康" class="headerlink" title="7.计算电路健康"></a>7.计算电路健康</h3><p><code>Hystrix</code> 向断路器 报告成功，失败，拒绝和超时，断路器保持滚动一个计数器来计算统计信息。它使用这些统计信息来确定断路器什么时候应该跳闸，这时他会将随后所有请求短路，直到经过恢复期为止，在此之后，在首先检查某些运行状况检查后，它将在此闭合电路。</p>
+<h3 id="8-获取后备（Get-the-Fallback）"><a href="#8-获取后备（Get-the-Fallback）" class="headerlink" title="8. 获取后备（Get the Fallback）"></a>8. 获取后备（Get the Fallback）</h3><p>Hystrix tried to revert to your fallback whenever a command execution fails:</p>
+<p><code>Hystrix</code>尝试在命令执行失败时回复到您的后备状态：</p>
+<ul>
+<li>当<code>construct（）</code>或<code>run（）</code>抛出异常时（6.）</li>
+<li>当命令由于电路断开而短路时（4.）</li>
+<li>命令的线程池和队列或信号量达到最大容量（5.）</li>
+<li>命令超过其超时长度时。</li>
+</ul>
+<p>编写您的后备，以从内存缓存中或者通过其他的静态逻辑提供通用的响应，而无需任何网络依赖性。如果你在后备中必须使用网络调用，您应该通过<code>HystrixCommand</code> 或 <code>HystrixObservableCommand</code> 来使用。</p>
+<p>对于 <code>HystrixCommand</code>，要提供后备逻辑，请实现<a href="http://netflix.github.io/Hystrix/javadoc/com/netflix/hystrix/HystrixCommand.html#getFallback()"><code>HystrixCommand.getFallback()</code></a>，它将会返回一个后备值。</p>
+<p>对于<code>HystrixObservableCommand</code>，要提供后备逻辑，您可以实现<a href="http://netflix.github.io/Hystrix/javadoc/com/netflix/hystrix/HystrixObservableCommand.html#resumeWithFallback"><code>HystrixObservableCommand.resumeWithFallback()</code></a>，它返回一个Observable，它可能会发出一个或多个后备值。</p>
+<p>如果fallback方法返回响应，则Hystrix将将此响应返回给调用方。如果是<code>HystrixCommand.getFallback()</code>，它将返回一个Observable，该Observable发出从方法返回的值。对于<code>HystrixObservableCommand.resumeWithFallback()</code>，它将返回从方法返回的相同Observable。</p>
+<p>如果尚未为<code>Hystrix</code>命令实现后备方法，或者后备本身引发异常，则Hystrix仍会返回一个Observable，但它不发出任何内容并立即以<code>onError</code>通知终止。通过此<code>onError</code>通知，导致命令失败的异常被发送回调用者。 （实施回退实现可能会失败，这是一个糟糕的做法。您应该实施回退，以使其不执行任何可能失败的逻辑。）</p>
+<p>后备失败或不存在的后备结果将因调用<code>Hystrix</code>命令的方式而异：</p>
+<ul>
+<li><code>execute()</code> — 抛出异常</li>
+<li><code>queue()</code> — 成功返回 <code>Future</code>，但是这个 <code>Future</code>如果调用<code>get()</code>方法时候将会抛出异常</li>
+<li><code>observe()</code> — 返回一个 <code>Observable</code> ，当你订阅它时，将通过调用订阅者的<code>onError</code> 方法立刻终止</li>
+<li><code>toObservable()</code> — 返回一个 <code>Observable</code> ，当您订阅它时，将通过调用订阅者的<code>onError</code> 方法终止</li>
+</ul>
+<h3 id="9-返回成功的响应"><a href="#9-返回成功的响应" class="headerlink" title="9.返回成功的响应"></a>9.返回成功的响应</h3><p>如果<code>Hystrix</code>命令成功执行，它将以<code>Observable</code>的形式将一个或多个响应返回给调用方。根据您在上述第2步中调用命令的方式，此<code>Observable</code>可能会在返回给您之前进行转换：</p>
+<p><a href="https://imgchr.com/i/8yU8AK"><img src="https://s1.ax1x.com/2020/03/19/8yU8AK.png" alt="8yU8AK.png"></a></p>
+<ul>
+<li><code>execute()</code> —  以与<code>.queue()</code> 相同的方式获取<code>Future</code>，然后在此<code>Future</code>调用<code>get</code>以获取<code>Observable</code> 发出的单个值。</li>
+<li><code>queue()</code> — 将 <code>Observable</code> 转换为 <code>BlockingObservable</code> ，以便于可以将其转换成一个 <code>Future</code>，然后返回<code>Future</code>。</li>
+<li><code>observe()</code> — 立即定于 <code>Observable</code> 并开始执行命令的流程；返回一个 <code>Observable</code> ，当您 <code>subscribe（订阅）</code> 它时候，将重新发出和通知。</li>
+<li><code>toObservable()</code> — 不变地返回 <code>Observable</code> ； 您必须 <code>subscribe（订阅）</code> 它，才能真正开始真正执行命令的流程。</li>
+</ul>
+<h2 id="时序图"><a href="#时序图" class="headerlink" title="时序图"></a>时序图</h2><p>@adrianb11 has kindly provided a <a href="https://design.codelytics.io/hystrix/how-it-works">sequence diagram</a> demonstrating the above flows.（Note: 需要梯子喔。）</p>
+<p>参考上面，自己也有手撸了一个：</p>
+<p><img src="https://s1.ax1x.com/2020/03/19/86icFS.png" alt="86icFS.png"></p>
+<h2 id="断路器（熔断器）"><a href="#断路器（熔断器）" class="headerlink" title="断路器（熔断器）"></a>断路器（熔断器）</h2><p>下面展示了 <code>HystrixCommand</code> 或者 <code>HystrixObservableCommand</code> 如何与 <a href="http://netflix.github.io/Hystrix/javadoc/index.html?com/netflix/hystrix/HystrixCircuitBreaker.html"><code>HystrixCircuitBreaker</code></a> 交互，以及其逻辑和决策流程，包括计数器在断路器中的行为方式。</p>
+<p><img src="https://s1.ax1x.com/2020/03/19/86kkNT.png" alt="86kkNT.png"></p>
+<p>电路打开和闭合的精确方式如下：</p>
+<ol>
+<li>假设电路上的容量达到某个阈值(<code>HystrixCommandProperties.circuitBreakerRequestVolumeThreshold()</code>)…</li>
+<li>并假设误差百分比超过阈值误差百分比(<code>HystrixCommandProperties.circuitBreakerErrorThresholdPercentage()</code>)…</li>
+<li>断路器从 <code>CLOSED</code> 状态转换成 <code>OPEN</code>状态。</li>
+<li>当它断开时，它会使针对该断路器的所有请求短路。</li>
+<li>一段时间后(<code>HystrixCommandProperties.circuitBreakerSleepWindowInMilliseconds()</code>)，下一个单个请求被允许通过（这是<code>HALF-OPEN(半开)</code>状态）。如果请求失败，断路器将在睡眠窗口期间返回<code>OPEN</code>状态。如果请求成功，断路器将切换到<code>CLOSED</code> 然后回到1.中的逻辑。</li>
+</ol>
+<h2 id="隔离（Isolation）"><a href="#隔离（Isolation）" class="headerlink" title="隔离（Isolation）"></a>隔离（Isolation）</h2><p>Hystrix使用隔板模式将依赖关系彼此隔离，并限制对其中任何一个的并发访问。</p>
+<p><img src="https://s1.ax1x.com/2020/03/20/82UKHA.png" alt="82UKHA.png"></p>
+<h2 id="线程和线程池"><a href="#线程和线程池" class="headerlink" title="线程和线程池"></a>线程和线程池</h2><p>客户端（库，网络调用等）在单独的线程上执行。这样可以将它们与调用线程（Tomcat线程池）隔离，以便调用者可以“摆脱”花费太长时间的依赖项调用。</p>
+<p>Hystrix使用单独的，每个依赖关系的线程池作为约束任何给定依赖关系的方式，因此对基础执行的延迟将仅使该池中的可用线程饱和。</p>
+<p><img src="https://s1.ax1x.com/2020/03/20/82aUxO.png" alt="82aUxO.png"></p>
+<p>您可以在不使用线程池的情况下防止失败，但这需要信任的客户端非常快速地失败（网络连接&#x2F;读取超时和重试配置），并且始终表现良好。</p>
+<p>Netflix在Hystrix的设计中选择使用线程和线程池来实现隔离的原因很多，其中包括：</p>
+<ul>
+<li>许多应用程序会针对许多不同团队开发的数十种不同服务执行数十种（有时甚至超过100种）不同的后端服务调用。</li>
+<li>每个服务都提供自己的客户端库。</li>
+<li>客户端库一直在变化</li>
+<li>客户端库逻辑可以更改以添加新的网络调用。</li>
+<li>客户端库可以包含诸如重试，数据解析，缓存（内存中或跨网络）之类的逻辑，以及其他此类行为。</li>
+<li>客户端库往往是“黑匣子”-用户对其实现细节，网络访问模式，配置默认值等不透明。</li>
+<li>在实际的几次生产中断中，确定为“哦，某些更改并且应该调整属性”或“客户端库更改了其行为”。</li>
+<li>即使客户端本身没有变化，服务本身也会发生变化，从而影响性能特征，进而导致客户端配置无效</li>
+<li>传递依赖关系可能会引入其他意外的客户端库，这些客户端库可能不是预期的，而且配置可能不正确。</li>
+<li>大部分的网络访问是同步进行。</li>
+<li>故障和延迟也可能在客户端代码中发生，而不仅仅是在网络调用中。</li>
+</ul>
+<h3 id="线程池的好处"><a href="#线程池的好处" class="headerlink" title="线程池的好处"></a>线程池的好处</h3><p>通过自己线程池中的线程进行隔离的好处是：</p>
+<ul>
+<li>该应用程序受到完全保护，不受客户端库的攻击。给定依赖库的池可以填满，而不会影响应用程序的其余部分。</li>
+<li>该应用程序可以接受风险更低的新客户端库。如果发生问题，它将隔离到库中，并且不会影响其他所有问题。</li>
+<li>当发生故障的客户端再次恢复正常运行时，线程池将被清除，应用程序将立即恢复运行正常的性能，与整个Tomcat容器不堪重负的长时间恢复相反。</li>
+<li>如果客户端库配置错误，线程池的运行状况将迅速证明这一点（通过增加错误，延迟，超时，拒绝等），您可以处理它（通常通过动态属性实时进行）而不会影响应用程序功能。</li>
+<li>如果客户端服务更改了性能特征（通常会经常出现问题），进而导致需要调整属性（增加&#x2F;减少超时，更改重试次数等），则可以通过线程池指标（错误，延迟）再次看到该特征，超时，拒绝），并且可以在不影响其他客户端，请求或用户的情况下进行处理。</li>
+<li>除了隔离优势之外，拥有专用线程池还可以提供内置的并发性，可以利用这些并发性在同步客户端库之上构建异步外观（类似于Netflix API如何在Hystrix命令之上构建一个reactive，采用完全异步的Java API）。</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/03/20/8207FA.png" alt="8207FA.png"></p>
+<p>简而言之，线程池提供的隔离允许客户端库和子系统性能特征的不断变化和动态组合得到优雅处理，而不会造成中断。</p>
+<p>注意：尽管有单独的线程提供了隔离，但您的基础客户端代码也应具有超时和&#x2F;或对线程中断的响应，因此它不能无限期地阻塞并使Hystrix线程池饱和。</p>
+<h3 id="线程池的缺点"><a href="#线程池的缺点" class="headerlink" title="线程池的缺点"></a>线程池的缺点</h3><p>线程池的主要缺点是它们增加了计算开销。每个命令执行都涉及在单独的线程上运行命令所涉及的队列，调度和上下文切换。</p>
+<p>Netflix API使用线程隔离每天处理10+亿次Hystrix Command执行。每个API实例有40多个线程池，每个线程池中有5-20个线程（大多数设置为10）。</p>
+<h3 id="线程的成本"><a href="#线程的成本" class="headerlink" title="线程的成本"></a>线程的成本</h3><p><img src="https://github.com/Netflix/Hystrix/wiki/images/thread-cost-60rps-original.png" alt="thread-cost-60rps-original.png"></p>
+<p>在中位数（或更低）处，拥有一个单独的线程没有成本。</p>
+<p>在第90个百分位数处，拥有一个单独的线程需要花费3ms的时间。</p>
+<p>在第99个百分位数处，拥有一个单独的线程要花费9ms。但是请注意，成本的增加远远小于单独线程（网络请求）的执行时间的增加，后者从2跳到28，而成本从0跳到9。</p>
+<p>对于这样的电路，这种开销在90％或更高的百分比上被认为对于大多数Netflix用例都是可以接受的，以实现所具有的弹性。</p>
+<p>对于包装延迟非常低的请求的电路（例如那些主要访问内存缓存的请求），开销可能会过高，在这种情况下，您可以使用另一种方法，例如可尝试的信号量，尽管它们不允许超时，提供最大的弹性优势，而没有开销。但是，总的来说开销很小，以至于Netflix实际上通常比这种技术更喜欢使用单独线程的隔离优势。</p>
+<h3 id="信号灯（Semaphores）"><a href="#信号灯（Semaphores）" class="headerlink" title="信号灯（Semaphores）"></a>信号灯（Semaphores）</h3><p>您可以使用信号量（或计数器）将并发调用的数量限制为任何给定的依赖项，而不是使用线程池&#x2F;队列大小。这使Hystrix无需使用线程池就可以减轻负载，但它不允许超时和退出。如果您信任客户端，并且只希望减少负载，则可以使用这种方法。</p>
+<p><code>HystrixCommand</code> and <code>HystrixObservableCommand</code> 在2个地方支持信号灯:</p>
+<ul>
+<li><strong>Fallback:</strong> Hystrix检索回退时，总是在调用Tomcat线程上进行回退。</li>
+<li><strong>Execution:</strong> 如果将属性<code>execution.isolation.strategy</code>设置为<code>SEMAPHORE</code>，则Hystrix将使用信号量而不是线程来限制调用该命令的并发父线程的数量</li>
+</ul>
+<p>您可以通过定义可以执行多少个并发线程的动态属性来配置信号灯的这两种用法。您应该使用与确定线程池大小时相似的计算方法来确定它们的大小（在不到毫秒的时间内返回的内存中调用的性能可以超过5000rps，并且信号量仅为1或2…但默认值为10）。</p>
+<p>注意：如果依赖关系被信号量隔离，然后变为潜在状态，则父线程将保持阻塞状态，直到基础网络调用超时为止。</p>
+<p>一旦达到限制，信号灯拒绝将开始，但是填充信号灯的线程无法终止。</p>
+<h2 id="请求折叠（Request-Collapsing）"><a href="#请求折叠（Request-Collapsing）" class="headerlink" title="请求折叠（Request Collapsing）"></a>请求折叠（Request Collapsing）</h2><p>您可以在<code>HystrixCommand</code>前面加上请求折叠程序（<a href="http://netflix.github.io/Hystrix/javadoc/index.html?com/netflix/hystrix/HystrixCollapser.html"><code>HystrixCollapser</code></a>是抽象父级），您可以将多个请求折叠为一个后端依赖项调用。</p>
+<p>下图显示了两种情况下的线程和网络连接数：首先是没有连接，然后是请求折叠（假设所有连接在较短的时间范围内（在这种情况下为10ms）在“并发”状态）。</p>
+<p><img src="https://s1.ax1x.com/2020/03/20/82RCtS.png" alt="82RCtS.png"></p>
+<h3 id="请求折叠-时序图"><a href="#请求折叠-时序图" class="headerlink" title="请求折叠-时序图"></a>请求折叠-时序图</h3><p>@adrianb11 has kindly provided a <a href="https://design.codelytics.io/hystrix/request-collapsing">sequence diagram</a> of request-collapsing（Note: 需要梯子喔。）<br>同样手撸一个图，如果想了解大概流程，可以参考上面的链接：<br><img src="https://s1.ax1x.com/2020/03/22/8ICSXT.png" alt="8ICSXT.png"></p>
+<h3 id="为什么使用请求折叠"><a href="#为什么使用请求折叠" class="headerlink" title="为什么使用请求折叠"></a>为什么使用请求折叠</h3><p>使用请求折叠可减少执行并发<code>HystrixCommand</code>执行所需的线程数和网络连接数。请求折叠以一种自动化的方式完成，不会强制所有代码库的开发人员协调手动的请求批处理。</p>
+<h4 id="全局上下文-Across-All-Tomcat-Threads"><a href="#全局上下文-Across-All-Tomcat-Threads" class="headerlink" title="全局上下文 (Across All Tomcat Threads)"></a>全局上下文 (Across All Tomcat Threads)</h4><p>理想的折叠类型是在全局应用程序级别完成的，因此可以将来自任何Tomcat线程上任何用户的请求一起折叠。</p>
+<p>例如，如果将<code>HystrixCommand</code>配置为支持对检索电影分级的依赖项的所有用户的批处理，则当同一JVM中的任何用户线程发出这样的请求时，Hystrix都会将其请求与其他任何请求一起添加到同一JVM中网络通话崩溃。</p>
+<p>请注意，折叠器会将单个<code>HystrixRequestContext</code>对象传递给折叠的网络调用，因此下游系统必须处理这种情况才能使其成为有效的选择。</p>
+<h4 id="用户请求的上下文-Single-Tomcat-Thread"><a href="#用户请求的上下文-Single-Tomcat-Thread" class="headerlink" title="用户请求的上下文 (Single Tomcat Thread)"></a>用户请求的上下文 (Single Tomcat Thread)</h4><p>如果将<code>HystrixCommand</code>配置为仅处理单个用户的批处理请求，则Hystrix可以折叠单个Tomcat线程（请求）中的请求。</p>
+<p>例如，如果用户想为300个视频对象加载书签，而不是执行300个网络调用，Hystrix可以将它们全部合并为一个。</p>
+<h4 id="对象建模和代码复杂度"><a href="#对象建模和代码复杂度" class="headerlink" title="对象建模和代码复杂度"></a>对象建模和代码复杂度</h4><p>有时，当您创建对对象的使用者具有逻辑意义的对象模型时，与对象的生产者的有效资源利用并不十分匹配。</p>
+<p>例如，给定一个300个视频对象的列表，对其进行迭代并在每个对象上调用<code>getSomeAttribute()</code>是一个显而易见的对象模型，但是如果天真地实现了，则可能会导致300个网络调用之间相互之间的毫秒数（并且很可能会占用资源）。</p>
+<p>有一些手动方法可以处理此问题，例如在允许用户调用<code>getSomeAttribute()</code>之前，要求他们声明要为其获取属性的视频对象，以便可以全部提取它们。</p>
+<p>或者，您可以划分对象模型，以便用户必须从一个地方获取视频列表，然后从其他地方询问该视频列表的属性。</p>
+<p>这些方法可能导致笨拙的API和对象模型与思维模型和使用模式不匹配。当多个开发人员在一个代码库上工作时，它们还可能导致简单的错误和效率低下，因为针对一个用例进行的优化可能会因另一用例的实现和代码的新路径而中断。</p>
+<p>通过将折叠逻辑推到Hystrix层，无论如何创建对象模型，以什么顺序进行调用，或者不同的开发人员是否知道已完成优化或什至需要完成优化都无关紧要.</p>
+<p>可以将<code>getSomeAttribute()</code>方法放在最合适的位置，并以适合使用模式的任何方式调用它，然后折叠器将自动将调用批量处理到时间窗口中。</p>
+<h4 id="请求折叠的成本是多少"><a href="#请求折叠的成本是多少" class="headerlink" title="请求折叠的成本是多少"></a>请求折叠的成本是多少</h4><p>启用请求折叠的代价是在执行实际命令之前增加了等待时间。最大成本是批处理窗口的大小。</p>
+<p>如果您有一条命令需要花费5ms的中位数执行时间和10ms的批处理窗口，则在最坏的情况下执行时间可能变为15ms。通常，一个请求不会在打开时就被提交到窗口，因此中值损失是窗口时间的一半，在这种情况下为5ms。</p>
+<p>确定此成本是否值得取决于所执行的命令。高延迟命令不会受到少量额外平均延迟的影响。同样，给定命令的并发量很关键：如果很少有超过1或2个请求被批处理在一起，那么付出代价是没有意义的。实际上，在单线程顺序迭代中，折叠将是主要的性能瓶颈，因为每次迭代将等待10ms的批处理窗口时间。</p>
+<p>但是，如果特定命令被大量同时使用，并且可以将数十个甚至数百个呼叫分批处理。然后，由于Hystrix减少了所需的线程数以及与依存关系的网络连接数，因此获得的吞吐量通常远远超过了成本。</p>
+<h4 id="折叠流程图"><a href="#折叠流程图" class="headerlink" title="折叠流程图"></a>折叠流程图</h4><p><img src="https://s1.ax1x.com/2020/03/20/82TSJ0.png" alt="82TSJ0.png"></p>
+<h2 id="请求缓存"><a href="#请求缓存" class="headerlink" title="请求缓存"></a>请求缓存</h2><p><code>HystrixCommand</code>和<code>HystrixObservableCommand</code>实现可以定义一个缓存键，然后将其用于以并发感知的方式对请求上下文中的重复数据进行重复数据删除。</p>
+<p>这是一个示例流程，涉及一个HTTP请求生命周期和两个在该请求中工作的线程：</p>
+<p>请求缓存的好处是：</p>
+<ul>
+<li>不同的代码路径可以执行Hystrix命令，而无需担心重复的工作。</li>
+</ul>
+<p>这在大型代码库中特别有用，在该代码库中许多开发人员正在实现不同的功能。</p>
+<p>例如，所有需要获得用户的<code>Account</code>对象的代码的多个路径都可以这样请求：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">Account</span> <span class="variable">account</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">UserGetAccount</span>(accountId).execute();</span><br><span class="line"></span><br><span class="line"><span class="comment">//or</span></span><br><span class="line"></span><br><span class="line">Observable&lt;Account&gt; accountObservable = <span class="keyword">new</span> <span class="title class_">UserGetAccount</span>(accountId).observe();</span><br></pre></td></tr></table></figure>
+
+<p>Hystrix <code>RequestCache</code>将一次且仅执行一次基础<code>run()</code>方法，并且尽管实例化了不同的实例，但执行<code>HystrixCommand</code>的两个线程仍将接收相同的数据。</p>
+<ul>
+<li>整个请求中的数据检索都是一致的。</li>
+</ul>
+<p>不是每次执行命令时都可能返回不同的值（或回退），而是对同一请求内的所有后续调用进行缓存并返回第一个响应。</p>
+<ul>
+<li>消除重复线程执行</li>
+</ul>
+<p>由于请求缓存位于<code>construct()</code>或<code>run()</code>方法调用的前面，因此Hystrix可以在导致线程执行之前对重复数据删除重复数据。</p>
+<p>如果Hystrix没有实现请求缓存功能，则每个命令都需要自己在<code>construct()</code>或<code>run()</code>方法内部实现它，这会将其放在线程排队和执行之后。</p>
+]]></content>
+      <categories>
+        <category>translate</category>
+      </categories>
+      <tags>
+        <tag>Hystrix</tag>
+        <tag>translate</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《Netty in Action》 读后感</title>
     <url>/2020/02/07/Netty-in-Action-After-Reading/</url>
     <content><![CDATA[<h2 id="开编我想说"><a href="#开编我想说" class="headerlink" title="开编我想说"></a>开编我想说</h2><blockquote>
@@ -506,7 +506,7 @@
 <p>在进行阻塞操作时，当前线程会处于阻塞状态，无法从事其他任务，只有当条件就绪才能继续，比如 ServerSocket 新连接建立完毕，或数据读取、写入操作完成；而非阻塞则是不管 IO 操作是否结束，直接返回，相应操作在后台继续处理。</p>
 </blockquote>
 <ul>
-<li><p>查询常见的I&#x2F;O模型：I&#x2F;O堵塞;I&#x2F;O非堵塞;I&#x2F;O复用；信号驱动I&#x2F;O；异步I&#x2F;O<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.ax1x.com/2020/02/07/1cIMQI.png" alt="1cIMQI.png"></p>
+<li><p>查询常见的I&#x2F;O模型：I&#x2F;O堵塞;I&#x2F;O非堵塞;I&#x2F;O复用；信号驱动I&#x2F;O；异步I&#x2F;O<br><img src="https://s2.ax1x.com/2020/02/07/1cIMQI.png" alt="1cIMQI.png"></p>
 </li>
 <li><p>用户空间和系统空间</p>
 </li>
@@ -529,7 +529,7 @@
 <h4 id="EventLoop"><a href="#EventLoop" class="headerlink" title="EventLoop"></a>EventLoop</h4><blockquote>
 <p>用于处理连接的生命周期的中发生的事件</p>
 </blockquote>
-<p>Channel、EventLoop和EventLoopGroup的关系图<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.ax1x.com/2020/02/07/1czd5n.png" alt="1czd5n.png"></p>
+<p>Channel、EventLoop和EventLoopGroup的关系图<br><img src="https://s2.ax1x.com/2020/02/07/1czd5n.png" alt="1czd5n.png"></p>
 <p>图中可以看到EventLoopGroup其实就具有多个EventLoop的组，EventLoop会在Channel的整个生命周期处理I&#x2F;O事件。<br>三者关系如下：</p>
 <ul>
 <li>一个EventLoopGroup包含一个或者多个EventLoop</li>
@@ -539,17 +539,17 @@
 <li>一个EventLoop可以会分配多个Channel</li>
 </ul>
 <p>得益于EventLoop是一个固定的线程处理，给定的Channel上的I&#x2F;O的处理将会在同一个线程处理，避免了不必要的线程切换上下文的开销；</p>
-<p>下面来深入了解一下，EventLoop：<br>先通过类图去纵览<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.ax1x.com/2020/02/07/1guZWT.png" alt="1guZWT.png"></p>
+<p>下面来深入了解一下，EventLoop：<br>先通过类图去纵览<br><img src="https://s2.ax1x.com/2020/02/07/1guZWT.png" alt="1guZWT.png"></p>
 <ul>
 <li>java.util.concurrent<br>AbstractExecutorService主要是实现了ExecutorService接口，ScheduledExecutorService则是继承了ExecutorService；</li>
 <li>io.netty.utilconcurrent<br>AbstractEventExecutor，继承了AbstractExecutorService类，并且实现EventExecutor接口，</li>
 <li>io.netty.channel<br>EventLoop，继承了OrderedEventExecutor, EventLoopGroup，只有一个：EventLoopGroup parent()方法。<br>SingleThreadEventLoop，继承SingleThreadEventExecutor，并且实现EventLoop接口；<br>重头戏来了，NioEventLoop，是继承了SingleThreadEventLoop，正如上面所说的：<code>一个EventLoop一个生命周期中，只和一个线程绑定</code></li>
 </ul>
-<p>EventLoop的执行逻辑：<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.ax1x.com/2020/02/07/1g3qc6.png" alt="1g3qc6.png"></p>
+<p>EventLoop的执行逻辑：<br><img src="https://s2.ax1x.com/2020/02/07/1g3qc6.png" alt="1g3qc6.png"></p>
 <h4 id="ChannelPipeline"><a href="#ChannelPipeline" class="headerlink" title="ChannelPipeline"></a>ChannelPipeline</h4><blockquote>
 <p>pipeline，意译为管道，ChannelPipeline，一看到这个名字，我们能够猜到它的作用就是类似管道的作用。<br>目的：为了提供ChannelHandler链式容器（ChannelHandler在下一节介绍）</p>
 </blockquote>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.ax1x.com/2020/02/07/1gpYkj.png" alt="1gpYkj.png"></p>
+<p><img src="https://s2.ax1x.com/2020/02/07/1gpYkj.png" alt="1gpYkj.png"></p>
 <p>本节，需要了解pipeline它的头部和尾部的概念，入站从头部第一个ChannelHandler先入，出站的时候从尾端端第一个ChannelHandler先开始流出。</p>
 <p>顺便提一下，Channel一旦分配为ChannelPipeline后，是永久性操作，不能被修改。<br>通过 DefaultChannelPipeline 和 AbstractChannel 源代码分析，也能得到上面的结论：</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">AbstractChannel</span><br><span class="line">    <span class="keyword">protected</span> <span class="title function_">AbstractChannel</span><span class="params">(Channel parent)</span> &#123;</span><br><span class="line">    ...</span><br><span class="line">        pipeline = newChannelPipeline();<span class="comment">// 新建分配一个ChannelPipeline</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
@@ -649,21 +649,21 @@
 <li>在出站操作都会返回ChannelFuture，进行添加监听事件</li>
 <li>在ChannelOutboundHandler的入参都会带有ChannelPromis，进行添加监听事件<br>方式2更加常用，因为相对方式1相关更加简单有效。</li>
 </ol>
-<h4 id="ChannelHandlerContext"><a href="#ChannelHandlerContext" class="headerlink" title="ChannelHandlerContext"></a>ChannelHandlerContext</h4><p>紧接上面，我来看一下Channel、ChannelPipeline、ChannelHandler和ChannelHandlerContext之间的关系：<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.ax1x.com/2020/02/07/123uKf.png" alt="123uKf.png"><br>当ChannelHandler添加到ChannelPipeline到时候，ChannelHandlerContext将会被创建。</p>
+<h4 id="ChannelHandlerContext"><a href="#ChannelHandlerContext" class="headerlink" title="ChannelHandlerContext"></a>ChannelHandlerContext</h4><p>紧接上面，我来看一下Channel、ChannelPipeline、ChannelHandler和ChannelHandlerContext之间的关系：<br><img src="https://s2.ax1x.com/2020/02/07/123uKf.png" alt="123uKf.png"><br>当ChannelHandler添加到ChannelPipeline到时候，ChannelHandlerContext将会被创建。</p>
 <p>ChannelHandler高级用法：我们可以在使用ChannelHandler可以缓存ChannelHanlderContext，然后去完成一些复杂的操作。<br>但是这里是有一个前提，就是当前ChannelHandler应该是被@Sharable注释，因为一个ChannelHandler可能属于多个ChannelPipeline。在使用@Sharable之前，最好确保当前ChannelHandler是线程安全。</p>
 <h4 id="ChannelFuture"><a href="#ChannelFuture" class="headerlink" title="ChannelFuture"></a>ChannelFuture</h4><blockquote>
 <p>Netty提供了ChannelFuture接口，其addListener()方法注册了一个ChannelFutureListener，以便在某个操作完成时（无论是否成功）得到通知。</p>
 </blockquote>
-<h4 id="Bootstrap"><a href="#Bootstrap" class="headerlink" title="Bootstrap"></a>Bootstrap</h4><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.ax1x.com/2020/02/07/1gyOJ0.png" alt="1gyOJ0.png"></p>
+<h4 id="Bootstrap"><a href="#Bootstrap" class="headerlink" title="Bootstrap"></a>Bootstrap</h4><p><img src="https://s2.ax1x.com/2020/02/07/1gyOJ0.png" alt="1gyOJ0.png"></p>
 <ul>
-<li>引导客户端 和 无连接协议<br>引导流程如下：<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.ax1x.com/2020/02/07/1g6GSf.png" alt="1g6GSf.png"></li>
+<li>引导客户端 和 无连接协议<br>引导流程如下：<br><img src="https://s2.ax1x.com/2020/02/07/1g6GSf.png" alt="1g6GSf.png"></li>
 </ul>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">class</span> <span class="title class_">EchoClient</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">boolean</span> <span class="variable">SSL</span> <span class="operator">=</span> System.getProperty(<span class="string">&quot;ssl&quot;</span>) != <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">HOST</span> <span class="operator">=</span> System.getProperty(<span class="string">&quot;host&quot;</span>, <span class="string">&quot;127.0.0.1&quot;</span>);</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">PORT</span> <span class="operator">=</span> Integer.parseInt(System.getProperty(<span class="string">&quot;port&quot;</span>, <span class="string">&quot;8023&quot;</span>));</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="comment">// Configure SSL.git</span></span><br><span class="line">        <span class="keyword">final</span> SslContext sslCtx;</span><br><span class="line">        <span class="keyword">if</span> (SSL) &#123;</span><br><span class="line">            sslCtx = SslContextBuilder.forClient()</span><br><span class="line">                    .trustManager(InsecureTrustManagerFactory.INSTANCE).build();</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            sslCtx = <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Configure the client.</span></span><br><span class="line">        <span class="type">EventLoopGroup</span> <span class="variable">group</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">NioEventLoopGroup</span>();</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="type">Bootstrap</span> <span class="variable">b</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Bootstrap</span>();</span><br><span class="line">            b.group(group)</span><br><span class="line">                    .channel(NioSocketChannel.class)</span><br><span class="line">                    .handler(<span class="keyword">new</span> <span class="title class_">ChannelInitializer</span>&lt;SocketChannel&gt;() &#123;</span><br><span class="line">                        <span class="meta">@Override</span></span><br><span class="line">                        <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">initChannel</span><span class="params">(SocketChannel ch)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">                            <span class="type">ChannelPipeline</span> <span class="variable">p</span> <span class="operator">=</span> ch.pipeline();</span><br><span class="line">                            <span class="keyword">if</span> (sslCtx != <span class="literal">null</span>) &#123;</span><br><span class="line">                                p.addLast(sslCtx.newHandler(ch.alloc(), HOST, PORT));</span><br><span class="line">                            &#125;</span><br><span class="line">                            p.addLast(</span><br><span class="line">                                    <span class="keyword">new</span> <span class="title class_">CustomSimpleChannelInboundHandler</span>())</span><br><span class="line">                            ;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 在connect方法调用后，Bootstrap类将会创建一个新的Channel</span></span><br><span class="line">            <span class="type">ChannelFuture</span> <span class="variable">f</span> <span class="operator">=</span> b.connect(HOST, PORT).sync();</span><br><span class="line"></span><br><span class="line">            <span class="comment">// Wait until the connection is closed.</span></span><br><span class="line">            f.channel().closeFuture().sync();</span><br><span class="line">        &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">            <span class="comment">// Shut down the event loop to terminate all threads.</span></span><br><span class="line">            group.shutdownGracefully();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>引导服务器</li>
 </ul>
-<p>引导流程如下：<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.ax1x.com/2020/02/07/1g6tOg.png" alt="1g6tOg.png"></p>
+<p>引导流程如下：<br><img src="https://s2.ax1x.com/2020/02/07/1g6tOg.png" alt="1g6tOg.png"></p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">class</span> <span class="title class_">EchoServer</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">boolean</span> <span class="variable">SSL</span> <span class="operator">=</span> System.getProperty(<span class="string">&quot;ssl&quot;</span>) != <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">PORT</span> <span class="operator">=</span> Integer.parseInt(System.getProperty(<span class="string">&quot;port&quot;</span>, <span class="string">&quot;8007&quot;</span>));</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">SECOND_HANDLER_NAME</span> <span class="operator">=</span> <span class="string">&quot;second&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="comment">// Configure SSL.</span></span><br><span class="line">        <span class="keyword">final</span> SslContext sslCtx;</span><br><span class="line">        <span class="keyword">if</span> (SSL) &#123;</span><br><span class="line">            <span class="type">SelfSignedCertificate</span> <span class="variable">ssc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SelfSignedCertificate</span>();</span><br><span class="line">            sslCtx = SslContextBuilder.forServer(ssc.certificate(), ssc.privateKey()).build();</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            sslCtx = <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Configure the server.</span></span><br><span class="line">        <span class="type">EventLoopGroup</span> <span class="variable">bossGroup</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">NioEventLoopGroup</span>(<span class="number">1</span>);</span><br><span class="line">        <span class="type">EventLoopGroup</span> <span class="variable">workerGroup</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">NioEventLoopGroup</span>(<span class="number">2</span>);</span><br><span class="line">        <span class="keyword">final</span> <span class="type">EchoServerHandler</span> <span class="variable">serverHandler</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">EchoServerHandler</span>();</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="type">ServerBootstrap</span> <span class="variable">b</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ServerBootstrap</span>();</span><br><span class="line">            b.group(bossGroup, workerGroup)</span><br><span class="line">                    .channel(NioServerSocketChannel.class)</span><br><span class="line">                    .option(ChannelOption.SO_BACKLOG, <span class="number">100</span>)</span><br><span class="line">                    .handler(<span class="keyword">new</span> <span class="title class_">LoggingHandler</span>(LogLevel.INFO))</span><br><span class="line">                    .childHandler(<span class="keyword">new</span> <span class="title class_">ChannelInitializer</span>&lt;SocketChannel&gt;() &#123;</span><br><span class="line">                        <span class="meta">@Override</span></span><br><span class="line">                        <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">initChannel</span><span class="params">(SocketChannel ch)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">                            <span class="type">ChannelPipeline</span> <span class="variable">p</span> <span class="operator">=</span> ch.pipeline();</span><br><span class="line">                            <span class="keyword">if</span> (sslCtx != <span class="literal">null</span>) &#123;</span><br><span class="line">                            p.addLast(sslCtx.newHandler(ch.alloc()));</span><br><span class="line">                            p.addLast(serverHandler);</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// Start the server.</span></span><br><span class="line">            <span class="type">ChannelFuture</span> <span class="variable">f</span> <span class="operator">=</span> b.bind(PORT).sync();</span><br><span class="line"></span><br><span class="line">            <span class="comment">// Wait until the server socket is closed.</span></span><br><span class="line">            f.channel().closeFuture().sync();</span><br><span class="line">        &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">            <span class="comment">// Shut down all event loops to terminate all threads.</span></span><br><span class="line">            bossGroup.shutdownGracefully();</span><br><span class="line">            workerGroup.shutdownGracefully();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <ul>
@@ -690,12 +690,12 @@
 <h3 id="解码器和编码器"><a href="#解码器和编码器" class="headerlink" title="解码器和编码器"></a>解码器和编码器</h3><h4 id="解码器"><a href="#解码器" class="headerlink" title="解码器"></a>解码器</h4><p>总体来说，我们有两种需求：</p>
 <ul>
 <li>字节解码成消息，常用抽象类：ByteToMessageDecoder extends ChannelInboundHandlerAdapter</li>
-<li>消息A解码成消息B，常用抽象类：MessageToMessageDecoder extends ChannelInboundHandlerAdapter<br>它们都是继承 ChannelInboundHandlerAdapter，又是熟悉的味道，这个又是得益Netty统一的设计。<br>流程图如下：<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.ax1x.com/2020/02/07/1gv0E9.png" alt="1gv0E9.png"></li>
+<li>消息A解码成消息B，常用抽象类：MessageToMessageDecoder extends ChannelInboundHandlerAdapter<br>它们都是继承 ChannelInboundHandlerAdapter，又是熟悉的味道，这个又是得益Netty统一的设计。<br>流程图如下：<br><img src="https://s2.ax1x.com/2020/02/07/1gv0E9.png" alt="1gv0E9.png"></li>
 </ul>
 <h4 id="编码器"><a href="#编码器" class="headerlink" title="编码器"></a>编码器</h4><p>总体来说，我们有两种需求：</p>
 <ul>
 <li>消息编码成消息，常用抽象类：MessageToByteEncoder extends ChannelOutboundHandlerAdapter</li>
-<li>消息B编码成消息A，常用抽象类：MessageToMessageEncoder extends ChannelOutboundHandlerAdapter<br>它们都是继承了ChannelOutboundHandlerAdapter。<br>流程图如下：<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.ax1x.com/2020/02/07/1gzNTJ.png" alt="1gzNTJ.png"></li>
+<li>消息B编码成消息A，常用抽象类：MessageToMessageEncoder extends ChannelOutboundHandlerAdapter<br>它们都是继承了ChannelOutboundHandlerAdapter。<br>流程图如下：<br><img src="https://s2.ax1x.com/2020/02/07/1gzNTJ.png" alt="1gzNTJ.png"></li>
 </ul>
 <h4 id="抽象的编解码类"><a href="#抽象的编解码类" class="headerlink" title="抽象的编解码类"></a>抽象的编解码类</h4><p>很多时候，编解码是一对，我们就想着为啥不能直接设置成一个类？Netty给我们，预设Codec。</p>
 <ul>
@@ -718,7 +718,7 @@
 <h2 id="网络协议"><a href="#网络协议" class="headerlink" title="网络协议"></a>网络协议</h2><h3 id="使用WebSocket"><a href="#使用WebSocket" class="headerlink" title="使用WebSocket"></a>使用WebSocket</h3><blockquote>
 <p>WebSocket ，WebSocket协议是完全重新设计的协议，旨在为Web上的双向数据传输问题提供一个切实可行的解决方案，使得客户端和服务器之间可以在任意时刻传输消息，因此，这也就要求它们异步地处理消息回执。</p>
 </blockquote>
-<p>使用WebSocket实现一个简单的聊天室，总体架构图如下：<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.ax1x.com/2020/02/07/12ZsXj.png" alt="12ZsXj.png"><br>服务器的流程图如下：<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.ax1x.com/2020/02/07/12Z6ns.png" alt="12Z6ns.png"></p>
+<p>使用WebSocket实现一个简单的聊天室，总体架构图如下：<br><img src="https://s2.ax1x.com/2020/02/07/12ZsXj.png" alt="12ZsXj.png"><br>服务器的流程图如下：<br><img src="https://s2.ax1x.com/2020/02/07/12Z6ns.png" alt="12Z6ns.png"></p>
 <p>大概代码结构如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">src</span><br><span class="line">├─main</span><br><span class="line">    ├─java</span><br><span class="line">        ├─handler</span><br><span class="line">            ├─HttpRequestHandler</span><br><span class="line">            ├─TextWebSocketFrameHandler</span><br><span class="line">        ├─initializer</span><br><span class="line">            ├─ChatServerInitializer</span><br><span class="line">            ├─SecureChatServerInitializer</span><br><span class="line">        ├─server</span><br><span class="line">            ├─ChatServer</span><br><span class="line">            ├─SecureChatServer</span><br><span class="line">    ├─resource</span><br><span class="line">    ├─index.html</span><br><span class="line">├─test</span><br><span class="line">├─pom.xml</span><br></pre></td></tr></table></figure>
 
@@ -750,7 +750,7 @@
     <content><![CDATA[<h2 id="String-概括"><a href="#String-概括" class="headerlink" title="String 概括"></a>String 概括</h2><blockquote>
 <p>string 名次，意思可以翻译为：线，弦，细绳；一串，一行等</p>
 </blockquote>
-<p>再来看看String的类图，String的value是不是感觉很应景呢？一个个字符，串起来变成我们熟悉的字符串。<br><a href="https://imgchr.com/i/mgkwsH"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.ax1x.com/2019/08/25/mgkwsH.md.png" alt="mgkwsH.md.png"></a><br>这里有两个关键的field：value和hash。</p>
+<p>再来看看String的类图，String的value是不是感觉很应景呢？一个个字符，串起来变成我们熟悉的字符串。<br><a href="https://imgchr.com/i/mgkwsH"><img src="https://s2.ax1x.com/2019/08/25/mgkwsH.md.png" alt="mgkwsH.md.png"></a><br>这里有两个关键的field：value和hash。</p>
 <span id="more"></span>
 
 <h2 id="String-三连击"><a href="#String-三连击" class="headerlink" title="String 三连击"></a>String 三连击</h2><h3 id="String变量到底存储在哪里？（JDK8"><a href="#String变量到底存储在哪里？（JDK8" class="headerlink" title="String变量到底存储在哪里？（JDK8)"></a>String变量到底存储在哪里？（JDK8)</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">StringDemo</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">            <span class="type">String</span> <span class="variable">hello</span> <span class="operator">=</span> <span class="string">&quot;hello&quot;</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
@@ -872,9 +872,9 @@
 
 <h2 id="最后一步"><a href="#最后一步" class="headerlink" title="最后一步"></a>最后一步</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vagrant reload centos7</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果没有意外，重启一下服务，将默认通过root对账户进行登陆了。</span></span><br><span class="line">vagrant ssh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 当然通过其他的ssh客户端也是可以直接登陆上去</span></span><br><span class="line"><span class="comment"># 如果有下面的日志，也不要惊慌，稍等一会儿看看，是否最终能够登陆成</span></span><br><span class="line">    centos7: Warning: Connection reset. Retrying...</span><br><span class="line">    centos7: Warning: Remote connection disconnect. Retrying...</span><br></pre></td></tr></table></figure>
 
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tva1.sinaimg.cn/large/008i3skNly1gtwnze31rej60xb0u078b02.jpg" alt="Vagrant%E9%BB%98%E8%AE%A4%E4%BD%BF%E7%94%A8root%E7%99%BB%E9%99%86%2004f5ec4a47414212bd73d14b1b5fa1a2/Untitled.png"></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tva1.sinaimg.cn/large/008i3skNly1gtwnzf2p1yj612804gaaq02.jpg" alt="Vagrant%E9%BB%98%E8%AE%A4%E4%BD%BF%E7%94%A8root%E7%99%BB%E9%99%86%2004f5ec4a47414212bd73d14b1b5fa1a2/Untitled%201.png"></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tva1.sinaimg.cn/large/008i3skNly1gtwnzelc7mj60z609o74w02.jpg" alt="Vagrant%E9%BB%98%E8%AE%A4%E4%BD%BF%E7%94%A8root%E7%99%BB%E9%99%86%2004f5ec4a47414212bd73d14b1b5fa1a2/Untitled%202.png"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gtwnze31rej60xb0u078b02.jpg" alt="Vagrant%E9%BB%98%E8%AE%A4%E4%BD%BF%E7%94%A8root%E7%99%BB%E9%99%86%2004f5ec4a47414212bd73d14b1b5fa1a2/Untitled.png"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gtwnzf2p1yj612804gaaq02.jpg" alt="Vagrant%E9%BB%98%E8%AE%A4%E4%BD%BF%E7%94%A8root%E7%99%BB%E9%99%86%2004f5ec4a47414212bd73d14b1b5fa1a2/Untitled%201.png"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gtwnzelc7mj60z609o74w02.jpg" alt="Vagrant%E9%BB%98%E8%AE%A4%E4%BD%BF%E7%94%A8root%E7%99%BB%E9%99%86%2004f5ec4a47414212bd73d14b1b5fa1a2/Untitled%202.png"></p>
 <h1 id="总结与思考"><a href="#总结与思考" class="headerlink" title="总结与思考"></a>总结与思考</h1><p>有时候，找问题的时候，可以发散一下思维，不要老钻牛角尖，往往得不偿失。</p>
 <p>例如，这一次，我找问题的思路一开始是这样子的。</p>
 <p>1，一直觉得是vagrant的问题，一直搜索vagrant相关的内容</p>
@@ -943,7 +943,7 @@
 
 
 <h1 id="问题与解决思路"><a href="#问题与解决思路" class="headerlink" title="问题与解决思路"></a>问题与解决思路</h1><ol>
-<li>(node:60240) UnhandledPromiseRejectionWarning: Error: spawn &#x2F;Users&#x2F;jaryoung&#x2F;project&#x2F;myblog&#x2F;node_modules&#x2F;<a href="mailto:&#95;&#x67;&#105;&#102;&#x73;&#105;&#99;&#108;&#x65;&#64;&#x35;&#x2e;&#x32;&#x2e;&#x31;">&#95;&#x67;&#105;&#102;&#x73;&#105;&#99;&#108;&#x65;&#64;&#x35;&#x2e;&#x32;&#x2e;&#x31;</a>@gifsicle&#x2F;vendor&#x2F;gifsicle ENOENT<br>解决思路，不一定正确，根据自己实际情况来处理。<ul>
+<li>(node:60240) UnhandledPromiseRejectionWarning: Error: spawn &#x2F;Users&#x2F;jaryoung&#x2F;project&#x2F;myblog&#x2F;node_modules&#x2F;<a href="mailto:&#x5f;&#103;&#105;&#102;&#115;&#105;&#x63;&#108;&#x65;&#64;&#x35;&#46;&#x32;&#46;&#49;">&#x5f;&#103;&#105;&#102;&#115;&#105;&#x63;&#108;&#x65;&#64;&#x35;&#46;&#x32;&#46;&#49;</a>@gifsicle&#x2F;vendor&#x2F;gifsicle ENOENT<br>解决思路，不一定正确，根据自己实际情况来处理。<ul>
 <li><code>gulp-imagemin</code>，由于8.0.0出现一个比较诡异的问题，所以需要将<code>gulp-imagemin</code>降级到<code>7.1.0</code>版本</li>
 <li>但是降级到<code>7.1.0</code>会出现有一些依赖找不到的情况，只能一个个来找进行安装（如果有更好的办法，也希望有小伙伴跟我说一下）</li>
 <li><a href="https://github.com/sindresorhus/gulp-imagemin/blob/v7.1.0/package.json">版本依赖情况</a>，根据github来进行一个个版本jar依赖的下载。最终整理为：<code>npm install -d gulp-imagemin@7.1.0 imagemin@7.0.0 imagemin-optipng@7.0.0 imagemin-mozjpeg@8.0.0 imagemin-svgo@7.0.0 imagemin-gifsicle@7.0.0 gifsicle@5.0.0 --save-dev</code> ，也就是上面步骤给出来的命令</li>
@@ -968,10 +968,33 @@
       </tags>
   </entry>
   <entry>
+    <title>你喜欢技术吗？</title>
+    <url>/2019/07/13/%E4%BD%A0%E5%96%9C%E6%AC%A2%E6%8A%80%E6%9C%AF%E5%90%97/</url>
+    <content><![CDATA[<h2 id="技术的本身是什么？"><a href="#技术的本身是什么？" class="headerlink" title="技术的本身是什么？"></a>技术的本身是什么？</h2><p>我从维基百科找了一个差不多定义</p>
+<blockquote>
+<p>技术可以指人类对机器、硬件或人造器皿的运用，但它也可以包含更广的架构，如系统、组织方法学和技巧。 </p>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="我的成长印记"><a href="#我的成长印记" class="headerlink" title="我的成长印记"></a>我的成长印记</h2><h3 id="那一年春节"><a href="#那一年春节" class="headerlink" title="那一年春节"></a>那一年春节</h3><p>那一年春节（约2005年），我哥苦苦哀求老爸买下叔叔自己组装的电脑的情景。现在回想起来，我的技术成长的印记最初应该是从那时候开始。叔叔送我们一本厚厚的关于计算机的书，里面介绍了计算机的基本组成，一些常用的问题的处理等等。我从小不太喜欢看书，我竟然为了计算机把书啃完了。当我掌握了修电脑的技能后，村里如果谁家的电脑有问题了，就叫我去帮忙看看，但是也试过删除人家整个硬盘的资料，然后花了一个晚上慢慢找回数据。</p>
+<h3 id="数码产品"><a href="#数码产品" class="headerlink" title="数码产品"></a>数码产品</h3><p>高中那三年，抱着智能手机过来的，从最初的塞班爱好者，到Windows Mobile 手机，再到后来的安卓和iOS，都是让我如痴如醉，那时候安卓刚刚出来的时候，强行将自己的Windows mobile 手机刷成安卓系统，后来热的不行，冬天的时候刚刚可以当成暖手宝。安卓就是刷机，刷成瘾，帮雷总测试miui，到后来拿到全国第一批的小米1，然后转手卖掉，赚了几百块钱，也是美滋滋。</p>
+<h3 id="大学学渣"><a href="#大学学渣" class="headerlink" title="大学学渣"></a>大学学渣</h3><p>高考过后，填写志愿所有的学校报都是软件工程，当时想法很单纯，就是想学习计算机软件相关的东西。暑假的时候买一本c语言相关的书籍，提前自学了。大一，经过媳妇（那时候还没有在一起哈哈）给我恶补的离散数学和高数还好没有挂科。大二，学完c++，还有数据结构等课程，现在想起来好像都还给老师了，最近也在恶补这个方面的东西。大三，基本开始Java 和安卓这些课程了。大四，基本不再上课，很多同学开始实习了，最后我也坐不住了，趁着暑假的时候，我也进去第一家公司去实习了，就这样子踏上了不归路了。</p>
+<p>几大学最后悔的事情，就是没有参加过一次编程比赛，如果有还在读书的小伙伴，记得一定不要让自己后悔了。</p>
+<h3 id="从代码的搬运工，真正的搬砖"><a href="#从代码的搬运工，真正的搬砖" class="headerlink" title="从代码的搬运工，真正的搬砖"></a>从代码的搬运工，真正的搬砖</h3><p>从开始，工作只是为了完成上级交给的任务。很少思考，这个需求的真实内在需求。但是，慢慢会发现，工作其实不是想象中那么简单的。很多时候，需求你的理解是这样子，产品的理解是那样子，很容易出现xy问题。所以，<strong>沟通理解</strong> 十分重要，一定要准确表达自己的意思，也要力求理解别人说的，至少在百分之五十左右，不然会严重的问题。例如，做完了需求，产品说这个不是他想要的，这个就很操蛋了。可能说偏了，但是沟通好了，肯定是有助于提高我们的技术。2017年的时候，我的上级在指导我的时候，由于我的表达和理解不到位，差点吵起来了，但是坐下来，好好想一下，才知道上级的真正表达的意思。如果我们的沟通理解能力越强，技术的提升会更加快。</p>
+<h2 id="技术给你的成就感是什么？"><a href="#技术给你的成就感是什么？" class="headerlink" title="技术给你的成就感是什么？"></a>技术给你的成就感是什么？</h2><p>计算机给我的成就感，就是能帮助到别人我就很开心，当然不小心格式化了别人的硬盘我也会很不开心。软件开发，给我成就感，从最初的一次次任务的完成就很满足，到现在的方案是否为最优才会有成就感。一个产品经理跟我说，只有有价值的东西，才有可能会存在。现在，会思考自己做的东西是否有价值，如果觉得是无价值的东西，有时候会感觉成就感很低。</p>
+<p>最后，我觉得技术，不单单是指软件开发本身，更多说的是思维的模式，只有不断思考，我们的技术才会越来越来好。</p>
+<p><strong>看山是山，看山不是山，看山还是山。</strong></p>
+<p>少吃零食，多看书，多看报，多思考，多睡觉。如果尽信书不如无书，所以每个人都需要有自己的思考能力。<br>做人嘛，最紧要就系开心😄！！！全世界晚安！！！</p>
+]]></content>
+      <tags>
+        <tag>Something</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>初识Docker（针对开发人员）</title>
     <url>/2019/03/31/%E5%88%9D%E8%AF%86Docker/</url>
     <content><![CDATA[<h2 id="概括"><a href="#概括" class="headerlink" title="概括"></a>概括</h2><p>Docker 是世界领先的软件容器平台。开发人员利用 Docker 可以解决，“在我的机器上可正常工作的啊！！！”的问题</p>
-<h2 id="容器又是什么东西？"><a href="#容器又是什么东西？" class="headerlink" title="容器又是什么东西？"></a>容器又是什么东西？</h2><p>容器是一种标准化的软件单元。<br>容器镜像是轻量的、可执行的独立软件包，包含软件运行所需的所有内容：代码、运行时环境、系统工具、系统库和设置。<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.ax1x.com/2019/03/30/ADavjK.png" alt="ADavjK.png"></p>
+<h2 id="容器又是什么东西？"><a href="#容器又是什么东西？" class="headerlink" title="容器又是什么东西？"></a>容器又是什么东西？</h2><p>容器是一种标准化的软件单元。<br>容器镜像是轻量的、可执行的独立软件包，包含软件运行所需的所有内容：代码、运行时环境、系统工具、系统库和设置。<br><img src="https://s2.ax1x.com/2019/03/30/ADavjK.png" alt="ADavjK.png"></p>
 <blockquote>
 <p>图片出自：<a href="https://www.docker-cn.com/what-container">https://www.docker-cn.com/what-container</a></p>
 </blockquote>
@@ -992,14 +1015,14 @@
 <td>虚拟机 (VM) 是一个物理硬件层抽象，用于将一台服务器变成多台服务器。管理程序允许多个 VM 在一台机器上运行。每个 VM 都包含一整套操作系统、一个或多个应用、必要的二进制文件和库资源，因</td>
 </tr>
 <tr>
-<td><a href="https://imgchr.com/i/ADwWLT"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.ax1x.com/2019/03/30/ADwWLT.md.png" alt="ADwWLT.md.png"></a>图片出自：<a href="https://www.docker-cn.com/what-container">https://www.docker-cn.com/what-container</a></td>
-<td><a href="https://imgchr.com/i/ADwRyV"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.ax1x.com/2019/03/30/ADwRyV.md.png" alt="ADwRyV.md.png"></a> 图片出自：<a href="https://www.docker-cn.com/what-container">https://www.docker-cn.com/what-container</a></td>
+<td><a href="https://imgchr.com/i/ADwWLT"><img src="https://s2.ax1x.com/2019/03/30/ADwWLT.md.png" alt="ADwWLT.md.png"></a>图片出自：<a href="https://www.docker-cn.com/what-container">https://www.docker-cn.com/what-container</a></td>
+<td><a href="https://imgchr.com/i/ADwRyV"><img src="https://s2.ax1x.com/2019/03/30/ADwRyV.md.png" alt="ADwRyV.md.png"></a> 图片出自：<a href="https://www.docker-cn.com/what-container">https://www.docker-cn.com/what-container</a></td>
 </tr>
 </tbody></table>
 <h4 id="容器和虚拟机共用"><a href="#容器和虚拟机共用" class="headerlink" title="容器和虚拟机共用"></a>容器和虚拟机共用</h4><blockquote>
 <p>将容器和虚拟机配合使用，为应用的部署和管理提供极大的灵活性。</p>
 </blockquote>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.ax1x.com/2019/03/30/ADdmDS.png" alt="ADdmDS.png"></p>
+<p><img src="https://s2.ax1x.com/2019/03/30/ADdmDS.png" alt="ADdmDS.png"></p>
 <blockquote>
 <p>图片出自：<a href="https://www.docker-cn.com/what-container">https://www.docker-cn.com/what-container</a></p>
 </blockquote>
@@ -1007,7 +1030,7 @@
 <li>建议注册一个账户</li>
 <li>然后通过官网链接下载桌面版的Docker，<a href="https://www.docker.com/products/docker-desktop">官网超链接</a>，如果想快一点可以试试看这个<a href="https://download.docker.com/mac/stable/Docker.dmg">链接</a> 。(默认最新稳定版)</li>
 </ol>
-<p><a href="https://imgchr.com/i/AD0J7F"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.ax1x.com/2019/03/30/AD0J7F.md.png" alt="AD0J7F.md.png"></a><br>3. 下载完，安装好，配置一下Docker 中国官方镜像加速源 <code>http://registry.docker-cn.com</code>，当然你也是可以选择其他的加速源例如阿里，网易等等。配置完，记得点击<strong>Apply&amp;Restart</strong>。<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.ax1x.com/2019/03/30/AD0zuV.png" alt="AD0zuV.png"><br>4. 打开Terminal ，输入一下命令 <code>docker info</code><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.ax1x.com/2019/03/30/ADBWaF.png" alt="ADBWaF.png"></p>
+<p><a href="https://imgchr.com/i/AD0J7F"><img src="https://s2.ax1x.com/2019/03/30/AD0J7F.md.png" alt="AD0J7F.md.png"></a><br>3. 下载完，安装好，配置一下Docker 中国官方镜像加速源 <code>http://registry.docker-cn.com</code>，当然你也是可以选择其他的加速源例如阿里，网易等等。配置完，记得点击<strong>Apply&amp;Restart</strong>。<br><img src="https://s2.ax1x.com/2019/03/30/AD0zuV.png" alt="AD0zuV.png"><br>4. 打开Terminal ，输入一下命令 <code>docker info</code><br><img src="https://s2.ax1x.com/2019/03/30/ADBWaF.png" alt="ADBWaF.png"></p>
 <p>安装工具，到此结束了，是不是想说So easy？其实就是如此轻松，马上可以享受到Docker带来的快感吧！</p>
 <h2 id="使用Docker"><a href="#使用Docker" class="headerlink" title="使用Docker"></a>使用Docker</h2><p>我习惯上来先查一下，help（不想看，直接跳过哈，下面会开始讲，我目前经常使用的一些命令。）</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker help</span><br><span class="line">Usage: docker [OPTIONS] COMMAND</span><br><span class="line"></span><br><span class="line">A self-sufficient runtime for containers</span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line">      --config string      Location of client config files (default &quot;/Users/jaryoung/.docker&quot;)</span><br><span class="line">  -D, --debug              Enable debug mode</span><br><span class="line">  -H, --host list          Daemon socket(s) to connect to</span><br><span class="line">  -l, --log-level string   Set the logging level (&quot;debug&quot;|&quot;info&quot;|&quot;warn&quot;|&quot;error&quot;|&quot;fatal&quot;) (default &quot;info&quot;)</span><br><span class="line">      --tls                Use TLS; implied by --tlsverify</span><br><span class="line">      --tlscacert string   Trust certs signed only by this CA (default &quot;/Users/jaryoung/.docker/ca.pem&quot;)</span><br><span class="line">      --tlscert string     Path to TLS certificate file (default &quot;/Users/jaryoung/.docker/cert.pem&quot;)</span><br><span class="line">      --tlskey string      Path to TLS key file (default &quot;/Users/jaryoung/.docker/key.pem&quot;)</span><br><span class="line">      --tlsverify          Use TLS and verify the remote</span><br><span class="line">  -v, --version            Print version information and quit</span><br><span class="line"></span><br><span class="line">Management Commands:</span><br><span class="line">  builder     Manage builds</span><br><span class="line">  config      Manage Docker configs</span><br><span class="line">  container   Manage containers</span><br><span class="line">  image       Manage images</span><br><span class="line">  network     Manage networks</span><br><span class="line">  node        Manage Swarm nodes</span><br><span class="line">  plugin      Manage plugins</span><br><span class="line">  secret      Manage Docker secrets</span><br><span class="line">  service     Manage services</span><br><span class="line">  stack       Manage Docker stacks</span><br><span class="line">  swarm       Manage Swarm</span><br><span class="line">  system      Manage Docker</span><br><span class="line">  trust       Manage trust on Docker images</span><br><span class="line">  volume      Manage volumes</span><br><span class="line"></span><br><span class="line">Commands:</span><br><span class="line">  attach      Attach local standard input, output, and error streams to a running container</span><br><span class="line">  build       Build an image from a Dockerfile</span><br><span class="line">  commit      Create a new image from a container&#x27;s changes</span><br><span class="line">  cp          Copy files/folders between a container and the local filesystem</span><br><span class="line">  create      Create a new container</span><br><span class="line">  diff        Inspect changes to files or directories on a container&#x27;s filesystem</span><br><span class="line">  events      Get real time events from the server</span><br><span class="line">  exec        Run a command in a running container</span><br><span class="line">  export      Export a container&#x27;s filesystem as a tar archive</span><br><span class="line">  history     Show the history of an image</span><br><span class="line">  images      List images</span><br><span class="line">  import      Import the contents from a tarball to create a filesystem image</span><br><span class="line">  info        Display system-wide information</span><br><span class="line">  inspect     Return low-level information on Docker objects</span><br><span class="line">  kill        Kill one or more running containers</span><br><span class="line">  load        Load an image from a tar archive or STDIN</span><br><span class="line">  login       Log in to a Docker registry</span><br><span class="line">  logout      Log out from a Docker registry</span><br><span class="line">  logs        Fetch the logs of a container</span><br><span class="line">  pause       Pause all processes within one or more containers</span><br><span class="line">  port        List port mappings or a specific mapping for the container</span><br><span class="line">  ps          List containers</span><br><span class="line">  pull        Pull an image or a repository from a registry</span><br><span class="line">  push        Push an image or a repository to a registry</span><br><span class="line">  rename      Rename a container</span><br><span class="line">  restart     Restart one or more containers</span><br><span class="line">  rm          Remove one or more containers</span><br><span class="line">  rmi         Remove one or more images</span><br><span class="line">  run         Run a command in a new container</span><br><span class="line">  save        Save one or more images to a tar archive (streamed to STDOUT by default)</span><br><span class="line">  search      Search the Docker Hub for images</span><br><span class="line">  start       Start one or more stopped containers</span><br><span class="line">  stats       Display a live stream of container(s) resource usage statistics</span><br><span class="line">  stop        Stop one or more running containers</span><br><span class="line">  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE</span><br><span class="line">  top         Display the running processes of a container</span><br><span class="line">  unpause     Unpause all processes within one or more containers</span><br><span class="line">  update      Update configuration of one or more containers</span><br><span class="line">  version     Show the Docker version information</span><br><span class="line">  wait        Block until one or more containers stop, then print their exit codes</span><br><span class="line"></span><br><span class="line">Run &#x27;docker COMMAND --help&#x27; for more information on a command.</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -1093,29 +1116,6 @@
       </tags>
   </entry>
   <entry>
-    <title>你喜欢技术吗？</title>
-    <url>/2019/07/13/%E4%BD%A0%E5%96%9C%E6%AC%A2%E6%8A%80%E6%9C%AF%E5%90%97/</url>
-    <content><![CDATA[<h2 id="技术的本身是什么？"><a href="#技术的本身是什么？" class="headerlink" title="技术的本身是什么？"></a>技术的本身是什么？</h2><p>我从维基百科找了一个差不多定义</p>
-<blockquote>
-<p>技术可以指人类对机器、硬件或人造器皿的运用，但它也可以包含更广的架构，如系统、组织方法学和技巧。 </p>
-</blockquote>
-<span id="more"></span>
-
-<h2 id="我的成长印记"><a href="#我的成长印记" class="headerlink" title="我的成长印记"></a>我的成长印记</h2><h3 id="那一年春节"><a href="#那一年春节" class="headerlink" title="那一年春节"></a>那一年春节</h3><p>那一年春节（约2005年），我哥苦苦哀求老爸买下叔叔自己组装的电脑的情景。现在回想起来，我的技术成长的印记最初应该是从那时候开始。叔叔送我们一本厚厚的关于计算机的书，里面介绍了计算机的基本组成，一些常用的问题的处理等等。我从小不太喜欢看书，我竟然为了计算机把书啃完了。当我掌握了修电脑的技能后，村里如果谁家的电脑有问题了，就叫我去帮忙看看，但是也试过删除人家整个硬盘的资料，然后花了一个晚上慢慢找回数据。</p>
-<h3 id="数码产品"><a href="#数码产品" class="headerlink" title="数码产品"></a>数码产品</h3><p>高中那三年，抱着智能手机过来的，从最初的塞班爱好者，到Windows Mobile 手机，再到后来的安卓和iOS，都是让我如痴如醉，那时候安卓刚刚出来的时候，强行将自己的Windows mobile 手机刷成安卓系统，后来热的不行，冬天的时候刚刚可以当成暖手宝。安卓就是刷机，刷成瘾，帮雷总测试miui，到后来拿到全国第一批的小米1，然后转手卖掉，赚了几百块钱，也是美滋滋。</p>
-<h3 id="大学学渣"><a href="#大学学渣" class="headerlink" title="大学学渣"></a>大学学渣</h3><p>高考过后，填写志愿所有的学校报都是软件工程，当时想法很单纯，就是想学习计算机软件相关的东西。暑假的时候买一本c语言相关的书籍，提前自学了。大一，经过媳妇（那时候还没有在一起哈哈）给我恶补的离散数学和高数还好没有挂科。大二，学完c++，还有数据结构等课程，现在想起来好像都还给老师了，最近也在恶补这个方面的东西。大三，基本开始Java 和安卓这些课程了。大四，基本不再上课，很多同学开始实习了，最后我也坐不住了，趁着暑假的时候，我也进去第一家公司去实习了，就这样子踏上了不归路了。</p>
-<p>几大学最后悔的事情，就是没有参加过一次编程比赛，如果有还在读书的小伙伴，记得一定不要让自己后悔了。</p>
-<h3 id="从代码的搬运工，真正的搬砖"><a href="#从代码的搬运工，真正的搬砖" class="headerlink" title="从代码的搬运工，真正的搬砖"></a>从代码的搬运工，真正的搬砖</h3><p>从开始，工作只是为了完成上级交给的任务。很少思考，这个需求的真实内在需求。但是，慢慢会发现，工作其实不是想象中那么简单的。很多时候，需求你的理解是这样子，产品的理解是那样子，很容易出现xy问题。所以，<strong>沟通理解</strong> 十分重要，一定要准确表达自己的意思，也要力求理解别人说的，至少在百分之五十左右，不然会严重的问题。例如，做完了需求，产品说这个不是他想要的，这个就很操蛋了。可能说偏了，但是沟通好了，肯定是有助于提高我们的技术。2017年的时候，我的上级在指导我的时候，由于我的表达和理解不到位，差点吵起来了，但是坐下来，好好想一下，才知道上级的真正表达的意思。如果我们的沟通理解能力越强，技术的提升会更加快。</p>
-<h2 id="技术给你的成就感是什么？"><a href="#技术给你的成就感是什么？" class="headerlink" title="技术给你的成就感是什么？"></a>技术给你的成就感是什么？</h2><p>计算机给我的成就感，就是能帮助到别人我就很开心，当然不小心格式化了别人的硬盘我也会很不开心。软件开发，给我成就感，从最初的一次次任务的完成就很满足，到现在的方案是否为最优才会有成就感。一个产品经理跟我说，只有有价值的东西，才有可能会存在。现在，会思考自己做的东西是否有价值，如果觉得是无价值的东西，有时候会感觉成就感很低。</p>
-<p>最后，我觉得技术，不单单是指软件开发本身，更多说的是思维的模式，只有不断思考，我们的技术才会越来越来好。</p>
-<p><strong>看山是山，看山不是山，看山还是山。</strong></p>
-<p>少吃零食，多看书，多看报，多思考，多睡觉。如果尽信书不如无书，所以每个人都需要有自己的思考能力。<br>做人嘛，最紧要就系开心😄！！！全世界晚安！！！</p>
-]]></content>
-      <tags>
-        <tag>Something</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>重新认识maven</title>
     <url>/2021/08/01/%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86maven/</url>
     <content><![CDATA[<h1 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h1><ol>
@@ -1169,7 +1169,7 @@
 
 <h2 id="执行jar包"><a href="#执行jar包" class="headerlink" title="执行jar包"></a>执行jar包</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">java -<span class="built_in">cp</span> target/first-demo-1.0-SNAPSHOT.jar com.jaryoung.demo.App</span><br></pre></td></tr></table></figure>
 
-<h1 id="maven架构"><a href="#maven架构" class="headerlink" title="maven架构"></a>maven架构</h1><h2 id="maven鸟瞰图"><a href="#maven鸟瞰图" class="headerlink" title="maven鸟瞰图"></a>maven鸟瞰图</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tva1.sinaimg.cn/large/008i3skNly1gt1o3afzqwj314o0ng0u8.jpg" alt="%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86maven%2024fba34a5ee5462cbca9db8b86fe4619/Untitled.png"></p>
+<h1 id="maven架构"><a href="#maven架构" class="headerlink" title="maven架构"></a>maven架构</h1><h2 id="maven鸟瞰图"><a href="#maven鸟瞰图" class="headerlink" title="maven鸟瞰图"></a>maven鸟瞰图</h2><p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gt1o3afzqwj314o0ng0u8.jpg" alt="%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86maven%2024fba34a5ee5462cbca9db8b86fe4619/Untitled.png"></p>
 <h1 id="maven重要的知识点"><a href="#maven重要的知识点" class="headerlink" title="maven重要的知识点"></a>maven重要的知识点</h1><h2 id="maven坐标"><a href="#maven坐标" class="headerlink" title="maven坐标"></a>maven坐标</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 项目所在的组织 --&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.jaryoung.demo<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 项目中唯一标识 --&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>first-demo<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 项目的打包类型 --&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">packaging</span>&gt;</span>jar<span class="tag">&lt;/<span class="name">packaging</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 项目的版本号 --&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 定义某个工程的附属项目 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">classifier</span>&gt;</span> <span class="tag">&lt;/<span class="name">classifier</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>坐标的作用，上面的五个坐标就代表了特定版本的代码，就是特定代码版本的jar包，可以上传到maven的仓库，能够提供给别人下载使用。</p>
@@ -1204,7 +1204,7 @@
 </ol>
 </li>
 </ol>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tva1.sinaimg.cn/large/008i3skNly1gt1o34mj37j61gm0kqwg702.jpg" alt="%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86maven%2024fba34a5ee5462cbca9db8b86fe4619/Untitled%201.png"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gt1o34mj37j61gm0kqwg702.jpg" alt="%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86maven%2024fba34a5ee5462cbca9db8b86fe4619/Untitled%201.png"></p>
 <h2 id="maven的生命周期以及执行原理"><a href="#maven的生命周期以及执行原理" class="headerlink" title="maven的生命周期以及执行原理"></a>maven的生命周期以及执行原理</h2><p><a href="http://maven.apache.org/plugins/index.html">Maven - Available Plugins</a></p>
 <p>生命周期的图</p>
 <p>mvn命令相关的</p>
@@ -1264,18 +1264,18 @@
 <p><code>clean -》clean:clean</code></p>
 <p>命令行和phrase的关系</p>
 <p><code>mvn clean package</code></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tva1.sinaimg.cn/large/008i3skNly1gt1o49w0xxj30qz0hy755.jpg" alt="%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86maven%2024fba34a5ee5462cbca9db8b86fe4619/Untitled%202.png"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gt1o49w0xxj30qz0hy755.jpg" alt="%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86maven%2024fba34a5ee5462cbca9db8b86fe4619/Untitled%202.png"></p>
 <p>clean，代表是clean 生命周期的中clean phase。</p>
 <p>会执行，clean 所有的 操作，也就是上面clean 的1 - 3 步。</p>
 <p>package，代表是会执行default中package phase之前所有的操作，当然也包含当前packagephase的操作</p>
 <p><code>mvn dependency:tree</code></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tva1.sinaimg.cn/large/008i3skNly1gt1o3628syj30k004h0sr.jpg" alt="%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86maven%2024fba34a5ee5462cbca9db8b86fe4619/Untitled%203.png"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gt1o3628syj30k004h0sr.jpg" alt="%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86maven%2024fba34a5ee5462cbca9db8b86fe4619/Untitled%203.png"></p>
 <p><code>mvn deploy:deploy-file</code></p>
 <p>直接执行，不会执行任何 default上面的生命周期的内容，会直接执行插件的中的goal。例如 ，mvn dependency:tree，直接执行dependency插件中的tree的goal。</p>
 <h2 id="plugin配置"><a href="#plugin配置" class="headerlink" title="plugin配置"></a>plugin配置</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.maven.plugins<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-compiler-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">source</span>&gt;</span>8<span class="tag">&lt;/<span class="name">source</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">target</span>&gt;</span>8<span class="tag">&lt;/<span class="name">target</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.maven.plugins<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-source-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.2.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">							<span class="tag">&lt;<span class="name">executions</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">execution</span>&gt;</span></span><br><span class="line">                      <span class="tag">&lt;<span class="name">id</span>&gt;</span>source jar<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">                      <span class="tag">&lt;<span class="name">phase</span>&gt;</span>verify<span class="tag">&lt;/<span class="name">phase</span>&gt;</span></span><br><span class="line">                      <span class="tag">&lt;<span class="name">goals</span>&gt;</span></span><br><span class="line">                          <span class="tag">&lt;<span class="name">goal</span>&gt;</span>jar-no-fork<span class="tag">&lt;/<span class="name">goal</span>&gt;</span></span><br><span class="line">                      <span class="tag">&lt;/<span class="name">goals</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;/<span class="name">execution</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">executions</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">outputDirectory</span>&gt;</span>$&#123;basedir&#125;/target<span class="tag">&lt;/<span class="name">outputDirectory</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h1 id="maven企业级实战"><a href="#maven企业级实战" class="headerlink" title="maven企业级实战"></a>maven企业级实战</h1><h2 id="从0到1搭建一个私服仓库"><a href="#从0到1搭建一个私服仓库" class="headerlink" title="从0到1搭建一个私服仓库"></a>从0到1搭建一个私服仓库</h2><p>架构图</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tva1.sinaimg.cn/large/008i3skNly1gt1o48gzjwj31cs0u041m.jpg" alt="%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86maven%2024fba34a5ee5462cbca9db8b86fe4619/Untitled%204.png"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gt1o48gzjwj31cs0u041m.jpg" alt="%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86maven%2024fba34a5ee5462cbca9db8b86fe4619/Untitled%204.png"></p>
 <ol>
 <li><p>下载 neuxs repository</p>
 <p><code>docker pull sonatype/nexus3:latest</code></p>
@@ -1284,25 +1284,25 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">-v 挂载volume到意思</span><br><span class="line"><span class="variable">$PWD</span> 代表到是当前到目录</span><br><span class="line">docker run -d -p 8090:8081 --name nexus -v <span class="variable">$PWD</span>/nexus-data:/nexus-data sonatype/nexus3</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>修改maven-central代理仓库中的remote storage <code>https://repo1.maven.org/maven2/</code> 修改成：<code>https://maven.aliyun.com/repository/central</code></p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tva1.sinaimg.cn/large/008i3skNly1gt1o38waxjj31p30u0wip.jpg" alt="%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86maven%2024fba34a5ee5462cbca9db8b86fe4619/Untitled%205.png"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gt1o38waxjj31p30u0wip.jpg" alt="%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86maven%2024fba34a5ee5462cbca9db8b86fe4619/Untitled%205.png"></p>
 </li>
 <li><p>maven-snapshot和maven-releases宿主仓库已有，无需修改</p>
 </li>
 <li><p>3rd-party仓库，需要手动创建，并且配置到maven-public group中</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tva1.sinaimg.cn/large/008i3skNly1gt1o4f3qakj31nm0s8adu.jpg" alt="%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86maven%2024fba34a5ee5462cbca9db8b86fe4619/Untitled%206.png"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gt1o4f3qakj31nm0s8adu.jpg" alt="%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86maven%2024fba34a5ee5462cbca9db8b86fe4619/Untitled%206.png"></p>
 <p>选择 maven2(hosted)，宿主类型</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tva1.sinaimg.cn/large/008i3skNly1gt1o4b8ap4j31h40u0jun.jpg" alt="%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86maven%2024fba34a5ee5462cbca9db8b86fe4619/Untitled%207.png"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gt1o4b8ap4j31h40u0jun.jpg" alt="%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86maven%2024fba34a5ee5462cbca9db8b86fe4619/Untitled%207.png"></p>
 <p>输入3rd-party，然后创建。</p>
 <p>设置maven-public</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tva1.sinaimg.cn/large/008i3skNly1gt1o467si1j326r0u0n22.jpg" alt="%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86maven%2024fba34a5ee5462cbca9db8b86fe4619/Untitled%208.png"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gt1o467si1j326r0u0n22.jpg" alt="%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86maven%2024fba34a5ee5462cbca9db8b86fe4619/Untitled%208.png"></p>
 <p>添加组内，保存，大功告成</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tva1.sinaimg.cn/large/008i3skNly1gt1o3dx6ihj31n00u041q.jpg" alt="%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86maven%2024fba34a5ee5462cbca9db8b86fe4619/Untitled%209.png"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gt1o3dx6ihj31n00u041q.jpg" alt="%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86maven%2024fba34a5ee5462cbca9db8b86fe4619/Untitled%209.png"></p>
 </li>
 <li><p>本地强制配置走私服</p>
 <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">settings</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/SETTINGS/1.0.0&quot;</span></span></span><br><span class="line"><span class="tag">          <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">          <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd&quot;</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">pluginGroups</span>&gt;</span></span><br><span class="line">   </span><br><span class="line">  <span class="tag">&lt;/<span class="name">pluginGroups</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">proxies</span>&gt;</span></span><br><span class="line"> </span><br><span class="line">  <span class="tag">&lt;/<span class="name">proxies</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">servers</span>&gt;</span></span><br><span class="line">		<span class="comment">&lt;!--配置专用账号 --&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">server</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus-releases<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">username</span>&gt;</span>nx-deployment<span class="tag">&lt;/<span class="name">username</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">password</span>&gt;</span>nx-deployment123<span class="tag">&lt;/<span class="name">password</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">server</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">server</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus-snapshots<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">username</span>&gt;</span>nx-deployment<span class="tag">&lt;/<span class="name">username</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">password</span>&gt;</span>nx-deployment123<span class="tag">&lt;/<span class="name">password</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">server</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">server</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus-3rd-party<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">username</span>&gt;</span>nx-deployment<span class="tag">&lt;/<span class="name">username</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">password</span>&gt;</span>nx-deployment123<span class="tag">&lt;/<span class="name">password</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">server</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">servers</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">mirrors</span>&gt;</span>   </span><br><span class="line">    <span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>*<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://localhost:8090/repository/maven-public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;/<span class="name">mirrors</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">profiles</span>&gt;</span>   </span><br><span class="line">    <span class="tag">&lt;<span class="name">profile</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">id</span>&gt;</span>neuxs<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">repositories</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">repository</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">id</span>&gt;</span>neuxs<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">name</span>&gt;</span>neuxs<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://localhost:8090/repository/maven-public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span>          </span><br><span class="line">          <span class="tag">&lt;<span class="name">releases</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">enabled</span>&gt;</span>true<span class="tag">&lt;/<span class="name">enabled</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">releases</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">snapshots</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">enabled</span>&gt;</span>true<span class="tag">&lt;/<span class="name">enabled</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">snapshots</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">repository</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">repositories</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">pluginRepositories</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">pluginRepository</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">id</span>&gt;</span>nexus<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">name</span>&gt;</span>Nexus Plugin Repository<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://localhost:8090/repository/maven-public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">releases</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">enabled</span>&gt;</span>true<span class="tag">&lt;/<span class="name">enabled</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">releases</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">snapshots</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">enabled</span>&gt;</span>true<span class="tag">&lt;/<span class="name">enabled</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">snapshots</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">pluginRepository</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">pluginRepositories</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;/<span class="name">profiles</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">activeProfiles</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">activeProfile</span>&gt;</span>neuxs<span class="tag">&lt;/<span class="name">activeProfile</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">activeProfiles</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">settings</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>权限管理，例如配置一个可以上传的jar的账号,nx-deployment</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tva1.sinaimg.cn/large/008i3skNly1gt1o3c7dasj61jn0u0n0702.jpg" alt="%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86maven%2024fba34a5ee5462cbca9db8b86fe4619/Untitled%2010.png"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gt1o3c7dasj61jn0u0n0702.jpg" alt="%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86maven%2024fba34a5ee5462cbca9db8b86fe4619/Untitled%2010.png"></p>
 </li>
 <li><p>使用专用的账号，上传</p>
 <p>pom文件添加，需要跟setting文件中的 servers 配置server的id一致</p>
@@ -1317,7 +1317,7 @@
 </li>
 </ol>
 <p>仓库类型</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tva1.sinaimg.cn/large/008i3skNly1gt1o3g6vogj32l80sw443.jpg" alt="%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86maven%2024fba34a5ee5462cbca9db8b86fe4619/Untitled%2011.png"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gt1o3g6vogj32l80sw443.jpg" alt="%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86maven%2024fba34a5ee5462cbca9db8b86fe4619/Untitled%2011.png"></p>
 <ol>
 <li>group：仓库组，虚拟的仓库组。中央仓库：maven1或者maven2</li>
 <li>hosted：宿主仓库，内部发布使用</li>
@@ -1366,7 +1366,7 @@
 <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/POM/4.0.0&quot;</span> <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.jaryoung.oa<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>oa-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>oa-org<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>oa-org<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- FIXME change it to the project&#x27;s website --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://www.example.com<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.jaryoung.oa<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>oa-common<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.fasterxml.jackson.core<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jackson-core<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.9.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencyManagement</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.jaryoung.bom<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>oa-commons-bom<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">type</span>&gt;</span>pom<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line">								<span class="comment">&lt;!-- oa-common-bom 组件的依赖，作为引入组件 oa-common，--&gt;</span></span><br><span class="line">								<span class="comment">&lt;!--	引用的开源或者其他项目的版本依赖 --&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">scope</span>&gt;</span>import<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencyManagement</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
 </ol>
 <h2 id="开发OA系统的web服务"><a href="#开发OA系统的web服务" class="headerlink" title="开发OA系统的web服务"></a>开发OA系统的web服务</h2><p>目录结构</p>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tva1.sinaimg.cn/large/008i3skNly1gt1o46mqauj3084053a9y.jpg" alt="%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86maven%2024fba34a5ee5462cbca9db8b86fe4619/Untitled%2012.png"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gt1o46mqauj3084053a9y.jpg" alt="%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86maven%2024fba34a5ee5462cbca9db8b86fe4619/Untitled%2012.png"></p>
 <blockquote>
 <p>java<br>resources<br>—application-web.xml<br>—spring-servlet.xml<br>webapp<br>—WEB-INF<br>—web.xml</p>
 </blockquote>
@@ -1450,7 +1450,7 @@
 <li><p>进行资源文件的多环境配置</p>
 </li>
 </ol>
-<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tva1.sinaimg.cn/large/008i3skNly1gt1o336ox4j30g409mt8r.jpg" alt="%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86maven%2024fba34a5ee5462cbca9db8b86fe4619/Untitled%2013.png"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gt1o336ox4j30g409mt8r.jpg" alt="%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86maven%2024fba34a5ee5462cbca9db8b86fe4619/Untitled%2013.png"></p>
 <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">公共资源配置，非profiles.build.resources中resrouce的配置					</span><br><span class="line">					<span class="tag">&lt;<span class="name">resource</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">directory</span>&gt;</span>src/main/profiles/$&#123;env&#125;<span class="tag">&lt;/<span class="name">directory</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">includes</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">include</span>&gt;</span>/**<span class="tag">&lt;/<span class="name">include</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">includes</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">filtering</span>&gt;</span>true<span class="tag">&lt;/<span class="name">filtering</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">resource</span>&gt;</span></span><br><span class="line">profiles的配置</span><br><span class="line">				<span class="tag">&lt;<span class="name">profile</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">id</span>&gt;</span>dev<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">activation</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">activeByDefault</span>&gt;</span>true<span class="tag">&lt;/<span class="name">activeByDefault</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">activation</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">jdbc.driverClassName</span>&gt;</span>com.mysql.jdbc.Driver<span class="tag">&lt;/<span class="name">jdbc.driverClassName</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">jdbc.url</span>&gt;</span>jdbc:mysql://localhost:3306/oa<span class="tag">&lt;/<span class="name">jdbc.url</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">jdbc.username</span>&gt;</span>root<span class="tag">&lt;/<span class="name">jdbc.username</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">jdbc.password</span>&gt;</span>123456<span class="tag">&lt;/<span class="name">jdbc.password</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">env</span>&gt;</span>dev<span class="tag">&lt;/<span class="name">env</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">profile</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>上面主要是增加一个propertie → <code>&lt;env&gt;dev&lt;/env&gt;</code></p>
@@ -1467,7 +1467,7 @@
 
 <h2 id="mybatis源码中的pom-xml解释"><a href="#mybatis源码中的pom-xml解释" class="headerlink" title="mybatis源码中的pom.xml解释"></a>mybatis源码中的pom.xml解释</h2><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">2021-02-28 17:08:54,847 [main] INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from URL [file:/Users/jaryoung/project/study/maven/oa-parent/oa-web/target/classes/application-web.xml]</span><br></pre></td></tr></table></figure>
 
-<h1 id="课程总结"><a href="#课程总结" class="headerlink" title="课程总结"></a>课程总结</h1><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tva1.sinaimg.cn/large/008i3skNly1gt1o4cj3fxj31830u0goa.jpg" alt="%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86maven%2024fba34a5ee5462cbca9db8b86fe4619/Untitled%2014.png"></p>
+<h1 id="课程总结"><a href="#课程总结" class="headerlink" title="课程总结"></a>课程总结</h1><p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gt1o4cj3fxj31830u0goa.jpg" alt="%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86maven%2024fba34a5ee5462cbca9db8b86fe4619/Untitled%2014.png"></p>
 <h1 id="遇到的问题及解决思路"><a href="#遇到的问题及解决思路" class="headerlink" title="遇到的问题及解决思路"></a>遇到的问题及解决思路</h1><p>多模块进行聚合的时候，发现部分项目的mamper没有被扫描到。<br>解决思路，查询日志看那些mapper没有被扫描到<br>Parsed mapper file:’URL [jar:file:&#x2F;**&#x2F;oa-org-1.0-SNAPSHOT.jar!&#x2F;mapper&#x2F;AuthorizationDao.xml]’</p>
 <p>解决思路：</p>
 <ol>
