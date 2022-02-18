@@ -484,77 +484,6 @@
       </tags>
   </entry>
   <entry>
-    <title>String of Java</title>
-    <url>/2019/08/25/String-of-Java/</url>
-    <content><![CDATA[<h2 id="String-概括"><a href="#String-概括" class="headerlink" title="String 概括"></a>String 概括</h2><blockquote>
-<p>string 名次，意思可以翻译为：线，弦，细绳；一串，一行等</p>
-</blockquote>
-<p>再来看看String的类图，String的value是不是感觉很应景呢？一个个字符，串起来变成我们熟悉的字符串。<br><a href="https://imgchr.com/i/mgkwsH"><img src="https://s2.ax1x.com/2019/08/25/mgkwsH.md.png" alt="mgkwsH.md.png"></a><br>这里有两个关键的field：value和hash。</p>
-<span id="more"></span>
-
-<h2 id="String-三连击"><a href="#String-三连击" class="headerlink" title="String 三连击"></a>String 三连击</h2><h3 id="String变量到底存储在哪里？（JDK8"><a href="#String变量到底存储在哪里？（JDK8" class="headerlink" title="String变量到底存储在哪里？（JDK8)"></a>String变量到底存储在哪里？（JDK8)</h3><figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">StringDemo</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>            <span class="hljs-type">String</span> <span class="hljs-variable">hello</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;hello&quot;</span>;<br>    &#125;<br></code></pre></td></tr></table></figure>
-<p>通过命令 <code> javap -v StringDemo.class</code> 对编译后的文件进行编码，会看到以下内容：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">cn</span>.hy.study.string.StringDemo<br>  minor version: <span class="hljs-number">0</span><br>  major version: <span class="hljs-number">52</span><br>  flags: ACC_PUBLIC, ACC_SUPER<br>Constant pool:<br>   #<span class="hljs-number">1</span> = Methodref          #<span class="hljs-number">4.</span>#<span class="hljs-number">20</span>         <span class="hljs-comment">// java/lang/Object.&quot;&lt;init&gt;&quot;:()V</span><br>   #<span class="hljs-number">2</span> = String             #<span class="hljs-number">16</span>            <span class="hljs-comment">// hello</span><br></code></pre></td></tr></table></figure>
-
-<p>可以看到，<code>hello</code> 这个字符串被存在了常量池（Constant pool）中，那么常量池又会存在哪里呢？</p>
-<p>通过下面代码，我们来看看jdk 1.8 的常量池是存在哪一块：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-type">String</span> <span class="hljs-variable">hello</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;hello&quot;</span>;<br><span class="hljs-type">ArrayList</span> <span class="hljs-variable">list</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>();<br><span class="hljs-keyword">for</span> (; ; ) &#123;<br>    <span class="hljs-type">String</span> <span class="hljs-variable">tmp</span> <span class="hljs-operator">=</span> hello + <span class="hljs-keyword">new</span> <span class="hljs-title class_">Random</span>().nextInt();<br>    hello = tmp;<br>    list.add(tmp.intern());<br>&#125;<br></code></pre></td></tr></table></figure>
-<p>jvm参数添加：<code>-Xmx2m -XX:+PrintGCDetails</code> 之后，运行不到一会儿，估计就会有下面的提醒了：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-number">1.8</span><br>Exception in thread <span class="hljs-string">&quot;main&quot;</span> java.lang.OutOfMemoryError: Java heap space<br>	at java.util.Arrays.copyOf(Arrays.java:<span class="hljs-number">3332</span>)<br>	at ...<br></code></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-number">1.7</span><br>Exception in thread <span class="hljs-string">&quot;main&quot;</span> java.lang.OutOfMemoryError: Java heap space<br>	at java.util.Arrays.copyOf(Arrays.java:<span class="hljs-number">2367</span>)<br></code></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-number">1.6</span><br>Exception in thread <span class="hljs-string">&quot;main&quot;</span> java.lang.OutOfMemoryError: PermGen space<br>	at java.lang.String.intern(Native Method)<br></code></pre></td></tr></table></figure>
-
-<p>堆的内存分布：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-number">1.8</span><br>Heap<br> PSYoungGen      total 1024K, used 17K [...)<br>  eden space 512K, <span class="hljs-number">3</span>% used [...)<br>  from space 512K, <span class="hljs-number">0</span>% used [...)<br>  to   space 512K, <span class="hljs-number">0</span>% used [...)<br> ParOldGen       total 512K, used 401K [...)<br>  object space 512K, <span class="hljs-number">78</span>% used [...)<br> Metaspace       used 2728K, capacity 4486K, committed 4864K, reserved 1056768K<br>  <span class="hljs-keyword">class</span> <span class="hljs-title class_">space</span>    used 291K, capacity 386K, committed 512K, reserved 1048576K<br><br><span class="hljs-number">1.7</span><br>Heap<br> PSYoungGen      total 2048K, used 22K [...)<br>  eden space 1024K, <span class="hljs-number">2</span>% used [...)<br>  from space 1024K, <span class="hljs-number">0</span>% used [...)<br>  to   space 1024K, <span class="hljs-number">0</span>% used [...)<br> ParOldGen       total 4096K, used 267K [...)<br>  object space 4096K, <span class="hljs-number">6</span>% used [...)<br> PSPermGen       total 21504K, used 2652K [...)<br>  object space 21504K, <span class="hljs-number">12</span>% used [...)<br><br><span class="hljs-number">1.6</span><br>Heap<br> par <span class="hljs-keyword">new</span> <span class="hljs-title class_">generation</span>   total 1152K, used 41K [...)<br>  eden space 1024K,   <span class="hljs-number">4</span>% used [...)<br>  from space 128K,   <span class="hljs-number">0</span>% used [...)<br>  to   space 128K,   <span class="hljs-number">0</span>% used [...)<br> concurrent mark-sweep generation total 5312K, used 279K [...)<br> concurrent-mark-sweep perm gen total 83968K, used 4693K [...) <br></code></pre></td></tr></table></figure>
-<p>我们知道jvm的内存结构，分为，堆、栈、方法区。从上面，我可以看到jdk 1.8 中字符串常量池存在于jvm的堆内存中。<br>综上所诉，可以看到</p>
-<blockquote>
-<p>注：PermGen space 全程 Permanent Generation space 永久的产生的空间，也就是常说的永久代，在1.8以后已经被Meta space所代替。</p>
-</blockquote>
-<h3 id="String哪个方法最重要？"><a href="#String哪个方法最重要？" class="headerlink" title="String哪个方法最重要？"></a>String哪个方法最重要？</h3><p>从问题一我们可以知道，字符串是保存到常量池中，但是常量池中保存到字符串是如何快速返回字符串给调用方呢？如果让我来设计，我会将它放在哈希表中，通过合理设计hash函数，使得字符串合理分布在哈希表中，使得我们能迅速获取已经存在常量池中的字符串。<br>下面是String的hashCode方法：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/** Cache the hash code for the string */</span><br><span class="hljs-keyword">private</span> <span class="hljs-type">int</span> hash; <span class="hljs-comment">// Default to 0</span><br><span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">hashCode</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> <span class="hljs-variable">h</span> <span class="hljs-operator">=</span> hash;<br>    <span class="hljs-keyword">if</span> (h == <span class="hljs-number">0</span> &amp;&amp; value.length &gt; <span class="hljs-number">0</span>) &#123;<br>        <span class="hljs-type">char</span> val[] = value;<br><br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; value.length; i++) &#123;<br>            h = <span class="hljs-number">31</span> * h + val[i];<br>        &#125;<br>        hash = h;<br>    &#125;<br>    <span class="hljs-keyword">return</span> h;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>这里最难理解就是：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; value.length; i++) &#123;<br>    h = <span class="hljs-number">31</span> * h + val[i];<br>&#125;<br>--&gt; s[<span class="hljs-number">0</span>]*<span class="hljs-number">31</span>^(n-<span class="hljs-number">1</span>) + s[<span class="hljs-number">1</span>]*<span class="hljs-number">31</span>^(n-<span class="hljs-number">2</span>) + ... + s[n-<span class="hljs-number">1</span>]<br></code></pre></td></tr></table></figure>
-
-<p>这里为啥是<code>31 * h</code><br>根据资料查阅，加上自己的一些理解，我觉得比较合理的解释：</p>
-<ul>
-<li><p><code>31 * h == (h &lt;&lt; 5) - h</code>，VM优化成位运算，使得计算hash code 性能更好</p>
-</li>
-<li><p>31 是一个不大不小的奇质数，也可以使得 <code>hashCode</code> 尽可能均匀分布。</p>
-</li>
-</ul>
-<p>除了以上，我们还可以发现一个有趣的地方 <code>if (h == 0 &amp;&amp; value.length &gt; 0)</code> ，这里用到了<em>闪存散列代码（caching the hash code）</em>，无需二次计算 <code>hash code</code>，是一个比较典型空间换时间的应用，它之所以行之有效，其实有一个大前提就是String是final&#x2F;immutable。</p>
-<blockquote>
-<p>哈希表，搜索的平均时间复杂度为：O(1)，最坏的时间复杂度：O(n)。<br>质数（Prime number），又称素数，指在大于1的自然数中，除了1和该数自身外，无法被其他自然数整除的数（也可定义为只有1与该数本身两个正因数的数）。</p>
-</blockquote>
-<h3 id="String哪个方法体逻辑最难懂，分享出来。"><a href="#String哪个方法体逻辑最难懂，分享出来。" class="headerlink" title="String哪个方法体逻辑最难懂，分享出来。"></a>String哪个方法体逻辑最难懂，分享出来。</h3><p>个人觉得 <code>split</code> 方法是在String中相对比较难懂。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java">        <span class="hljs-comment">/* fastpath if the regex is a</span><br><span class="hljs-comment">         (1)one-char String and this character is not one of the </span><br><span class="hljs-comment">            RegEx&#x27;s meta characters &quot;.$|()[&#123;^?*+\\&quot;, or</span><br><span class="hljs-comment">         (2)two-char String and the first char is the backslash and</span><br><span class="hljs-comment">            the second is not the ascii digit or ascii letter.</span><br><span class="hljs-comment">         */</span><br><span class="hljs-keyword">if</span> (((regex.value.length == <span class="hljs-number">1</span> &amp;&amp;<br>             <span class="hljs-string">&quot;.$|()[&#123;^?*+\\&quot;</span>.indexOf(ch = regex.charAt(<span class="hljs-number">0</span>)) == -<span class="hljs-number">1</span>) ||<br>             (regex.length() == <span class="hljs-number">2</span> &amp;&amp;<br>              regex.charAt(<span class="hljs-number">0</span>) == <span class="hljs-string">&#x27;\\&#x27;</span> &amp;&amp;<br>              (((ch = regex.charAt(<span class="hljs-number">1</span>))-<span class="hljs-string">&#x27;0&#x27;</span>)|(<span class="hljs-string">&#x27;9&#x27;</span>-ch)) &lt; <span class="hljs-number">0</span> &amp;&amp;<br>              ((ch-<span class="hljs-string">&#x27;a&#x27;</span>)|(<span class="hljs-string">&#x27;z&#x27;</span>-ch)) &lt; <span class="hljs-number">0</span> &amp;&amp;<br>              ((ch-<span class="hljs-string">&#x27;A&#x27;</span>)|(<span class="hljs-string">&#x27;Z&#x27;</span>-ch)) &lt; <span class="hljs-number">0</span>)) &amp;&amp;<br>            (ch &lt; Character.MIN_HIGH_SURROGATE ||<br>             ch &gt; Character.MAX_LOW_SURROGATE))<br>        &#123;<br></code></pre></td></tr></table></figure>
-<p>这个if语句想判断 <code>regex</code> 是否为 <code>fastpath</code> 而不是正则表达式，否则直接跑下面的代码:</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">return</span> Pattern.compile(regex).split(<span class="hljs-built_in">this</span>, limit);<br></code></pre></td></tr></table></figure>
-<p>所以用这个API的时候，我们最好不要使用 <code>&quot;.$|()[&#123;^?*+\\&quot;</code> 中的字符来进行分割，如果实在要用 需要通过 <code>\\</code> 来转义。举个栗子：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-type">String</span> <span class="hljs-variable">s</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;A,b|中,c&quot;</span>;<br><span class="hljs-keyword">for</span> (String word :<br>        s.split(<span class="hljs-string">&quot;\\|&quot;</span>)) &#123;<br>    System.out.println(word);<br>&#125;<br><br></code></pre></td></tr></table></figure>
-<p>输出结果为：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java">A,b<br>中,c<br></code></pre></td></tr></table></figure>
-<p>分析完，感觉最困难的<code>       return Pattern.compile(regex).split(this, limit);</code> 并没有分析到，下次如果有深入了解正则表达式的想法可以死磕一波。</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
-<li><a href="https://www.infoq.cn/article/2018/08/java-stringhashcode-plenty">Java 中的 String.hashCode() 方法可能有问题？</a></li>
-<li><a href="https://stackoverflow.com/questions/299304/why-does-javas-hashcode-in-string-use-31-as-a-multiplier">why-does-javas-hashcode-in-string-use-31-as-a-multiplier</a></li>
-<li><a href="https://segmentfault.com/a/1190000010799123">科普：为什么 String hashCode 方法选择数字31作为乘子</a></li>
-<li>Effective Java</li>
-<li>数据结构与算法分析 Java语言描述</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Java基础</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>hash</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>《Netty in Action》 读后感</title>
     <url>/2020/02/07/Netty-in-Action-After-Reading/</url>
     <content><![CDATA[<h2 id="开编我想说"><a href="#开编我想说" class="headerlink" title="开编我想说"></a>开编我想说</h2><blockquote>
@@ -816,34 +745,74 @@
       </tags>
   </entry>
   <entry>
-    <title>Study English One Day</title>
-    <url>/2020/01/02/Study-English-One-Day/</url>
-    <content><![CDATA[<h2 id="2020年立个flat-刻意学习和练习英语"><a href="#2020年立个flat-刻意学习和练习英语" class="headerlink" title="2020年立个flat 刻意学习和练习英语"></a>2020年立个flat 刻意学习和练习英语</h2><blockquote>
-<p>跟着《程序员的英语》学起英语来。</p>
+    <title>String of Java</title>
+    <url>/2019/08/25/String-of-Java/</url>
+    <content><![CDATA[<h2 id="String-概括"><a href="#String-概括" class="headerlink" title="String 概括"></a>String 概括</h2><blockquote>
+<p>string 名次，意思可以翻译为：线，弦，细绳；一串，一行等</p>
 </blockquote>
-<h2 id="五个基本基本句式"><a href="#五个基本基本句式" class="headerlink" title="五个基本基本句式"></a>五个基本基本句式</h2><h3 id="句式1为【主语-动词（vi）】，是基本句式"><a href="#句式1为【主语-动词（vi）】，是基本句式" class="headerlink" title="句式1为【主语 + 动词（vi）】，是基本句式"></a>句式1为【主语 + 动词（vi）】，是基本句式</h3><blockquote>
-<p>vi，不及物动词，不能直接跟宾语，需要一些介词跟着，例如，to，of，at等</p>
-</blockquote>
+<p>再来看看String的类图，String的value是不是感觉很应景呢？一个个字符，串起来变成我们熟悉的字符串。<br><a href="https://imgchr.com/i/mgkwsH"><img src="https://s2.ax1x.com/2019/08/25/mgkwsH.md.png" alt="mgkwsH.md.png"></a><br>这里有两个关键的field：value和hash。</p>
 <span id="more"></span>
 
-<p>He made toward the center station.<br>他（He，主语） 向中央车站 走过去（toward，动词）。</p>
-<h3 id="句式2为【主语-动词-补语】"><a href="#句式2为【主语-动词-补语】" class="headerlink" title="句式2为【主语 + 动词 + 补语】"></a>句式2为【主语 + 动词 + 补语】</h3><blockquote>
-<p>补语，对主语的补充说明</p>
+<h2 id="String-三连击"><a href="#String-三连击" class="headerlink" title="String 三连击"></a>String 三连击</h2><h3 id="String变量到底存储在哪里？（JDK8"><a href="#String变量到底存储在哪里？（JDK8" class="headerlink" title="String变量到底存储在哪里？（JDK8)"></a>String变量到底存储在哪里？（JDK8)</h3><figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">StringDemo</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>            <span class="hljs-type">String</span> <span class="hljs-variable">hello</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;hello&quot;</span>;<br>    &#125;<br></code></pre></td></tr></table></figure>
+<p>通过命令 <code> javap -v StringDemo.class</code> 对编译后的文件进行编码，会看到以下内容：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">cn</span>.hy.study.string.StringDemo<br>  minor version: <span class="hljs-number">0</span><br>  major version: <span class="hljs-number">52</span><br>  flags: ACC_PUBLIC, ACC_SUPER<br>Constant pool:<br>   #<span class="hljs-number">1</span> = Methodref          #<span class="hljs-number">4.</span>#<span class="hljs-number">20</span>         <span class="hljs-comment">// java/lang/Object.&quot;&lt;init&gt;&quot;:()V</span><br>   #<span class="hljs-number">2</span> = String             #<span class="hljs-number">16</span>            <span class="hljs-comment">// hello</span><br></code></pre></td></tr></table></figure>
+
+<p>可以看到，<code>hello</code> 这个字符串被存在了常量池（Constant pool）中，那么常量池又会存在哪里呢？</p>
+<p>通过下面代码，我们来看看jdk 1.8 的常量池是存在哪一块：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-type">String</span> <span class="hljs-variable">hello</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;hello&quot;</span>;<br><span class="hljs-type">ArrayList</span> <span class="hljs-variable">list</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>();<br><span class="hljs-keyword">for</span> (; ; ) &#123;<br>    <span class="hljs-type">String</span> <span class="hljs-variable">tmp</span> <span class="hljs-operator">=</span> hello + <span class="hljs-keyword">new</span> <span class="hljs-title class_">Random</span>().nextInt();<br>    hello = tmp;<br>    list.add(tmp.intern());<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>jvm参数添加：<code>-Xmx2m -XX:+PrintGCDetails</code> 之后，运行不到一会儿，估计就会有下面的提醒了：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-number">1.8</span><br>Exception in thread <span class="hljs-string">&quot;main&quot;</span> java.lang.OutOfMemoryError: Java heap space<br>	at java.util.Arrays.copyOf(Arrays.java:<span class="hljs-number">3332</span>)<br>	at ...<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-number">1.7</span><br>Exception in thread <span class="hljs-string">&quot;main&quot;</span> java.lang.OutOfMemoryError: Java heap space<br>	at java.util.Arrays.copyOf(Arrays.java:<span class="hljs-number">2367</span>)<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-number">1.6</span><br>Exception in thread <span class="hljs-string">&quot;main&quot;</span> java.lang.OutOfMemoryError: PermGen space<br>	at java.lang.String.intern(Native Method)<br></code></pre></td></tr></table></figure>
+
+<p>堆的内存分布：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-number">1.8</span><br>Heap<br> PSYoungGen      total 1024K, used 17K [...)<br>  eden space 512K, <span class="hljs-number">3</span>% used [...)<br>  from space 512K, <span class="hljs-number">0</span>% used [...)<br>  to   space 512K, <span class="hljs-number">0</span>% used [...)<br> ParOldGen       total 512K, used 401K [...)<br>  object space 512K, <span class="hljs-number">78</span>% used [...)<br> Metaspace       used 2728K, capacity 4486K, committed 4864K, reserved 1056768K<br>  <span class="hljs-keyword">class</span> <span class="hljs-title class_">space</span>    used 291K, capacity 386K, committed 512K, reserved 1048576K<br><br><span class="hljs-number">1.7</span><br>Heap<br> PSYoungGen      total 2048K, used 22K [...)<br>  eden space 1024K, <span class="hljs-number">2</span>% used [...)<br>  from space 1024K, <span class="hljs-number">0</span>% used [...)<br>  to   space 1024K, <span class="hljs-number">0</span>% used [...)<br> ParOldGen       total 4096K, used 267K [...)<br>  object space 4096K, <span class="hljs-number">6</span>% used [...)<br> PSPermGen       total 21504K, used 2652K [...)<br>  object space 21504K, <span class="hljs-number">12</span>% used [...)<br><br><span class="hljs-number">1.6</span><br>Heap<br> par <span class="hljs-keyword">new</span> <span class="hljs-title class_">generation</span>   total 1152K, used 41K [...)<br>  eden space 1024K,   <span class="hljs-number">4</span>% used [...)<br>  from space 128K,   <span class="hljs-number">0</span>% used [...)<br>  to   space 128K,   <span class="hljs-number">0</span>% used [...)<br> concurrent mark-sweep generation total 5312K, used 279K [...)<br> concurrent-mark-sweep perm gen total 83968K, used 4693K [...) <br></code></pre></td></tr></table></figure>
+<p>我们知道jvm的内存结构，分为，堆、栈、方法区。从上面，我可以看到jdk 1.8 中字符串常量池存在于jvm的堆内存中。<br>综上所诉，可以看到</p>
+<blockquote>
+<p>注：PermGen space 全程 Permanent Generation space 永久的产生的空间，也就是常说的永久代，在1.8以后已经被Meta space所代替。</p>
 </blockquote>
-<p>He will make a good programer.<br>他（He，主语） 将要成为（make，动词） 一名优秀的程序员（programer，补语，对主语他的补充说明）。</p>
-<h3 id="句式3为【主语-动词（vt）-宾语】句式2和句式3的区分方式是，如果一般动词可以用be动词代替，则属于句式2，否则是句式3"><a href="#句式3为【主语-动词（vt）-宾语】句式2和句式3的区分方式是，如果一般动词可以用be动词代替，则属于句式2，否则是句式3" class="headerlink" title="句式3为【主语 + 动词（vt） + 宾语】句式2和句式3的区分方式是，如果一般动词可以用be动词代替，则属于句式2，否则是句式3"></a>句式3为【主语 + 动词（vt） + 宾语】句式2和句式3的区分方式是，如果一般动词可以用be动词代替，则属于句式2，否则是句式3</h3><blockquote>
-<p>vt 及物动词，能够直接宾语</p>
+<h3 id="String哪个方法最重要？"><a href="#String哪个方法最重要？" class="headerlink" title="String哪个方法最重要？"></a>String哪个方法最重要？</h3><p>从问题一我们可以知道，字符串是保存到常量池中，但是常量池中保存到字符串是如何快速返回字符串给调用方呢？如果让我来设计，我会将它放在哈希表中，通过合理设计hash函数，使得字符串合理分布在哈希表中，使得我们能迅速获取已经存在常量池中的字符串。<br>下面是String的hashCode方法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/** Cache the hash code for the string */</span><br><span class="hljs-keyword">private</span> <span class="hljs-type">int</span> hash; <span class="hljs-comment">// Default to 0</span><br><span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">hashCode</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">int</span> <span class="hljs-variable">h</span> <span class="hljs-operator">=</span> hash;<br>    <span class="hljs-keyword">if</span> (h == <span class="hljs-number">0</span> &amp;&amp; value.length &gt; <span class="hljs-number">0</span>) &#123;<br>        <span class="hljs-type">char</span> val[] = value;<br><br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; value.length; i++) &#123;<br>            h = <span class="hljs-number">31</span> * h + val[i];<br>        &#125;<br>        hash = h;<br>    &#125;<br>    <span class="hljs-keyword">return</span> h;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>这里最难理解就是：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; value.length; i++) &#123;<br>    h = <span class="hljs-number">31</span> * h + val[i];<br>&#125;<br>--&gt; s[<span class="hljs-number">0</span>]*<span class="hljs-number">31</span>^(n-<span class="hljs-number">1</span>) + s[<span class="hljs-number">1</span>]*<span class="hljs-number">31</span>^(n-<span class="hljs-number">2</span>) + ... + s[n-<span class="hljs-number">1</span>]<br></code></pre></td></tr></table></figure>
+
+<p>这里为啥是<code>31 * h</code><br>根据资料查阅，加上自己的一些理解，我觉得比较合理的解释：</p>
+<ul>
+<li><p><code>31 * h == (h &lt;&lt; 5) - h</code>，VM优化成位运算，使得计算hash code 性能更好</p>
+</li>
+<li><p>31 是一个不大不小的奇质数，也可以使得 <code>hashCode</code> 尽可能均匀分布。</p>
+</li>
+</ul>
+<p>除了以上，我们还可以发现一个有趣的地方 <code>if (h == 0 &amp;&amp; value.length &gt; 0)</code> ，这里用到了<em>闪存散列代码（caching the hash code）</em>，无需二次计算 <code>hash code</code>，是一个比较典型空间换时间的应用，它之所以行之有效，其实有一个大前提就是String是final&#x2F;immutable。</p>
+<blockquote>
+<p>哈希表，搜索的平均时间复杂度为：O(1)，最坏的时间复杂度：O(n)。<br>质数（Prime number），又称素数，指在大于1的自然数中，除了1和该数自身外，无法被其他自然数整除的数（也可定义为只有1与该数本身两个正因数的数）。</p>
 </blockquote>
-<p>Make hay while the sun shines.<br>晒（make，动词） 干草（hay，名词） 需要好太阳（sun，主语）。（寓意，看好时机干活）</p>
-<h3 id="句式4为【主语-动词-宾语（间接宾语）-宾语（直接宾语）】"><a href="#句式4为【主语-动词-宾语（间接宾语）-宾语（直接宾语）】" class="headerlink" title="句式4为【主语 + 动词 + 宾语（间接宾语） + 宾语（直接宾语）】"></a>句式4为【主语 + 动词 + 宾语（间接宾语） + 宾语（直接宾语）】</h3><p>He made me the simple dudoku app.<br>他（He，主语） 给我（me，间接宾语） 做（made，动词）了 一个简单的数独app（直接宾语）。</p>
-<h3 id="句式5为【主语-动词-宾语-补语】，宾语和补语是可以同时出的。宾补，可以是不定式to、现在分词、过去分词等"><a href="#句式5为【主语-动词-宾语-补语】，宾语和补语是可以同时出的。宾补，可以是不定式to、现在分词、过去分词等" class="headerlink" title="句式5为【主语 + 动词 + 宾语 + 补语】，宾语和补语是可以同时出的。宾补，可以是不定式to、现在分词、过去分词等"></a>句式5为【主语 + 动词 + 宾语 + 补语】，宾语和补语是可以同时出的。宾补，可以是不定式to、现在分词、过去分词等</h3><p>He made her happy.<br>他（He，主语）使（made，动词）她（her，宾语）幸福（happy，补语）</p>
+<h3 id="String哪个方法体逻辑最难懂，分享出来。"><a href="#String哪个方法体逻辑最难懂，分享出来。" class="headerlink" title="String哪个方法体逻辑最难懂，分享出来。"></a>String哪个方法体逻辑最难懂，分享出来。</h3><p>个人觉得 <code>split</code> 方法是在String中相对比较难懂。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java">        <span class="hljs-comment">/* fastpath if the regex is a</span><br><span class="hljs-comment">         (1)one-char String and this character is not one of the </span><br><span class="hljs-comment">            RegEx&#x27;s meta characters &quot;.$|()[&#123;^?*+\\&quot;, or</span><br><span class="hljs-comment">         (2)two-char String and the first char is the backslash and</span><br><span class="hljs-comment">            the second is not the ascii digit or ascii letter.</span><br><span class="hljs-comment">         */</span><br><span class="hljs-keyword">if</span> (((regex.value.length == <span class="hljs-number">1</span> &amp;&amp;<br>             <span class="hljs-string">&quot;.$|()[&#123;^?*+\\&quot;</span>.indexOf(ch = regex.charAt(<span class="hljs-number">0</span>)) == -<span class="hljs-number">1</span>) ||<br>             (regex.length() == <span class="hljs-number">2</span> &amp;&amp;<br>              regex.charAt(<span class="hljs-number">0</span>) == <span class="hljs-string">&#x27;\\&#x27;</span> &amp;&amp;<br>              (((ch = regex.charAt(<span class="hljs-number">1</span>))-<span class="hljs-string">&#x27;0&#x27;</span>)|(<span class="hljs-string">&#x27;9&#x27;</span>-ch)) &lt; <span class="hljs-number">0</span> &amp;&amp;<br>              ((ch-<span class="hljs-string">&#x27;a&#x27;</span>)|(<span class="hljs-string">&#x27;z&#x27;</span>-ch)) &lt; <span class="hljs-number">0</span> &amp;&amp;<br>              ((ch-<span class="hljs-string">&#x27;A&#x27;</span>)|(<span class="hljs-string">&#x27;Z&#x27;</span>-ch)) &lt; <span class="hljs-number">0</span>)) &amp;&amp;<br>            (ch &lt; Character.MIN_HIGH_SURROGATE ||<br>             ch &gt; Character.MAX_LOW_SURROGATE))<br>        &#123;<br></code></pre></td></tr></table></figure>
+<p>这个if语句想判断 <code>regex</code> 是否为 <code>fastpath</code> 而不是正则表达式，否则直接跑下面的代码:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">return</span> Pattern.compile(regex).split(<span class="hljs-built_in">this</span>, limit);<br></code></pre></td></tr></table></figure>
+<p>所以用这个API的时候，我们最好不要使用 <code>&quot;.$|()[&#123;^?*+\\&quot;</code> 中的字符来进行分割，如果实在要用 需要通过 <code>\\</code> 来转义。举个栗子：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-type">String</span> <span class="hljs-variable">s</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;A,b|中,c&quot;</span>;<br><span class="hljs-keyword">for</span> (String word :<br>        s.split(<span class="hljs-string">&quot;\\|&quot;</span>)) &#123;<br>    System.out.println(word);<br>&#125;<br><br></code></pre></td></tr></table></figure>
+<p>输出结果为：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java">A,b<br>中,c<br></code></pre></td></tr></table></figure>
+<p>分析完，感觉最困难的<code>       return Pattern.compile(regex).split(this, limit);</code> 并没有分析到，下次如果有深入了解正则表达式的想法可以死磕一波。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://www.infoq.cn/article/2018/08/java-stringhashcode-plenty">Java 中的 String.hashCode() 方法可能有问题？</a></li>
+<li><a href="https://stackoverflow.com/questions/299304/why-does-javas-hashcode-in-string-use-31-as-a-multiplier">why-does-javas-hashcode-in-string-use-31-as-a-multiplier</a></li>
+<li><a href="https://segmentfault.com/a/1190000010799123">科普：为什么 String hashCode 方法选择数字31作为乘子</a></li>
+<li>Effective Java</li>
+<li>数据结构与算法分析 Java语言描述</li>
+</ul>
 ]]></content>
       <categories>
-        <category>English</category>
+        <category>Java基础</category>
       </categories>
       <tags>
-        <tag>Study</tag>
-        <tag>English</tag>
+        <tag>Java</tag>
+        <tag>hash</tag>
       </tags>
   </entry>
   <entry>
@@ -888,6 +857,37 @@
         <tag>Vagrant</tag>
         <tag>Linux</tag>
         <tag>CentOS7</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Study English One Day</title>
+    <url>/2020/01/02/Study-English-One-Day/</url>
+    <content><![CDATA[<h2 id="2020年立个flat-刻意学习和练习英语"><a href="#2020年立个flat-刻意学习和练习英语" class="headerlink" title="2020年立个flat 刻意学习和练习英语"></a>2020年立个flat 刻意学习和练习英语</h2><blockquote>
+<p>跟着《程序员的英语》学起英语来。</p>
+</blockquote>
+<h2 id="五个基本基本句式"><a href="#五个基本基本句式" class="headerlink" title="五个基本基本句式"></a>五个基本基本句式</h2><h3 id="句式1为【主语-动词（vi）】，是基本句式"><a href="#句式1为【主语-动词（vi）】，是基本句式" class="headerlink" title="句式1为【主语 + 动词（vi）】，是基本句式"></a>句式1为【主语 + 动词（vi）】，是基本句式</h3><blockquote>
+<p>vi，不及物动词，不能直接跟宾语，需要一些介词跟着，例如，to，of，at等</p>
+</blockquote>
+<span id="more"></span>
+
+<p>He made toward the center station.<br>他（He，主语） 向中央车站 走过去（toward，动词）。</p>
+<h3 id="句式2为【主语-动词-补语】"><a href="#句式2为【主语-动词-补语】" class="headerlink" title="句式2为【主语 + 动词 + 补语】"></a>句式2为【主语 + 动词 + 补语】</h3><blockquote>
+<p>补语，对主语的补充说明</p>
+</blockquote>
+<p>He will make a good programer.<br>他（He，主语） 将要成为（make，动词） 一名优秀的程序员（programer，补语，对主语他的补充说明）。</p>
+<h3 id="句式3为【主语-动词（vt）-宾语】句式2和句式3的区分方式是，如果一般动词可以用be动词代替，则属于句式2，否则是句式3"><a href="#句式3为【主语-动词（vt）-宾语】句式2和句式3的区分方式是，如果一般动词可以用be动词代替，则属于句式2，否则是句式3" class="headerlink" title="句式3为【主语 + 动词（vt） + 宾语】句式2和句式3的区分方式是，如果一般动词可以用be动词代替，则属于句式2，否则是句式3"></a>句式3为【主语 + 动词（vt） + 宾语】句式2和句式3的区分方式是，如果一般动词可以用be动词代替，则属于句式2，否则是句式3</h3><blockquote>
+<p>vt 及物动词，能够直接宾语</p>
+</blockquote>
+<p>Make hay while the sun shines.<br>晒（make，动词） 干草（hay，名词） 需要好太阳（sun，主语）。（寓意，看好时机干活）</p>
+<h3 id="句式4为【主语-动词-宾语（间接宾语）-宾语（直接宾语）】"><a href="#句式4为【主语-动词-宾语（间接宾语）-宾语（直接宾语）】" class="headerlink" title="句式4为【主语 + 动词 + 宾语（间接宾语） + 宾语（直接宾语）】"></a>句式4为【主语 + 动词 + 宾语（间接宾语） + 宾语（直接宾语）】</h3><p>He made me the simple dudoku app.<br>他（He，主语） 给我（me，间接宾语） 做（made，动词）了 一个简单的数独app（直接宾语）。</p>
+<h3 id="句式5为【主语-动词-宾语-补语】，宾语和补语是可以同时出的。宾补，可以是不定式to、现在分词、过去分词等"><a href="#句式5为【主语-动词-宾语-补语】，宾语和补语是可以同时出的。宾补，可以是不定式to、现在分词、过去分词等" class="headerlink" title="句式5为【主语 + 动词 + 宾语 + 补语】，宾语和补语是可以同时出的。宾补，可以是不定式to、现在分词、过去分词等"></a>句式5为【主语 + 动词 + 宾语 + 补语】，宾语和补语是可以同时出的。宾补，可以是不定式to、现在分词、过去分词等</h3><p>He made her happy.<br>他（He，主语）使（made，动词）她（her，宾语）幸福（happy，补语）</p>
+]]></content>
+      <categories>
+        <category>English</category>
+      </categories>
+      <tags>
+        <tag>Study</tag>
+        <tag>English</tag>
       </tags>
   </entry>
   <entry>
@@ -943,7 +943,7 @@
 
 
 <h1 id="问题与解决思路"><a href="#问题与解决思路" class="headerlink" title="问题与解决思路"></a>问题与解决思路</h1><ol>
-<li>(node:60240) UnhandledPromiseRejectionWarning: Error: spawn &#x2F;Users&#x2F;jaryoung&#x2F;project&#x2F;myblog&#x2F;node_modules&#x2F;<a href="mailto:&#x5f;&#103;&#105;&#102;&#115;&#105;&#99;&#x6c;&#x65;&#64;&#53;&#x2e;&#50;&#x2e;&#49;">&#x5f;&#103;&#105;&#102;&#115;&#105;&#99;&#x6c;&#x65;&#64;&#53;&#x2e;&#50;&#x2e;&#49;</a>@gifsicle&#x2F;vendor&#x2F;gifsicle ENOENT<br>解决思路，不一定正确，根据自己实际情况来处理。<ul>
+<li>(node:60240) UnhandledPromiseRejectionWarning: Error: spawn &#x2F;Users&#x2F;jaryoung&#x2F;project&#x2F;myblog&#x2F;node_modules&#x2F;<a href="mailto:&#x5f;&#x67;&#105;&#102;&#x73;&#x69;&#x63;&#108;&#x65;&#64;&#53;&#x2e;&#x32;&#x2e;&#x31;">&#x5f;&#x67;&#105;&#102;&#x73;&#x69;&#x63;&#108;&#x65;&#64;&#53;&#x2e;&#x32;&#x2e;&#x31;</a>@gifsicle&#x2F;vendor&#x2F;gifsicle ENOENT<br>解决思路，不一定正确，根据自己实际情况来处理。<ul>
 <li><code>gulp-imagemin</code>，由于8.0.0出现一个比较诡异的问题，所以需要将<code>gulp-imagemin</code>降级到<code>7.1.0</code>版本</li>
 <li>但是降级到<code>7.1.0</code>会出现有一些依赖找不到的情况，只能一个个来找进行安装（如果有更好的办法，也希望有小伙伴跟我说一下）</li>
 <li><a href="https://github.com/sindresorhus/gulp-imagemin/blob/v7.1.0/package.json">版本依赖情况</a>，根据github来进行一个个版本jar依赖的下载。最终整理为：<code>npm install -d gulp-imagemin@7.1.0 imagemin@7.0.0 imagemin-optipng@7.0.0 imagemin-mozjpeg@8.0.0 imagemin-svgo@7.0.0 imagemin-gifsicle@7.0.0 gifsicle@5.0.0 --save-dev</code> ，也就是上面步骤给出来的命令</li>
