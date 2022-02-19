@@ -745,6 +745,81 @@
       </tags>
   </entry>
   <entry>
+    <title>Study English One Day</title>
+    <url>/2020/01/02/Study-English-One-Day/</url>
+    <content><![CDATA[<h2 id="2020年立个flat-刻意学习和练习英语"><a href="#2020年立个flat-刻意学习和练习英语" class="headerlink" title="2020年立个flat 刻意学习和练习英语"></a>2020年立个flat 刻意学习和练习英语</h2><blockquote>
+<p>跟着《程序员的英语》学起英语来。</p>
+</blockquote>
+<h2 id="五个基本基本句式"><a href="#五个基本基本句式" class="headerlink" title="五个基本基本句式"></a>五个基本基本句式</h2><h3 id="句式1为【主语-动词（vi）】，是基本句式"><a href="#句式1为【主语-动词（vi）】，是基本句式" class="headerlink" title="句式1为【主语 + 动词（vi）】，是基本句式"></a>句式1为【主语 + 动词（vi）】，是基本句式</h3><blockquote>
+<p>vi，不及物动词，不能直接跟宾语，需要一些介词跟着，例如，to，of，at等</p>
+</blockquote>
+<span id="more"></span>
+
+<p>He made toward the center station.<br>他（He，主语） 向中央车站 走过去（toward，动词）。</p>
+<h3 id="句式2为【主语-动词-补语】"><a href="#句式2为【主语-动词-补语】" class="headerlink" title="句式2为【主语 + 动词 + 补语】"></a>句式2为【主语 + 动词 + 补语】</h3><blockquote>
+<p>补语，对主语的补充说明</p>
+</blockquote>
+<p>He will make a good programer.<br>他（He，主语） 将要成为（make，动词） 一名优秀的程序员（programer，补语，对主语他的补充说明）。</p>
+<h3 id="句式3为【主语-动词（vt）-宾语】句式2和句式3的区分方式是，如果一般动词可以用be动词代替，则属于句式2，否则是句式3"><a href="#句式3为【主语-动词（vt）-宾语】句式2和句式3的区分方式是，如果一般动词可以用be动词代替，则属于句式2，否则是句式3" class="headerlink" title="句式3为【主语 + 动词（vt） + 宾语】句式2和句式3的区分方式是，如果一般动词可以用be动词代替，则属于句式2，否则是句式3"></a>句式3为【主语 + 动词（vt） + 宾语】句式2和句式3的区分方式是，如果一般动词可以用be动词代替，则属于句式2，否则是句式3</h3><blockquote>
+<p>vt 及物动词，能够直接宾语</p>
+</blockquote>
+<p>Make hay while the sun shines.<br>晒（make，动词） 干草（hay，名词） 需要好太阳（sun，主语）。（寓意，看好时机干活）</p>
+<h3 id="句式4为【主语-动词-宾语（间接宾语）-宾语（直接宾语）】"><a href="#句式4为【主语-动词-宾语（间接宾语）-宾语（直接宾语）】" class="headerlink" title="句式4为【主语 + 动词 + 宾语（间接宾语） + 宾语（直接宾语）】"></a>句式4为【主语 + 动词 + 宾语（间接宾语） + 宾语（直接宾语）】</h3><p>He made me the simple dudoku app.<br>他（He，主语） 给我（me，间接宾语） 做（made，动词）了 一个简单的数独app（直接宾语）。</p>
+<h3 id="句式5为【主语-动词-宾语-补语】，宾语和补语是可以同时出的。宾补，可以是不定式to、现在分词、过去分词等"><a href="#句式5为【主语-动词-宾语-补语】，宾语和补语是可以同时出的。宾补，可以是不定式to、现在分词、过去分词等" class="headerlink" title="句式5为【主语 + 动词 + 宾语 + 补语】，宾语和补语是可以同时出的。宾补，可以是不定式to、现在分词、过去分词等"></a>句式5为【主语 + 动词 + 宾语 + 补语】，宾语和补语是可以同时出的。宾补，可以是不定式to、现在分词、过去分词等</h3><p>He made her happy.<br>他（He，主语）使（made，动词）她（her，宾语）幸福（happy，补语）</p>
+]]></content>
+      <categories>
+        <category>English</category>
+      </categories>
+      <tags>
+        <tag>Study</tag>
+        <tag>English</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vagrant 默认是用root账户登陆</title>
+    <url>/2021/08/28/Vagrant-default-use-root-login/</url>
+    <content><![CDATA[<blockquote>
+<p>本文不讨论，通过账号密码登陆的登陆的方式，因为我所在版本【Vagrant 2.2.9】，就算通过config-ssh-insert_key&#x3D;false，也无法通过免<strong>输入</strong>密码的方式登陆</p>
+</blockquote>
+<span id="more"></span>
+
+
+<h1 id="vagrant账户登陆的苦恼"><a href="#vagrant账户登陆的苦恼" class="headerlink" title="vagrant账户登陆的苦恼"></a>vagrant账户登陆的苦恼</h1><p>每次通过 <code>vagrant ssh</code>  命令登陆之后，默认使用的<code>vagrant</code>的账户，有时候我需要操作一些命令需要 <code>root</code> 的用户权限才可以操作，</p>
+<p>很自然我们就会想道通过<code>suod -i</code> 切换到的root账号上，再来执行对应的命令操作。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">vagrant ssh<br><br>yum install xxx<br><span class="hljs-comment"># 提醒没有权限</span><br><br>sudo -i<br><br>yum install xxx<br><span class="hljs-comment"># 安装成功</span><br></code></pre></td></tr></table></figure>
+
+<h1 id="也许版本有坑？"><a href="#也许版本有坑？" class="headerlink" title="也许版本有坑？"></a>也许版本有坑？</h1><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">Mac OS 11.4<br>vagrant --version<br>Vagrant 2.2.9<br></code></pre></td></tr></table></figure>
+
+<p>网上一顿搜索，找到很多帖子，但是很多人都是说明自己的使用的哪个版本的<br>所以很多帖子，都可能有点过期，反正找了一大圈，没有找到合适的解决方案；<br>建议查看本文的时候，看看你们的版本是否已经高于我的版本，如果高于或者低于2.x这个版本的可能本文就不太适用，大家另辟蹊径吧。</p>
+<h1 id="完美解决"><a href="#完美解决" class="headerlink" title="完美解决"></a>完美解决</h1><h2 id="第一步，将本地公钥文件同步到虚拟机"><a href="#第一步，将本地公钥文件同步到虚拟机" class="headerlink" title="第一步，将本地公钥文件同步到虚拟机"></a>第一步，将本地公钥文件同步到虚拟机</h2><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cat</span> ~/.ssh/id_rsa.pub<br>ssh-rsa AAAAB3NzaC1y....<br><br><span class="hljs-comment"># 如果没有到公私钥匙到话，就通过 ssh-keygen 生成一对吧。</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="第二步，登陆虚拟机"><a href="#第二步，登陆虚拟机" class="headerlink" title="第二步，登陆虚拟机"></a>第二步，登陆虚拟机</h2><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">vagrant ssh<br>sudo -i<br><br>[root@localhost ~]<span class="hljs-comment"># 需要注意看到，已经变成root@xxx才算切换成功喔。</span><br><br><span class="hljs-built_in">cd</span> /etc/ssh/<br><br>vi sshd_config<br><br><span class="hljs-comment">#PermitRootLogin yes</span><br>修改成<br>PermitRootLogin <span class="hljs-built_in">yes</span> <span class="hljs-comment"># 代表允许root用户登陆</span><br><br><span class="hljs-built_in">mkdir</span> /root/.ssh<br><span class="hljs-built_in">chmod</span> -R go= ~/.ssh<br><span class="hljs-built_in">chown</span> -R root:root ~/.ssh<br><span class="hljs-built_in">cd</span> /root/.ssh<br><br><span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;ssh-rsa AAAAB3NzaC1y....你对公钥&#x27;</span> &gt;&gt; authorized_keys<br></code></pre></td></tr></table></figure>
+
+<h2 id="第四步，验证公钥登陆是否生效"><a href="#第四步，验证公钥登陆是否生效" class="headerlink" title="第四步，验证公钥登陆是否生效"></a>第四步，验证公钥登陆是否生效</h2><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">ssh root@127.0.0.1 -p22230 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null<br><br>[root@localhost ~]<span class="hljs-comment">#</span><br><br>如果看到这里，基本可以说明我们已经修改成功了<br></code></pre></td></tr></table></figure>
+
+<h2 id="第五步，修改vagrant配置文件"><a href="#第五步，修改vagrant配置文件" class="headerlink" title="第五步，修改vagrant配置文件"></a>第五步，修改vagrant配置文件</h2><figure class="highlight ini"><table><tr><td class="code"><pre><code class="hljs ini"><span class="hljs-attr">config.ssh.username</span> = <span class="hljs-string">&#x27;root&#x27;</span><br><span class="hljs-attr">config.ssh.private_key_path</span> = <span class="hljs-string">&#x27;~/.ssh/id_rsa&#x27;</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="最后一步"><a href="#最后一步" class="headerlink" title="最后一步"></a>最后一步</h2><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">vagrant reload centos7<br><br><span class="hljs-comment"># 如果没有意外，重启一下服务，将默认通过root对账户进行登陆了。</span><br>vagrant ssh<br><br><span class="hljs-comment"># 当然通过其他的ssh客户端也是可以直接登陆上去</span><br><span class="hljs-comment"># 如果有下面的日志，也不要惊慌，稍等一会儿看看，是否最终能够登陆成</span><br>    centos7: Warning: Connection reset. Retrying...<br>    centos7: Warning: Remote connection disconnect. Retrying...<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gtwnze31rej60xb0u078b02.jpg" alt="Vagrant%E9%BB%98%E8%AE%A4%E4%BD%BF%E7%94%A8root%E7%99%BB%E9%99%86%2004f5ec4a47414212bd73d14b1b5fa1a2/Untitled.png"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gtwnzf2p1yj612804gaaq02.jpg" alt="Vagrant%E9%BB%98%E8%AE%A4%E4%BD%BF%E7%94%A8root%E7%99%BB%E9%99%86%2004f5ec4a47414212bd73d14b1b5fa1a2/Untitled%201.png"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gtwnzelc7mj60z609o74w02.jpg" alt="Vagrant%E9%BB%98%E8%AE%A4%E4%BD%BF%E7%94%A8root%E7%99%BB%E9%99%86%2004f5ec4a47414212bd73d14b1b5fa1a2/Untitled%202.png"></p>
+<h1 id="总结与思考"><a href="#总结与思考" class="headerlink" title="总结与思考"></a>总结与思考</h1><p>有时候，找问题的时候，可以发散一下思维，不要老钻牛角尖，往往得不偿失。</p>
+<p>例如，这一次，我找问题的思路一开始是这样子的。</p>
+<p>1，一直觉得是vagrant的问题，一直搜索vagrant相关的内容</p>
+<p>2，后来发现，我虚拟机使用Linux的厂商是centos7，能不能直接通过centos来解决，最后才找到正确之路</p>
+<p>3，如果一直在纠结在vagrant的问题，最后可能一天都没有找到对应的解决思路</p>
+<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><p><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-centos7">How To Set Up SSH Keys on CentOS 7 | DigitalOcean</a></p>
+<p><a href="https://www.vagrantup.com/docs/vagrantfile/ssh_settings">config.ssh - Vagrantfile | Vagrant by HashiCorp</a></p>
+]]></content>
+      <tags>
+        <tag>Visual box</tag>
+        <tag>Vagrant</tag>
+        <tag>Linux</tag>
+        <tag>CentOS7</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>String of Java</title>
     <url>/2019/08/25/String-of-Java/</url>
     <content><![CDATA[<h2 id="String-概括"><a href="#String-概括" class="headerlink" title="String 概括"></a>String 概括</h2><blockquote>
@@ -816,78 +891,192 @@
       </tags>
   </entry>
   <entry>
-    <title>Vagrant 默认是用root账户登陆</title>
-    <url>/2021/08/28/Vagrant-default-use-root-login/</url>
-    <content><![CDATA[<blockquote>
-<p>本文不讨论，通过账号密码登陆的登陆的方式，因为我所在版本【Vagrant 2.2.9】，就算通过config-ssh-insert_key&#x3D;false，也无法通过免<strong>输入</strong>密码的方式登陆</p>
+    <title>编辑器 (Vim)（转载）</title>
+    <url>/2022/02/19/editors-vim/</url>
+    <content><![CDATA[<h1 id="题外话："><a href="#题外话：" class="headerlink" title="题外话："></a>题外话：</h1><p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1gzj7756ahjj20ee0agmyl.jpg" alt="image-20220219223900066"></p>
+<blockquote>
+<p>发现一篇非常适合小白的Vim教程，跟着来学，一天就可以上手啦。坚持练习20个小时，基本可以跟老的编辑工具效率差不多，如果能够坚持下来，所有的IDE都适用Vim插件，或者使用Vim进行开发，就有不一样的感觉。<br>例如，当前文章的编写，我就是完成在VS Code的使用Vim的插件，编写的文章。</p>
 </blockquote>
-<span id="more"></span>
+<p><strong>记得练习一定要做喔，不好偷懒，一起加油吧。</strong></p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>写作和写代码其实是两项非常不同的活动。当我们编程的时候，会经常在文件间进行切换、阅读、浏览和修改代码，而不是连续编写一大段的文字。因此代码编辑器和文本编辑器是很不同的两种工具（例如微软的 Word 与 Visual Studio Code）</p>
+<p>作为程序员，我们大部分时间都花在代码编辑上，所以花点时间掌握某个适合自己的编辑器是非常值得的。通常学习使用一个新的编辑器包含以下步骤：</p>
+<ul>
+<li>阅读教程（比如这节课以及我们为您提供的资源）</li>
+<li>坚持使用它来完成你所有的编辑工作（即使一开始这会让你的工作效率降低）</li>
+<li>随时查阅：如果某个操作看起来像是有更方便的实现方法，一般情况下真的会有。</li>
+</ul>
+<p>如果您能够遵循上述步骤，并且坚持使用新的编辑器完成您所有的文本编辑任务，那么学习一个复杂的代码编辑器的过程一般是这样的：头两个小时，您会学习到编辑器的基本操作，例如打开和编辑文件、保存与退出、浏览缓冲区。当学习时间累计达到20个小时之后，您使用新编辑器的效率应该已经和使用老编辑器一样快。在此之后，其益处开始显现：有了足够的知识和肌肉记忆后，使用新编辑器将大大节省你的时间。而现代文本编辑器都是些复杂且强大的工具，永远有新东西可学：学的越多，效率越高。</p>
+<h1 id="该学哪个编辑器？"><a href="#该学哪个编辑器？" class="headerlink" title="该学哪个编辑器？"></a>该学哪个编辑器？</h1><p>程序员们对自己正在使用的文本编辑器通常有着 <a href="https://en.wikipedia.org/wiki/Editor_war">非常强的执念</a>。</p>
+<p>现在最流行的编辑器是什么？<a href="https://insights.stackoverflow.com/survey/2019/#development-environments-and-tools">Stack Overflow的调查</a>(这个调查可能并不如我们想象的那样客观，因为Stack Overflow 的用户并不能代表所有程序员)显示，<a href="https://code.visualstudio.com/">Visual Studio Code</a>是目前最流行的代码编辑器。而<a href="https://www.vim.org/">Vim</a> 则是最流行的基于命令行的编辑器。</p>
+<h2 id="Vim"><a href="#Vim" class="headerlink" title="Vim"></a>Vim</h2><p>这门课的所有教员都使用Vim作为编辑器。Vim有着悠久历史；它始于1976年的Vi编辑器，到现在还在 不断开发中。Vim有很多聪明的设计思想，所以很多其他工具也支持Vim模式（比如，140万人安装了 <a href="https://github.com/VSCodeVim/Vim">Vim emulation for VS code</a>）。即使你最后使用 其他编辑器，Vim也值得学习。</p>
+<p>由于不可能在50分钟内教授Vim的所有功能，我们会专注于解释Vim的设计哲学，教你基础知识， 并展示一部分高级功能，然后给你掌握这个工具所需要的资源。</p>
+<h1 id="Vim的哲学"><a href="#Vim的哲学" class="headerlink" title="Vim的哲学"></a>Vim的哲学</h1><p>在编程的时候，你会把大量时间花在阅读&#x2F;编辑而不是在写代码上。所以，Vim 是一个_多模态_编辑 器：它对于插入文字和操纵文字有不同的模式。Vim 是可编程的（可以使用 Vimscript 或者像 Python 一样的其他程序语言），Vim 的接口本身也是一个程序语言：键入操作（以及其助记名） 是命令，这些命令也是可组合的。Vim 避免了使用鼠标，因为那样太慢了；Vim 甚至避免用 上下左右键因为那样需要太多的手指移动。</p>
+<p>这样的设计哲学使得 Vim 成为了一个能跟上你思维速度的编辑器。</p>
+<h1 id="编辑模式"><a href="#编辑模式" class="headerlink" title="编辑模式"></a>编辑模式</h1><p>Vim的设计以大多数时间都花在阅读、浏览和进行少量编辑改动为基础，因此它具有多种操作模式：</p>
+<ul>
+<li><em>正常模式</em>：在文件中四处移动光标进行修改</li>
+<li><em>插入模式</em>：插入文本</li>
+<li><em>替换模式</em>：替换文本</li>
+<li><em>可视化（一般，行，块）模式</em>：选中文本块</li>
+<li><em>命令模式</em>：用于执行命令</li>
+</ul>
+<p>在不同的操作模式下，键盘敲击的含义也不同。比如，<code>x</code> 在插入模式会插入字母<code>x</code>，但是在正常模式 会删除当前光标所在的字母，在可视模式下则会删除选中文块。</p>
+<p>在默认设置下，Vim会在左下角显示当前的模式。 Vim启动时的默认模式是正常模式。通常你会把大部分 时间花在正常模式和插入模式。</p>
+<p>你可以按下 <code>&lt;ESC&gt;</code> （退出键） 从任何其他模式返回正常模式。 在正常模式，键入 <code>i</code> 进入插入 模式， <code>R</code> 进入替换模式， <code>v</code> 进入可视（一般）模式， <code>V</code> 进入可视（行）模式， <code>&lt;C-v&gt;</code> （Ctrl-V, 有时也写作 <code>^V</code>）进入可视（块）模式， <code>:</code> 进入命令模式。</p>
+<p>因为你会在使用 Vim 时大量使用 <code>&lt;ESC&gt;</code> 键，所以可以考虑把大小写锁定键重定义成 <code>&lt;ESC&gt;</code> 键 （<a href="https://vim.fandom.com/wiki/Map_caps_lock_to_escape_in_macOS">MacOS 教程</a> ）。</p>
+<h1 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h1><h2 id="插入文本"><a href="#插入文本" class="headerlink" title="插入文本"></a>插入文本</h2><p>在正常模式，键入 <code>i</code> 进入插入模式。现在 Vim 跟很多其他的编辑器一样，直到你键入<code>&lt;ESC&gt;</code> 返回正常模式。 你只需要掌握这一点和上面介绍的所有基础知识就可以使用 Vim 来编辑文件了 （虽然如果你一直停留在插入模式内不一定高效）。</p>
+<h2 id="缓存，-标签页，-窗口"><a href="#缓存，-标签页，-窗口" class="headerlink" title="缓存， 标签页， 窗口"></a>缓存， 标签页， 窗口</h2><p>Vim 会维护一系列打开的文件，称为“缓存”。一个 Vim 会话包含一系列标签页，每个标签页包含 一系列窗口（分隔面板）。每个窗口显示一个缓存。跟网页浏览器等其他你熟悉的程序不一样的是， 缓存和窗口不是一一对应的关系；窗口只是视角。一个缓存可以在_多个_窗口打开，甚至在同一 个标签页内的多个窗口打开。这个功能其实很好用，比如在查看同一个文件的不同部分的时候。</p>
+<p>Vim 默认打开一个标签页，这个标签也包含一个窗口。</p>
+<h2 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h2><p>在正常模式下键入 <code>:</code> 进入命令行模式。 在键入 <code>:</code> 后，你的光标会立即跳到屏幕下方的命令行。 这个模式有很多功能，包括打开，保存，关闭文件，以及 <a href="https://twitter.com/iamdevloper/status/435555976687923200">退出 Vim</a>。</p>
+<ul>
+<li><p><code>:q</code> 退出（关闭窗口）</p>
+</li>
+<li><p><code>:w</code> 保存（写）</p>
+</li>
+<li><p><code>:wq</code> 保存然后退出</p>
+</li>
+<li><p><code>:e &#123;文件名&#125;</code> 打开要编辑的文件</p>
+</li>
+<li><p><code>:ls</code> 显示打开的缓存</p>
+</li>
+<li><div class="code-wrapper"><pre><code class="plaintext">:help &#123;标题&#125;
+<figure class="highlight autohotkey"><table><tr><td class="code"><pre><code class="hljs autohotkey"><br>   <br><br>  打开帮助文档<br><br><span class="hljs-title">  - `:help :w` 打开 `:</span>w` 命令的帮助文档<br><span class="hljs-title">  - `:</span>help w` 打开 `w` 移动的帮助文档<br><br># Vim 的接口其实是一种编程语言<br><br>Vim 最重要的设计思想是 Vim 的界面本身是一个程序语言。键入操作 （以及他们的助记名） 本身是命令， 这些命令可以组合使用。 这使得移动和编辑更加高效，特别是一旦形成肌肉记忆。<br><br>## 移动<br><br>多数时候你会在正常模式下，使用移动命令在缓存中导航。在 Vim 里面移动也被称为 “名词”， 因为它们指向文字块。<br><br><span class="hljs-title">- 基本移动:</span> `hjkl` （左， 下， 上， 右）<br><br>- 词： `w` （下一个词）， `b` （词初）， `e` （词尾）<br><br>- 行： `0` （行初）， `^` （第一个非空格字符）， `$` （行尾）<br><br>- 屏幕： `H` （屏幕首行）， `M` （屏幕中间）， `L` （屏幕底部）<br><br>- 翻页： `Ctrl-u` （上翻）， `Ctrl-d` （下翻）<br><br>- 文件： `gg` （文件头）， `G` （文件尾）<br><br><span class="hljs-title">- 行数： `:</span>&#123;行数&#125;&lt;CR&gt;` 或者 `&#123;行数&#125;G` (&#123;行数&#125;为行数)<br><br>- 杂项： `%` （找到配对，比如括号或者 <span class="hljs-comment">/* */</span> 之类的注释对）<br><br>- 查找：<br><br>   <br><br>  ```plaintext<br>  f&#123;字符&#125;<br></code></pre></td></tr></table></figure>
 
+，
 
-<h1 id="vagrant账户登陆的苦恼"><a href="#vagrant账户登陆的苦恼" class="headerlink" title="vagrant账户登陆的苦恼"></a>vagrant账户登陆的苦恼</h1><p>每次通过 <code>vagrant ssh</code>  命令登陆之后，默认使用的<code>vagrant</code>的账户，有时候我需要操作一些命令需要 <code>root</code> 的用户权限才可以操作，</p>
-<p>很自然我们就会想道通过<code>suod -i</code> 切换到的root账号上，再来执行对应的命令操作。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">vagrant ssh<br><br>yum install xxx<br><span class="hljs-comment"># 提醒没有权限</span><br><br>sudo -i<br><br>yum install xxx<br><span class="hljs-comment"># 安装成功</span><br></code></pre></td></tr></table></figure>
+ 
 
-<h1 id="也许版本有坑？"><a href="#也许版本有坑？" class="headerlink" title="也许版本有坑？"></a>也许版本有坑？</h1><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">Mac OS 11.4<br>vagrant --version<br>Vagrant 2.2.9<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">t&#123;字符&#125;<br></code></pre></td></tr></table></figure>
 
-<p>网上一顿搜索，找到很多帖子，但是很多人都是说明自己的使用的哪个版本的<br>所以很多帖子，都可能有点过期，反正找了一大圈，没有找到合适的解决方案；<br>建议查看本文的时候，看看你们的版本是否已经高于我的版本，如果高于或者低于2.x这个版本的可能本文就不太适用，大家另辟蹊径吧。</p>
-<h1 id="完美解决"><a href="#完美解决" class="headerlink" title="完美解决"></a>完美解决</h1><h2 id="第一步，将本地公钥文件同步到虚拟机"><a href="#第一步，将本地公钥文件同步到虚拟机" class="headerlink" title="第一步，将本地公钥文件同步到虚拟机"></a>第一步，将本地公钥文件同步到虚拟机</h2><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cat</span> ~/.ssh/id_rsa.pub<br>ssh-rsa AAAAB3NzaC1y....<br><br><span class="hljs-comment"># 如果没有到公私钥匙到话，就通过 ssh-keygen 生成一对吧。</span><br></code></pre></td></tr></table></figure>
+，
 
-<h2 id="第二步，登陆虚拟机"><a href="#第二步，登陆虚拟机" class="headerlink" title="第二步，登陆虚拟机"></a>第二步，登陆虚拟机</h2><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">vagrant ssh<br>sudo -i<br><br>[root@localhost ~]<span class="hljs-comment"># 需要注意看到，已经变成root@xxx才算切换成功喔。</span><br><br><span class="hljs-built_in">cd</span> /etc/ssh/<br><br>vi sshd_config<br><br><span class="hljs-comment">#PermitRootLogin yes</span><br>修改成<br>PermitRootLogin <span class="hljs-built_in">yes</span> <span class="hljs-comment"># 代表允许root用户登陆</span><br><br><span class="hljs-built_in">mkdir</span> /root/.ssh<br><span class="hljs-built_in">chmod</span> -R go= ~/.ssh<br><span class="hljs-built_in">chown</span> -R root:root ~/.ssh<br><span class="hljs-built_in">cd</span> /root/.ssh<br><br><span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;ssh-rsa AAAAB3NzaC1y....你对公钥&#x27;</span> &gt;&gt; authorized_keys<br></code></pre></td></tr></table></figure>
+ 
 
-<h2 id="第四步，验证公钥登陆是否生效"><a href="#第四步，验证公钥登陆是否生效" class="headerlink" title="第四步，验证公钥登陆是否生效"></a>第四步，验证公钥登陆是否生效</h2><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">ssh root@127.0.0.1 -p22230 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null<br><br>[root@localhost ~]<span class="hljs-comment">#</span><br><br>如果看到这里，基本可以说明我们已经修改成功了<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">F&#123;字符&#125;<br></code></pre></td></tr></table></figure>
 
-<h2 id="第五步，修改vagrant配置文件"><a href="#第五步，修改vagrant配置文件" class="headerlink" title="第五步，修改vagrant配置文件"></a>第五步，修改vagrant配置文件</h2><figure class="highlight ini"><table><tr><td class="code"><pre><code class="hljs ini"><span class="hljs-attr">config.ssh.username</span> = <span class="hljs-string">&#x27;root&#x27;</span><br><span class="hljs-attr">config.ssh.private_key_path</span> = <span class="hljs-string">&#x27;~/.ssh/id_rsa&#x27;</span><br></code></pre></td></tr></table></figure>
+，
 
-<h2 id="最后一步"><a href="#最后一步" class="headerlink" title="最后一步"></a>最后一步</h2><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">vagrant reload centos7<br><br><span class="hljs-comment"># 如果没有意外，重启一下服务，将默认通过root对账户进行登陆了。</span><br>vagrant ssh<br><br><span class="hljs-comment"># 当然通过其他的ssh客户端也是可以直接登陆上去</span><br><span class="hljs-comment"># 如果有下面的日志，也不要惊慌，稍等一会儿看看，是否最终能够登陆成</span><br>    centos7: Warning: Connection reset. Retrying...<br>    centos7: Warning: Remote connection disconnect. Retrying...<br></code></pre></td></tr></table></figure>
+ 
 
-<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gtwnze31rej60xb0u078b02.jpg" alt="Vagrant%E9%BB%98%E8%AE%A4%E4%BD%BF%E7%94%A8root%E7%99%BB%E9%99%86%2004f5ec4a47414212bd73d14b1b5fa1a2/Untitled.png"></p>
-<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gtwnzf2p1yj612804gaaq02.jpg" alt="Vagrant%E9%BB%98%E8%AE%A4%E4%BD%BF%E7%94%A8root%E7%99%BB%E9%99%86%2004f5ec4a47414212bd73d14b1b5fa1a2/Untitled%201.png"></p>
-<p><img src="https://tva1.sinaimg.cn/large/008i3skNly1gtwnzelc7mj60z609o74w02.jpg" alt="Vagrant%E9%BB%98%E8%AE%A4%E4%BD%BF%E7%94%A8root%E7%99%BB%E9%99%86%2004f5ec4a47414212bd73d14b1b5fa1a2/Untitled%202.png"></p>
-<h1 id="总结与思考"><a href="#总结与思考" class="headerlink" title="总结与思考"></a>总结与思考</h1><p>有时候，找问题的时候，可以发散一下思维，不要老钻牛角尖，往往得不偿失。</p>
-<p>例如，这一次，我找问题的思路一开始是这样子的。</p>
-<p>1，一直觉得是vagrant的问题，一直搜索vagrant相关的内容</p>
-<p>2，后来发现，我虚拟机使用Linux的厂商是centos7，能不能直接通过centos来解决，最后才找到正确之路</p>
-<p>3，如果一直在纠结在vagrant的问题，最后可能一天都没有找到对应的解决思路</p>
-<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><p><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-centos7">How To Set Up SSH Keys on CentOS 7 | DigitalOcean</a></p>
-<p><a href="https://www.vagrantup.com/docs/vagrantfile/ssh_settings">config.ssh - Vagrantfile | Vagrant by HashiCorp</a></p>
-]]></content>
-      <tags>
-        <tag>Visual box</tag>
-        <tag>Vagrant</tag>
-        <tag>Linux</tag>
-        <tag>CentOS7</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Study English One Day</title>
-    <url>/2020/01/02/Study-English-One-Day/</url>
-    <content><![CDATA[<h2 id="2020年立个flat-刻意学习和练习英语"><a href="#2020年立个flat-刻意学习和练习英语" class="headerlink" title="2020年立个flat 刻意学习和练习英语"></a>2020年立个flat 刻意学习和练习英语</h2><blockquote>
-<p>跟着《程序员的英语》学起英语来。</p>
-</blockquote>
-<h2 id="五个基本基本句式"><a href="#五个基本基本句式" class="headerlink" title="五个基本基本句式"></a>五个基本基本句式</h2><h3 id="句式1为【主语-动词（vi）】，是基本句式"><a href="#句式1为【主语-动词（vi）】，是基本句式" class="headerlink" title="句式1为【主语 + 动词（vi）】，是基本句式"></a>句式1为【主语 + 动词（vi）】，是基本句式</h3><blockquote>
-<p>vi，不及物动词，不能直接跟宾语，需要一些介词跟着，例如，to，of，at等</p>
-</blockquote>
-<span id="more"></span>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">T&#123;字符&#125;<br></code></pre></td></tr></table></figure>
 
-<p>He made toward the center station.<br>他（He，主语） 向中央车站 走过去（toward，动词）。</p>
-<h3 id="句式2为【主语-动词-补语】"><a href="#句式2为【主语-动词-补语】" class="headerlink" title="句式2为【主语 + 动词 + 补语】"></a>句式2为【主语 + 动词 + 补语】</h3><blockquote>
-<p>补语，对主语的补充说明</p>
-</blockquote>
-<p>He will make a good programer.<br>他（He，主语） 将要成为（make，动词） 一名优秀的程序员（programer，补语，对主语他的补充说明）。</p>
-<h3 id="句式3为【主语-动词（vt）-宾语】句式2和句式3的区分方式是，如果一般动词可以用be动词代替，则属于句式2，否则是句式3"><a href="#句式3为【主语-动词（vt）-宾语】句式2和句式3的区分方式是，如果一般动词可以用be动词代替，则属于句式2，否则是句式3" class="headerlink" title="句式3为【主语 + 动词（vt） + 宾语】句式2和句式3的区分方式是，如果一般动词可以用be动词代替，则属于句式2，否则是句式3"></a>句式3为【主语 + 动词（vt） + 宾语】句式2和句式3的区分方式是，如果一般动词可以用be动词代替，则属于句式2，否则是句式3</h3><blockquote>
-<p>vt 及物动词，能够直接宾语</p>
-</blockquote>
-<p>Make hay while the sun shines.<br>晒（make，动词） 干草（hay，名词） 需要好太阳（sun，主语）。（寓意，看好时机干活）</p>
-<h3 id="句式4为【主语-动词-宾语（间接宾语）-宾语（直接宾语）】"><a href="#句式4为【主语-动词-宾语（间接宾语）-宾语（直接宾语）】" class="headerlink" title="句式4为【主语 + 动词 + 宾语（间接宾语） + 宾语（直接宾语）】"></a>句式4为【主语 + 动词 + 宾语（间接宾语） + 宾语（直接宾语）】</h3><p>He made me the simple dudoku app.<br>他（He，主语） 给我（me，间接宾语） 做（made，动词）了 一个简单的数独app（直接宾语）。</p>
-<h3 id="句式5为【主语-动词-宾语-补语】，宾语和补语是可以同时出的。宾补，可以是不定式to、现在分词、过去分词等"><a href="#句式5为【主语-动词-宾语-补语】，宾语和补语是可以同时出的。宾补，可以是不定式to、现在分词、过去分词等" class="headerlink" title="句式5为【主语 + 动词 + 宾语 + 补语】，宾语和补语是可以同时出的。宾补，可以是不定式to、现在分词、过去分词等"></a>句式5为【主语 + 动词 + 宾语 + 补语】，宾语和补语是可以同时出的。宾补，可以是不定式to、现在分词、过去分词等</h3><p>He made her happy.<br>他（He，主语）使（made，动词）她（her，宾语）幸福（happy，补语）</p>
+- 查找/到 向前/向后 在本行的&#123;字符&#125;
+- `,` / `;` 用于导航匹配
+</code></pre>
+</li>
+<li><p>搜索: <code>/&#123;正则表达式&#125;</code>, <code>n</code> &#x2F; <code>N</code> 用于导航匹配</p>
+</li>
+</ul>
+<h2 id="选择"><a href="#选择" class="headerlink" title="选择"></a>选择</h2><p>可视化模式:</p>
+<ul>
+<li>可视化：<code>v</code></li>
+<li>可视化行： <code>V</code></li>
+<li>可视化块：<code>Ctrl+v</code></li>
+</ul>
+<p>可以用移动命令来选中。</p>
+<h2 id="编辑"><a href="#编辑" class="headerlink" title="编辑"></a>编辑</h2><p>所有你需要用鼠标做的事， 你现在都可以用键盘：采用编辑命令和移动命令的组合来完成。 这就是 Vim 的界面开始看起来像一个程序语言的时候。Vim 的编辑命令也被称为 “动词”， 因为动词可以施动于名词。</p>
+<ul>
+<li><div class="code-wrapper"><pre><code class="plaintext">i
+<figure class="highlight autohotkey"><table><tr><td class="code"><pre><code class="hljs autohotkey"><br>   <br><br>  进入插入模式<br><br>  - 但是对于操纵/编辑文本，不单想用退格键完成<br><br>- `O` / `o` 在之上/之下插入行<br><br>- ```plaintext<br>  d&#123;移动命令&#125;<br></code></pre></td></tr></table></figure>
+
+ 
+
+删除 &#123;移动命令&#125;
+
+- 例如， `dw` 删除词, `d$` 删除到行尾, `d0` 删除到行头。
+</code></pre>
+</li>
+<li><p>&#96;&#96;&#96;plaintext<br>c{移动命令}</p>
+<figure class="highlight autohotkey"><table><tr><td class="code"><pre><code class="hljs autohotkey"><br>   <br><br>  改变 &#123;移动命令&#125;<br><br>  - 例如， `cw` 改变词<br>  - 比如 `d&#123;移动命令&#125;` 再 `i`<br><br>- `x` 删除字符（等同于 `dl`）<br><br>- `s` 替换字符（等同于 `xi`）<br><br>- 可视化模式 + 操作<br><br>  - 选中文字, `d` 删除 或者 `c` 改变<br><br>- `u` 撤销, `&lt;C-r&gt;` 重做<br><br>- `y` 复制 / “yank” （其他一些命令比如 `d` 也会复制）<br><br>- `p` 粘贴<br><br><span class="hljs-title">- 更多值得学习的:</span> 比如 `~` 改变字符的大小写<br><br>## 计数<br><br>你可以用一个计数来结合“名词”和“动词”，这会执行指定操作若干次。<br><br>- `3w` 向前移动三个词<br>- `5j` 向下移动<span class="hljs-number">5</span>行<br>- `7dw` 删除<span class="hljs-number">7</span>个词<br><br>## 修饰语<br><br>你可以用修饰语改变“名词”的意义。修饰语有 `i`，表示“内部”或者“在内“，和 `a`， 表示”周围“。<br><br>- `ci(` 改变当前括号内的内容<br>- `ci[` 改变当前方括号内的内容<br>- `da&#x27;` 删除一个单引号字符串， 包括周围的单引号<br><br># 演示<br><br><span class="hljs-title">这里是一个有问题的 [fizz buzz](https:</span>//en.wikipedia.org/wiki/Fizz_buzz) 实现：<br><br></code></pre></td></tr></table></figure>
+<p>def fizz_buzz(limit):<br>  for i in range(limit):<br>  if i % 3 &#x3D;&#x3D; 0:<br>      print(‘fizz’)<br>  if i % 5 &#x3D;&#x3D; 0:<br>      print(‘fizz’)<br>  if i % 3 and i % 5:<br>      print(i)</p>
+</li>
+</ul>
+<p>def main():<br>    fizz_buzz(10)</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown"><br>我们会修复以下问题：<br><br><span class="hljs-bullet">-</span> 主函数没有被调用<br><span class="hljs-bullet">-</span> 从 0 而不是 1 开始<br><span class="hljs-bullet">-</span> 在 15 的整数倍的时候在不用行打印 “fizz” 和 “buzz”<br><span class="hljs-bullet">-</span> 在 5 的整数倍的时候打印 “fizz”<br><span class="hljs-bullet">-</span> 采用硬编码的参数 10 而不是从命令控制行读取参数<br><span class="hljs-bullet">-</span> 主函数没有被调用<br><span class="hljs-bullet">  -</span> <span class="hljs-code">`G`</span> 文件尾<br><span class="hljs-bullet">  -</span> <span class="hljs-code">`o`</span> 向下打开一个新行<br><span class="hljs-bullet">  -</span> 输入 “if <span class="hljs-strong">**name**</span> …”<br><span class="hljs-bullet">-</span> 从 0 而不是 1 开始<br><span class="hljs-bullet">  -</span> 搜索 <span class="hljs-code">`/range`</span><br><span class="hljs-bullet">  -</span> <span class="hljs-code">`ww`</span> 向前移动两个词<br><span class="hljs-bullet">  -</span> <span class="hljs-code">`i`</span> 插入文字， “1, “<br><span class="hljs-bullet">  -</span> <span class="hljs-code">`ea`</span> 在 limit 后插入， “+1”<br><span class="hljs-bullet">-</span> 在新的一行 “fizzbuzz”<br><span class="hljs-bullet">  -</span> <span class="hljs-code">`jj$i`</span> 插入文字到行尾<br><span class="hljs-bullet">  -</span> 加入 “, end=’’”<br><span class="hljs-bullet">  -</span> <span class="hljs-code">`jj.`</span> 重复第二个打印<br><span class="hljs-bullet">  -</span> <span class="hljs-code">`jjo`</span> 在 if 打开一行<br><span class="hljs-bullet">  -</span> 加入 “else: print()”<br><span class="hljs-bullet">-</span> fizz fizz<br><span class="hljs-bullet">  -</span> <span class="hljs-code">`ci&#x27;`</span> 变到 fizz<br><span class="hljs-bullet">-</span> 命令控制行参数<br><span class="hljs-bullet">  -</span> <span class="hljs-code">`ggO`</span> 向上打开<br><span class="hljs-bullet">  -</span> “import sys”<br><span class="hljs-bullet">  -</span> <span class="hljs-code">`/10`</span><br><span class="hljs-bullet">  -</span> <span class="hljs-code">`ci(`</span> to “int(sys.argv[1])”<br><br>展示详情请观看课程视频。比较上面用 Vim 的操作和你可能使用其他程序的操作。 值得一提的是 Vim 需要很少的键盘操作，允许你编辑的速度跟上你思维的速度。<br><br><span class="hljs-section"># 自定义 Vim</span><br><br>Vim 由一个位于 <span class="hljs-code">`~/.vimrc`</span> 的文本配置文件（包含 Vim 脚本命令）。 你可能会启用很多基本 设置。<br><br>我们提供一个文档详细的基本设置，你可以用它当作你的初始设置。我们推荐使用这个设置因为 它修复了一些 Vim 默认设置奇怪行为。 <span class="hljs-strong">**在[<span class="hljs-string">这儿</span>](<span class="hljs-link">https://missing-semester-cn.github.io/2020/files/vimrc</span>) 下载我们的设置，然后将它保存成 `~/.vimrc`.**</span><br><br>Vim 能够被重度自定义，花时间探索自定义选项是值得的。你可以参考其他人的在GitHub 上共享的设置文件，比如，你的授课人的 Vim 设置 ([<span class="hljs-string">Anish</span>](<span class="hljs-link">https://github.com/anishathalye/dotfiles/blob/master/vimrc</span>),[<span class="hljs-string">Jon</span>](<span class="hljs-link">https://github.com/jonhoo/configs/blob/master/editor/.config/nvim/init.vim</span>) (uses [<span class="hljs-string">neovim</span>](<span class="hljs-link">https://neovim.io/</span>)), [<span class="hljs-string">Jose</span>](<span class="hljs-link">https://github.com/JJGO/dotfiles/blob/master/vim/.vimrc</span>))。 有很多好的博客文章也聊到了这个话题。尽量不要复制粘贴别人的整个设置文件， 而是阅读和理解它，然后采用对你有用的部分。<br><br><span class="hljs-section"># 扩展 Vim</span><br><br>Vim 有很多扩展插件。跟很多互联网上已经过时的建议相反，你<span class="hljs-emphasis">_不_</span>需要在 Vim 使用一个插件 管理器（从 Vim 8.0 开始）。你可以使用内置的插件管理系统。只需要创建一个 <span class="hljs-code">`~/.vim/pack/vendor/start/`</span> 的文件夹，然后把插件放到这里（比如通过 <span class="hljs-code">`git clone`</span>）。<br><br>以下是一些我们最爱的插件：<br><br><span class="hljs-bullet">-</span> [<span class="hljs-string">ctrlp.vim</span>](<span class="hljs-link">https://github.com/ctrlpvim/ctrlp.vim</span>): 模糊文件查找<br><span class="hljs-bullet">-</span> [<span class="hljs-string">ack.vim</span>](<span class="hljs-link">https://github.com/mileszs/ack.vim</span>): 代码搜索<br><span class="hljs-bullet">-</span> [<span class="hljs-string">nerdtree</span>](<span class="hljs-link">https://github.com/scrooloose/nerdtree</span>): 文件浏览器<br><span class="hljs-bullet">-</span> [<span class="hljs-string">vim-easymotion</span>](<span class="hljs-link">https://github.com/easymotion/vim-easymotion</span>): 魔术操作<br><br>我们尽量避免在这里提供一份冗长的插件列表。你可以查看讲师们的开源的配置文件 ([<span class="hljs-string">Anish</span>](<span class="hljs-link">https://github.com/anishathalye/dotfiles</span>), [<span class="hljs-string">Jon</span>](<span class="hljs-link">https://github.com/jonhoo/configs</span>), [<span class="hljs-string">Jose</span>](<span class="hljs-link">https://github.com/JJGO/dotfiles</span>)) 来看看我们使用的其他插件。 浏览 [<span class="hljs-string">Vim Awesome</span>](<span class="hljs-link">https://vimawesome.com/</span>) 来了解一些很棒的插件。 这个话题也有很多博客文章：搜索 “best Vim plugins”。<br><br><span class="hljs-section"># 其他程序的 Vim 模式</span><br><br>很多工具提供了 Vim 模式。这些 Vim 模式的质量参差不齐；取决于具体工具， 有的提供了 很多酷炫的 Vim 功能，但是大多数对基本功能支持的很好。<br><br><span class="hljs-section">## Shell</span><br><br>如果你是一个 Bash 用户，用 <span class="hljs-code">`set -o vi`</span>。如果你用 Zsh：<span class="hljs-code">`bindkey -v`</span>。Fish 用 <span class="hljs-code">`fish_vi_key_bindings`</span>。另外，不管利用什么 shell，你可以<span class="hljs-code">`export EDITOR=vim`</span>。 这是一个用来决定当一个程序需要启动编辑时启动哪个的环境变量。 例如，<span class="hljs-code">`git`</span> 会使用这个编辑器来编辑 commit 信息。<br><br><span class="hljs-section">## Readline</span><br><br>很多程序使用 [<span class="hljs-string">GNU Readline</span>](<span class="hljs-link">https://tiswww.case.edu/php/chet/readline/rltop.html</span>) 库来作为 它们的命令控制行界面。Readline 也支持基本的 Vim 模式， 可以通过在 <span class="hljs-code">`~/.inputrc`</span> 添加如下行开启：<br><br></code></pre></td></tr></table></figure>
+<p>set editing-mode vi</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><code class="hljs awk"><br>比如，在这个设置下，Python REPL 会支持 Vim 快捷键。<br><br><span class="hljs-comment">## 其他</span><br><br>甚至有 Vim 的网页浏览快捷键 [browsers](http:<span class="hljs-regexp">//</span>vim.wikia.com<span class="hljs-regexp">/wiki/</span>Vim_key_bindings_for_web_browsers), 受欢迎的有 用于 Google Chrome 的 [Vimium](https:<span class="hljs-regexp">//</span>chrome.google.com<span class="hljs-regexp">/webstore/</span>detail<span class="hljs-regexp">/vimium/</span>dbepggeogbaibhgnhhndojpepiihcmeb?hl=en) 和用于 Firefox 的 [Tridactyl](https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/tridactyl/</span>tridactyl)。 你甚至可以在 [Jupyter notebooks](https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/lambdalisue/</span>jupyter-vim-binding) 中用 Vim 快捷键。 [这个列表](https:<span class="hljs-regexp">//</span>reversed.top<span class="hljs-regexp">/2016-08-13/</span>big-list-of-vim-like-software) 中列举了支持类 vim 键位绑定的软件。<br><br><span class="hljs-comment"># Vim 进阶</span><br><br>这里我们提供了一些展示这个编辑器能力的例子。我们无法把所有的这样的事情都教给你，但是你 可以在使用中学习。一个好的对策是: 当你在使用你的编辑器的时候感觉 “一定有更好的方法来做这个”， 那么很可能真的有：上网搜寻一下。<br><br><span class="hljs-comment">## 搜索和替换</span><br><br>`:s` （替换）命令（[文档](http:<span class="hljs-regexp">//</span>vim.wikia.com<span class="hljs-regexp">/wiki/</span>Search_and_replace)）。<br><br>- ```plaintext<br>  %s<span class="hljs-regexp">/foo/</span>bar/g<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li><p>在整个文件中将 foo 全局替换成 bar</p>
+</li>
+<li><p>&#96;&#96;&#96;plaintext<br>%s&#x2F;[.*]((.*))&#x2F;\1&#x2F;g</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown"><br><span class="hljs-bullet">  -</span> 将有命名的 Markdown 链接替换成简单 URLs<br><br><span class="hljs-section">## 多窗口</span><br><br><span class="hljs-bullet">-</span> 用 <span class="hljs-code">`:sp`</span> / <span class="hljs-code">`:vsp`</span> 来分割窗口<br><span class="hljs-bullet">-</span> 同一个缓存可以在多个窗口中显示。<br><br><span class="hljs-section">## 宏</span><br><br><span class="hljs-bullet">-</span> <span class="hljs-code">`q&#123;字符&#125;`</span> 来开始在寄存器<span class="hljs-code">`&#123;字符&#125;`</span>中录制宏<br><br><span class="hljs-bullet">-</span> <span class="hljs-code">`q`</span>停止录制<br><br><span class="hljs-bullet">-</span> <span class="hljs-code">`@&#123;字符&#125;`</span> 重放宏<br><br><span class="hljs-bullet">-</span> 宏的执行遇错误会停止<br><br><span class="hljs-bullet">-</span> <span class="hljs-code">`&#123;计数&#125;@&#123;字符&#125;`</span>执行一个宏&#123;计数&#125;次<br><br><span class="hljs-bullet">-</span> 宏可以递归<br><br><span class="hljs-bullet">  -</span> 首先用<span class="hljs-code">`q&#123;字符&#125;q`</span>清除宏<br><span class="hljs-bullet">  -</span> 录制该宏，用 <span class="hljs-code">`@&#123;字符&#125;`</span> 来递归调用该宏 （在录制完成之前不会有任何操作）<br><br><span class="hljs-bullet">-</span> 例子：将 xml 转成 json (<br><br>  file<br><br>  )<br><br><span class="hljs-bullet">  -</span> 一个有 “name” / “email” 键对象的数组<br><br><span class="hljs-bullet">  -</span> 用一个 Python 程序？<br><br><span class="hljs-bullet">  -</span> 用 sed / 正则表达式<br><br><span class="hljs-bullet">    -</span> <span class="hljs-code">`g/people/d`</span><br><span class="hljs-bullet">    -</span> <span class="hljs-code">`%s/&lt;person&gt;/&#123;/g`</span><br><span class="hljs-bullet">    -</span> <span class="hljs-code">`%s/&lt;name&gt;\(.*\)&lt;\/name&gt;/&quot;name&quot;: &quot;\1&quot;,/g`</span><br><span class="hljs-bullet">    -</span> …<br><br><span class="hljs-bullet">  -</span> Vim 命令 / 宏<br><br><span class="hljs-bullet">    -</span> <span class="hljs-code">`Gdd`</span>, <span class="hljs-code">`ggdd`</span> 删除第一行和最后一行<br><br><span class="hljs-bullet">    -</span> 格式化最后一个元素的宏 （寄存器<br><br><span class="hljs-code">       </span><br><span class="hljs-code"></span><br><span class="hljs-code">      ```plaintext</span><br><span class="hljs-code">      e</span><br></code></pre></td></tr></table></figure>
+
+<div class="code-wrapper"><pre><code class="hljs">）
+
+- 跳转到有 `&lt;name&gt;` 的行
+- `qe^r&quot;f&gt;s&quot;: &quot;&lt;ESC&gt;f&lt;C&quot;&lt;ESC&gt;q`
+</code></pre></div>
+<ul>
+<li><p>格式化一个</p>
+<p>的宏</p>
+<ul>
+<li>跳转到有 <code>&lt;person&gt;</code> 的行</li>
+<li><code>qpS&#123;&lt;ESC&gt;j@eA,&lt;ESC&gt;j@ejS&#125;,&lt;ESC&gt;q</code></li>
+</ul>
+</li>
+<li><p>格式化一个</p>
+<p>标签然后转到另外一个的宏</p>
+<ul>
+<li>跳转到有 <code>&lt;person&gt;</code> 的行</li>
+<li><code>qq@pjq</code></li>
+</ul>
+</li>
+<li><p>执行宏到文件尾</p>
+<ul>
+<li><code>999@q</code></li>
+</ul>
+</li>
+<li><p>手动移除最后的 <code>,</code> 然后加上 <code>[</code> 和 <code>]</code> 分隔符</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="扩展资料"><a href="#扩展资料" class="headerlink" title="扩展资料"></a>扩展资料</h1><ul>
+<li><code>vimtutor</code> 是一个 Vim 安装时自带的教程</li>
+<li><a href="https://vim-adventures.com/">Vim Adventures</a> 是一个学习使用 Vim 的游戏</li>
+<li><a href="http://vim.wikia.com/wiki/Vim_Tips_Wiki">Vim Tips Wiki</a></li>
+<li><a href="https://vimways.org/2019/">Vim Advent Calendar</a> 有很多 Vim 小技巧</li>
+<li><a href="http://www.vimgolf.com/">Vim Golf</a> 是用 Vim 的用户界面作为程序语言的 <a href="https://en.wikipedia.org/wiki/Code_golf">code golf</a></li>
+<li><a href="https://vi.stackexchange.com/">Vi&#x2F;Vim Stack Exchange</a></li>
+<li><a href="http://vimcasts.org/">Vim Screencasts</a></li>
+<li><a href="https://pragprog.com/titles/dnvim2/">Practical Vim</a>（书籍）</li>
+</ul>
+<h1 id="课后练习"><a href="#课后练习" class="headerlink" title="课后练习"></a>课后练习</h1><p><a href="https://missing-semester-cn.github.io/missing-notes-and-solutions/2020/solutions//editors-solution">习题解答</a></p>
+<ol>
+<li><p>完成 <code>vimtutor</code>。 备注：它在一个 <a href="https://en.wikipedia.org/wiki/VT100">80x24</a>（80 列，24 行） 终端窗口看起来效果最好。</p>
+</li>
+<li><p>下载我们提供的 <a href="https://missing-semester-cn.github.io/2020/files/vimrc">vimrc</a>，然后把它保存到 <code>~/.vimrc</code>。 通读这个注释详细的文件 （用 Vim!）， 然后观察 Vim 在这个新的设置下看起来和使用起来有哪些细微的区别。</p>
+</li>
+<li><p>安装和配置一个插件：</p>
+<p>ctrlp.vim</p>
+<p>.</p>
+<ol>
+<li>用 <code>mkdir -p ~/.vim/pack/vendor/start</code> 创建插件文件夹</li>
+<li>下载这个插件： <code>cd ~/.vim/pack/vendor/start; git clone https://github.com/ctrlpvim/ctrlp.vim</code></li>
+<li>阅读这个插件的 <a href="https://github.com/ctrlpvim/ctrlp.vim/blob/master/readme.md">文档</a>。 尝试用 CtrlP 来在一个工程文件夹里定位一个文件， 打开 Vim, 然后用 Vim 命令控制行开始 <code>:CtrlP</code>.</li>
+<li>自定义 CtrlP： 添加 <a href="https://github.com/ctrlpvim/ctrlp.vim/blob/master/readme.md#basic-options">configuration</a> 到你的 <code>~/.vimrc</code> 来用按 Ctrl-P 打开 CtrlP</li>
+</ol>
+</li>
+<li><p>练习使用 Vim, 在你自己的机器上重做 <a href="https://missing-semester-cn.github.io/2020/editors/#demo">演示</a>。</p>
+</li>
+<li><p>下个月用 Vim 完成_所有的_文件编辑。每当不够高效的时候，或者你感觉 “一定有一个更好的方式”时， 尝试求助搜索引擎，很有可能有一个更好的方式。如果你遇到难题，可以来我们的答疑时间或者给我们发邮件。</p>
+</li>
+<li><p>在其他工具中设置 Vim 快捷键 （见上面的操作指南）。</p>
+</li>
+<li><p>进一步自定义你的 <code>~/.vimrc</code> 和安装更多插件。</p>
+</li>
+<li><p>（高阶）用 Vim 宏将 XML 转换到 JSON (<a href="https://missing-semester-cn.github.io/2020/files/example-data.xml">例子文件</a>)。 尝试着先完全自己做，但是在你卡住的时候可以查看上面<a href="https://missing-semester-cn.github.io/2020/editors/#macros">宏</a> 章节。</p>
+</li>
+</ol>
 ]]></content>
       <categories>
-        <category>English</category>
+        <category>CS必学工具</category>
       </categories>
       <tags>
-        <tag>Study</tag>
-        <tag>English</tag>
+        <tag>CS</tag>
+        <tag>Vim</tag>
+        <tag>转载</tag>
       </tags>
   </entry>
   <entry>
@@ -943,7 +1132,7 @@
 
 
 <h1 id="问题与解决思路"><a href="#问题与解决思路" class="headerlink" title="问题与解决思路"></a>问题与解决思路</h1><ol>
-<li>(node:60240) UnhandledPromiseRejectionWarning: Error: spawn &#x2F;Users&#x2F;jaryoung&#x2F;project&#x2F;myblog&#x2F;node_modules&#x2F;<a href="mailto:&#x5f;&#x67;&#105;&#102;&#x73;&#x69;&#x63;&#108;&#x65;&#64;&#53;&#x2e;&#x32;&#x2e;&#x31;">&#x5f;&#x67;&#105;&#102;&#x73;&#x69;&#x63;&#108;&#x65;&#64;&#53;&#x2e;&#x32;&#x2e;&#x31;</a>@gifsicle&#x2F;vendor&#x2F;gifsicle ENOENT<br>解决思路，不一定正确，根据自己实际情况来处理。<ul>
+<li>(node:60240) UnhandledPromiseRejectionWarning: Error: spawn &#x2F;Users&#x2F;jaryoung&#x2F;project&#x2F;myblog&#x2F;node_modules&#x2F;<a href="mailto:&#95;&#x67;&#x69;&#102;&#115;&#105;&#99;&#108;&#101;&#64;&#53;&#x2e;&#50;&#46;&#49;">&#95;&#x67;&#x69;&#102;&#115;&#105;&#99;&#108;&#101;&#64;&#53;&#x2e;&#50;&#46;&#49;</a>@gifsicle&#x2F;vendor&#x2F;gifsicle ENOENT<br>解决思路，不一定正确，根据自己实际情况来处理。<ul>
 <li><code>gulp-imagemin</code>，由于8.0.0出现一个比较诡异的问题，所以需要将<code>gulp-imagemin</code>降级到<code>7.1.0</code>版本</li>
 <li>但是降级到<code>7.1.0</code>会出现有一些依赖找不到的情况，只能一个个来找进行安装（如果有更好的办法，也希望有小伙伴跟我说一下）</li>
 <li><a href="https://github.com/sindresorhus/gulp-imagemin/blob/v7.1.0/package.json">版本依赖情况</a>，根据github来进行一个个版本jar依赖的下载。最终整理为：<code>npm install -d gulp-imagemin@7.1.0 imagemin@7.0.0 imagemin-optipng@7.0.0 imagemin-mozjpeg@8.0.0 imagemin-svgo@7.0.0 imagemin-gifsicle@7.0.0 gifsicle@5.0.0 --save-dev</code> ，也就是上面步骤给出来的命令</li>
