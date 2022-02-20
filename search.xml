@@ -1,6 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>ARTS-Week-5</title>
+    <url>/2020/07/26/ARTS-Week-5/</url>
+    <content><![CDATA[<h2 id="ARTS-Week-5"><a href="#ARTS-Week-5" class="headerlink" title="ARTS Week-5"></a>ARTS Week-5</h2><h3 id="1-Algorithm：每周至少做一个-leetcode-的算法题"><a href="#1-Algorithm：每周至少做一个-leetcode-的算法题" class="headerlink" title="1.Algorithm：每周至少做一个 leetcode 的算法题"></a>1.Algorithm：每周至少做一个 leetcode 的算法题</h3><span id="more"></span>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-number">560.</span> Subarray Sum Equals K<br><br>Given an array of integers and an integer k, you need to find the total number of continuous subarrays whose sum equals to k.<br><br>Example <span class="hljs-number">1</span>:<br><br>Input:nums = [<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>], k = <span class="hljs-number">2</span><br>Output: <span class="hljs-number">2</span><br><br>来源：力扣（LeetCode）<br>链接：https:<span class="hljs-comment">//leetcode-cn.com/problems/subarray-sum-equals-k</span><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">subarraySum</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums, <span class="hljs-type">int</span> k)</span> &#123;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">n</span> <span class="hljs-operator">=</span> nums.length;<br>        Map&lt;Integer, Integer&gt; map = <span class="hljs-keyword">new</span> <span class="hljs-title class_">HashMap</span>&lt;&gt;();        <br>        <span class="hljs-type">int</span> <span class="hljs-variable">ans</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>, sum = <span class="hljs-number">0</span>;<br>        map.put(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>);<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; n; i++) &#123;<br>            sum += nums[i];<br>            <span class="hljs-type">int</span> <span class="hljs-variable">count</span> <span class="hljs-operator">=</span> map.getOrDefault(sum - k, <span class="hljs-number">0</span>);  <br>            <span class="hljs-keyword">if</span> (count &gt; <span class="hljs-number">0</span>) &#123;<br>                ans += count;<br>            &#125;<br>            map.put(sum, map.getOrDefault(sum, <span class="hljs-number">0</span>) + <span class="hljs-number">1</span>);<br>        &#125;<br>        <span class="hljs-keyword">return</span> ans;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>解题思路：前缀和 + 哈希缓存</p>
+<ol>
+<li>sum{nums[x] + num[x + 1]…. nums[i]} &#x3D;&#x3D; k</li>
+<li>sum - pre[x] &#x3D;&#x3D; k</li>
+<li>sum - k &#x3D;&#x3D; pre[x]</li>
+<li>通过 sum - k，通过map寻找 pre[x]，如果没有则返回0，否则累加次数</li>
+<li>缓存sum到map，如果map中不存在sum到话存储0 + 1，否则获取到原来到次数 + 1存储</li>
+</ol>
+<h3 id="2-Review：阅读并点评至少一篇英文技术文章"><a href="#2-Review：阅读并点评至少一篇英文技术文章" class="headerlink" title="2.Review：阅读并点评至少一篇英文技术文章"></a>2.Review：阅读并点评至少一篇英文技术文章</h3><p><a href="https://medium.com/@factoryhr/http-2-the-difference-between-http-1-1-benefits-and-how-to-use-it-38094fa0e95b">HTTP&#x2F;2: the difference between HTTP&#x2F;1.1, benefits and how to use it</a></p>
+<ul>
+<li>Request multiplexing（请求多路复用）</li>
+</ul>
+<p>主要介绍http&#x2F;2，跟http1.0 最大到区别就是2.0能够做到请求的多路复用，而1.0不是。引用文章到图片更好说明这一点：</p>
+<p><img src="https://miro.medium.com/max/1494/0*lY05UTuA-dWCXU-q.png" alt="https://miro.medium.com/max/1494/0*lY05UTuA-dWCXU-q.png"></p>
+<ul>
+<li>Header compression（请求头压缩）</li>
+</ul>
+<p><img src="https://miro.medium.com/max/1400/0*5r8-MbhEseP6lEQg.png" alt="https://miro.medium.com/max/1400/0*5r8-MbhEseP6lEQg.png"></p>
+<ul>
+<li>Binary protocol（二进制协议）</li>
+</ul>
+<p><img src="https://miro.medium.com/max/1400/0*0LtM_XmkauxVoY8M.png" alt="https://miro.medium.com/max/1400/0*0LtM_XmkauxVoY8M.png"></p>
+<ul>
+<li>HTTP&#x2F;2 Server Push</li>
+</ul>
+<p>如果服务端发现 资源X 和 Y 是有关联，会一并发送，而不是分开发送，这个也是1.0的区别。</p>
+<p><img src="https://miro.medium.com/max/996/0*ZJLgVdXq_06hcF1o.png" alt="https://miro.medium.com/max/996/0*ZJLgVdXq_06hcF1o.png"></p>
+<h3 id="3-Tip：学习至少一个技术技巧"><a href="#3-Tip：学习至少一个技术技巧" class="headerlink" title="3.Tip：学习至少一个技术技巧"></a>3.Tip：学习至少一个技术技巧</h3><p>学习如何将自己本地的docker镜像上传到docker hub中，遇到的坑为：需要自己在docker创建仓库，并且docker的tag需要跟你的仓库保持一致。例如，我的账号为：jaryoung，创建了一个web-demo的仓库，所以我们需要修改本地的tag为 jaryoung&#x2F;web-demo</p>
+<p>下面为修改镜像的tag和推送到远端的命令</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java">tag web-demo-docker-image jaryoung/web-demo<br>docker push jaryoung/web-demo<br></code></pre></td></tr></table></figure>
+
+<h3 id="4-Share：分享一篇有观点和思考的技术文章"><a href="#4-Share：分享一篇有观点和思考的技术文章" class="headerlink" title="4.Share：分享一篇有观点和思考的技术文章"></a>4.Share：分享一篇有观点和思考的技术文章</h3><p><a href="https://coolshell.cn/articles/19840.html">HTTP的前世今生 | | 酷 壳 - CoolShell</a></p>
+<p>（注：国内很多公司HTTP无论对错只返回200，这种把HTTP Status Code 全部抹掉完全是一种工程界的倒退）<br>不禁想起来自己以前做得蠢事，实在不应该。</p>
+]]></content>
+      <categories>
+        <category>ARTS</category>
+      </categories>
+      <tags>
+        <tag>ARTS</tag>
+        <tag>Study</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>优化打开博客速度，给您的Hexo添加上PWA吧</title>
     <url>/2022/02/03/Add-PWA-to-hexo-in-fluid-theme/</url>
     <content><![CDATA[<h1 id="0-版本"><a href="#0-版本" class="headerlink" title="0. 版本"></a>0. 版本</h1><ul>
@@ -90,55 +139,6 @@
       <tags>
         <tag>Hexo</tag>
         <tag>PWA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ARTS-Week-5</title>
-    <url>/2020/07/26/ARTS-Week-5/</url>
-    <content><![CDATA[<h2 id="ARTS-Week-5"><a href="#ARTS-Week-5" class="headerlink" title="ARTS Week-5"></a>ARTS Week-5</h2><h3 id="1-Algorithm：每周至少做一个-leetcode-的算法题"><a href="#1-Algorithm：每周至少做一个-leetcode-的算法题" class="headerlink" title="1.Algorithm：每周至少做一个 leetcode 的算法题"></a>1.Algorithm：每周至少做一个 leetcode 的算法题</h3><span id="more"></span>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-number">560.</span> Subarray Sum Equals K<br><br>Given an array of integers and an integer k, you need to find the total number of continuous subarrays whose sum equals to k.<br><br>Example <span class="hljs-number">1</span>:<br><br>Input:nums = [<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>], k = <span class="hljs-number">2</span><br>Output: <span class="hljs-number">2</span><br><br>来源：力扣（LeetCode）<br>链接：https:<span class="hljs-comment">//leetcode-cn.com/problems/subarray-sum-equals-k</span><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。<br><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">subarraySum</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums, <span class="hljs-type">int</span> k)</span> &#123;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">n</span> <span class="hljs-operator">=</span> nums.length;<br>        Map&lt;Integer, Integer&gt; map = <span class="hljs-keyword">new</span> <span class="hljs-title class_">HashMap</span>&lt;&gt;();        <br>        <span class="hljs-type">int</span> <span class="hljs-variable">ans</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>, sum = <span class="hljs-number">0</span>;<br>        map.put(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>);<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; n; i++) &#123;<br>            sum += nums[i];<br>            <span class="hljs-type">int</span> <span class="hljs-variable">count</span> <span class="hljs-operator">=</span> map.getOrDefault(sum - k, <span class="hljs-number">0</span>);  <br>            <span class="hljs-keyword">if</span> (count &gt; <span class="hljs-number">0</span>) &#123;<br>                ans += count;<br>            &#125;<br>            map.put(sum, map.getOrDefault(sum, <span class="hljs-number">0</span>) + <span class="hljs-number">1</span>);<br>        &#125;<br>        <span class="hljs-keyword">return</span> ans;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>解题思路：前缀和 + 哈希缓存</p>
-<ol>
-<li>sum{nums[x] + num[x + 1]…. nums[i]} &#x3D;&#x3D; k</li>
-<li>sum - pre[x] &#x3D;&#x3D; k</li>
-<li>sum - k &#x3D;&#x3D; pre[x]</li>
-<li>通过 sum - k，通过map寻找 pre[x]，如果没有则返回0，否则累加次数</li>
-<li>缓存sum到map，如果map中不存在sum到话存储0 + 1，否则获取到原来到次数 + 1存储</li>
-</ol>
-<h3 id="2-Review：阅读并点评至少一篇英文技术文章"><a href="#2-Review：阅读并点评至少一篇英文技术文章" class="headerlink" title="2.Review：阅读并点评至少一篇英文技术文章"></a>2.Review：阅读并点评至少一篇英文技术文章</h3><p><a href="https://medium.com/@factoryhr/http-2-the-difference-between-http-1-1-benefits-and-how-to-use-it-38094fa0e95b">HTTP&#x2F;2: the difference between HTTP&#x2F;1.1, benefits and how to use it</a></p>
-<ul>
-<li>Request multiplexing（请求多路复用）</li>
-</ul>
-<p>主要介绍http&#x2F;2，跟http1.0 最大到区别就是2.0能够做到请求的多路复用，而1.0不是。引用文章到图片更好说明这一点：</p>
-<p><img src="https://miro.medium.com/max/1494/0*lY05UTuA-dWCXU-q.png" alt="https://miro.medium.com/max/1494/0*lY05UTuA-dWCXU-q.png"></p>
-<ul>
-<li>Header compression（请求头压缩）</li>
-</ul>
-<p><img src="https://miro.medium.com/max/1400/0*5r8-MbhEseP6lEQg.png" alt="https://miro.medium.com/max/1400/0*5r8-MbhEseP6lEQg.png"></p>
-<ul>
-<li>Binary protocol（二进制协议）</li>
-</ul>
-<p><img src="https://miro.medium.com/max/1400/0*0LtM_XmkauxVoY8M.png" alt="https://miro.medium.com/max/1400/0*0LtM_XmkauxVoY8M.png"></p>
-<ul>
-<li>HTTP&#x2F;2 Server Push</li>
-</ul>
-<p>如果服务端发现 资源X 和 Y 是有关联，会一并发送，而不是分开发送，这个也是1.0的区别。</p>
-<p><img src="https://miro.medium.com/max/996/0*ZJLgVdXq_06hcF1o.png" alt="https://miro.medium.com/max/996/0*ZJLgVdXq_06hcF1o.png"></p>
-<h3 id="3-Tip：学习至少一个技术技巧"><a href="#3-Tip：学习至少一个技术技巧" class="headerlink" title="3.Tip：学习至少一个技术技巧"></a>3.Tip：学习至少一个技术技巧</h3><p>学习如何将自己本地的docker镜像上传到docker hub中，遇到的坑为：需要自己在docker创建仓库，并且docker的tag需要跟你的仓库保持一致。例如，我的账号为：jaryoung，创建了一个web-demo的仓库，所以我们需要修改本地的tag为 jaryoung&#x2F;web-demo</p>
-<p>下面为修改镜像的tag和推送到远端的命令</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java">tag web-demo-docker-image jaryoung/web-demo<br>docker push jaryoung/web-demo<br></code></pre></td></tr></table></figure>
-
-<h3 id="4-Share：分享一篇有观点和思考的技术文章"><a href="#4-Share：分享一篇有观点和思考的技术文章" class="headerlink" title="4.Share：分享一篇有观点和思考的技术文章"></a>4.Share：分享一篇有观点和思考的技术文章</h3><p><a href="https://coolshell.cn/articles/19840.html">HTTP的前世今生 | | 酷 壳 - CoolShell</a></p>
-<p>（注：国内很多公司HTTP无论对错只返回200，这种把HTTP Status Code 全部抹掉完全是一种工程界的倒退）<br>不禁想起来自己以前做得蠢事，实在不应该。</p>
-]]></content>
-      <categories>
-        <category>ARTS</category>
-      </categories>
-      <tags>
-        <tag>ARTS</tag>
-        <tag>Study</tag>
       </tags>
   </entry>
   <entry>
@@ -1218,6 +1218,7 @@
 <li><p>（高阶）用 Vim 宏将 XML 转换到 JSON (<a href="https://missing-semester-cn.github.io/2020/files/example-data.xml">例子文件</a>)。 尝试着先完全自己做，但是在你卡住的时候可以查看上面<a href="https://missing-semester-cn.github.io/2020/editors/#macros">宏</a> 章节。</p>
 </li>
 </ol>
+<p><a href="https://missing-semester-cn.github.io/2020/editors/">转载自missing-semester</a></p>
 ]]></content>
       <categories>
         <category>CS必学工具</category>
@@ -1281,7 +1282,7 @@
 
 
 <h1 id="问题与解决思路"><a href="#问题与解决思路" class="headerlink" title="问题与解决思路"></a>问题与解决思路</h1><ol>
-<li>(node:60240) UnhandledPromiseRejectionWarning: Error: spawn &#x2F;Users&#x2F;jaryoung&#x2F;project&#x2F;myblog&#x2F;node_modules&#x2F;<a href="mailto:&#95;&#103;&#105;&#x66;&#x73;&#105;&#x63;&#108;&#x65;&#x40;&#x35;&#x2e;&#50;&#x2e;&#49;">&#95;&#103;&#105;&#x66;&#x73;&#105;&#x63;&#108;&#x65;&#x40;&#x35;&#x2e;&#50;&#x2e;&#49;</a>@gifsicle&#x2F;vendor&#x2F;gifsicle ENOENT<br>解决思路，不一定正确，根据自己实际情况来处理。<ul>
+<li>(node:60240) UnhandledPromiseRejectionWarning: Error: spawn &#x2F;Users&#x2F;jaryoung&#x2F;project&#x2F;myblog&#x2F;node_modules&#x2F;<a href="mailto:&#x5f;&#103;&#x69;&#102;&#115;&#105;&#x63;&#x6c;&#101;&#x40;&#x35;&#46;&#x32;&#46;&#49;">&#x5f;&#103;&#x69;&#102;&#115;&#105;&#x63;&#x6c;&#101;&#x40;&#x35;&#46;&#x32;&#46;&#49;</a>@gifsicle&#x2F;vendor&#x2F;gifsicle ENOENT<br>解决思路，不一定正确，根据自己实际情况来处理。<ul>
 <li><code>gulp-imagemin</code>，由于8.0.0出现一个比较诡异的问题，所以需要将<code>gulp-imagemin</code>降级到<code>7.1.0</code>版本</li>
 <li>但是降级到<code>7.1.0</code>会出现有一些依赖找不到的情况，只能一个个来找进行安装（如果有更好的办法，也希望有小伙伴跟我说一下）</li>
 <li><a href="https://github.com/sindresorhus/gulp-imagemin/blob/v7.1.0/package.json">版本依赖情况</a>，根据github来进行一个个版本jar依赖的下载。最终整理为：<code>npm install -d gulp-imagemin@7.1.0 imagemin@7.0.0 imagemin-optipng@7.0.0 imagemin-mozjpeg@8.0.0 imagemin-svgo@7.0.0 imagemin-gifsicle@7.0.0 gifsicle@5.0.0 --save-dev</code> ，也就是上面步骤给出来的命令</li>
