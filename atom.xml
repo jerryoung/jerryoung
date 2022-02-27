@@ -6,7 +6,7 @@
   <link href="https://jaryoung.com/atom.xml" rel="self"/>
   
   <link href="https://jaryoung.com/"/>
-  <updated>2022-02-20T03:51:45.189Z</updated>
+  <updated>2022-02-27T06:52:59.491Z</updated>
   <id>https://jaryoung.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ssh-copy-id 出错root@192.168.1.16: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password)</title>
+    <link href="https://jaryoung.com/2022/02/27/ssh-copy-id-permission-denied/"/>
+    <id>https://jaryoung.com/2022/02/27/ssh-copy-id-permission-denied/</id>
+    <published>2022-02-27T06:24:01.000Z</published>
+    <updated>2022-02-27T06:52:59.491Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;一年前，就踩过这个坑，这一次又踩一次，故记录下来，方便自己日后查阅，以来提醒自己，不要转牛角尖，多方面考虑。&lt;/p</summary>
+      
+    
+    
+    
+    <category term="Linux" scheme="https://jaryoung.com/categories/Linux/"/>
+    
+    
+    <category term="ssh" scheme="https://jaryoung.com/tags/ssh/"/>
+    
+    <category term="ssh-copy-id" scheme="https://jaryoung.com/tags/ssh-copy-id/"/>
+    
+  </entry>
   
   <entry>
     <title>编辑器 (Vim)（转载）</title>
